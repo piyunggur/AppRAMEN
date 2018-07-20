@@ -1,6 +1,8 @@
 package com.example.user.ramen;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -24,6 +26,10 @@ public class activity_main extends AppCompatActivity {
     private Button mNextBt;
     private Button mBackBt;
 
+    private TextView sTextHead;
+    private TextView sTextDesc;
+
+
     private int mCurrentPage;
 
 
@@ -31,17 +37,19 @@ public class activity_main extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-//        requestWindowFeature(Window.FEATURE_NO_TITLE);
-//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-//                WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-        setContentView(R.layout.activity_main);
+      setContentView(R.layout.activity_main);
 
         mSlideViewPager = (ViewPager) findViewById(R.id.slideViewPager);
         mDotLayout = (LinearLayout) findViewById(R.id.dotsLayout);
 
         mNextBt = (Button) findViewById(R.id.bt_next);
         mBackBt = (Button) findViewById(R.id.bt_back);
+        sTextHead = (TextView) findViewById(R.id.slide_heading);
+        sTextDesc = (TextView) findViewById(R.id.slide_desc);
+
+        mNextBt.setTypeface(CustomFont.getInstance().getFontData(this));
+        mBackBt.setTypeface(CustomFont.getInstance().getFontData(this));
+
 
         sliderAdapter = new adapter_slider(this);
 
@@ -63,6 +71,7 @@ public class activity_main extends AppCompatActivity {
                 String text_bt_next = set_bt_next.getText().toString();
                 if(text_bt_next.equalsIgnoreCase("FINISH")){
                     startActivity(new Intent(activity_main.this,activity_login.class));
+                    finish();
                 }
 
             }
@@ -84,7 +93,7 @@ public class activity_main extends AppCompatActivity {
             mDots[i] = new TextView(this);
             mDots[i].setText(Html.fromHtml("&#8226;"));
             mDots[i].setTextSize(35);
-            mDots[i].setTextColor(getResources().getColor((R.color.colortransparentWhite)));
+            mDots[i].setTextColor(getResources().getColor((R.color.BackTextColor)));
 
             mDotLayout.addView(mDots[i]);
 

@@ -1,8 +1,6 @@
 package com.example.user.ramen;
 
 import android.content.Context;
-import android.content.res.AssetManager;
-import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
@@ -12,37 +10,27 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class adapter_slider extends PagerAdapter{
+public class adapter_home_slider_news extends PagerAdapter{
+
+
 
     Context context;
     LayoutInflater layoutInflater;
 
-    public adapter_slider(Context context){
+    public adapter_home_slider_news(Context context){
         this.context = context;
     }
 
     // arrays
     public int[] slide_images = {
-            R.drawable.eat_icon,
-            R.drawable.sleep_icon,
-            R.drawable.code_icon
-    };
-
-    public String[] slide_headings = {
-            "EAT",
-            "SLEEP",
-            "CODE"
-    };
-
-    public String[] slide_desc = {
-            "Data text test By Date 18 07 61",
-            "Data text test By Date 18 07 61",
-            "Data text test By Date 18 07 61"
+            R.drawable.home_img_news,
+            R.drawable.home_img_news,
+            R.drawable.home_img_news
     };
 
     @Override
     public int getCount() {
-        return slide_headings.length;
+        return slide_images.length;
     }
 
     @Override
@@ -53,17 +41,11 @@ public class adapter_slider extends PagerAdapter{
     @Override
     public Object instantiateItem(ViewGroup container, int position){
         layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        View view = layoutInflater.inflate(R.layout.slide_layout,container,false);
+        View view = layoutInflater.inflate(R.layout.home_slide_news,container,false);
 
-        ImageView slideImageView = (ImageView) view.findViewById(R.id.slide_image);
-        TextView slideHeading = (TextView) view.findViewById(R.id.slide_heading);
-        TextView slideDescription = (TextView) view.findViewById(R.id.slide_desc);
-
-        slideHeading.setTypeface(CustomFont.getInstance().getFontHead(context));
+        ImageView slideImageView = (ImageView) view.findViewById(R.id.home_slide_img);
 
         slideImageView.setImageResource(slide_images[position]);
-        slideHeading.setText(slide_headings[position]);
-        slideDescription.setText(slide_desc[position]);
 
         container.addView(view);
 

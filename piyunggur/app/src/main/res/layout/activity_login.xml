@@ -11,8 +11,8 @@
         android:id="@+id/login_icon_logo"
         android:layout_width="115dp"
         android:layout_height="109dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo_icon_logo" />
@@ -72,7 +72,7 @@
         android:layout_height="43dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/s_bg_button_submit"
         android:text="ดำเนินการต่อ"
         android:textAllCaps="false"
@@ -88,7 +88,7 @@
         android:layout_height="43dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="35dp"
         android:background="@drawable/s_bg_button_register"
         android:text="สมัครสมาชิก"
         android:textAllCaps="false"
@@ -98,5 +98,39 @@
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_button_submit" />
+
+    <Button
+        android:id="@+id/login_button_facebook"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/s_bg_button_facebook"
+        android:text="F"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.298"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_button_register" />
+
+    <Button
+        android:id="@+id/login_button_gmail"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/s_bg_button_gmail"
+        android:text="G"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.385"
+        app:layout_constraintStart_toEndOf="@+id/login_button_facebook"
+        app:layout_constraintTop_toBottomOf="@+id/login_button_register" />
 
 </android.support.constraint.ConstraintLayout>
