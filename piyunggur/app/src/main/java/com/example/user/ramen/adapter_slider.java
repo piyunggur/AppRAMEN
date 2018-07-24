@@ -23,21 +23,21 @@ public class adapter_slider extends PagerAdapter{
 
     // arrays
     public int[] slide_images = {
-            R.drawable.eat_icon,
-            R.drawable.sleep_icon,
-            R.drawable.code_icon
+            R.drawable.learn_ic_ramen,
+            R.drawable.learn_ic_car,
+            R.drawable.learn_ic_sale
     };
 
     public String[] slide_headings = {
-            "EAT",
-            "SLEEP",
-            "CODE"
+            "ราเมง",
+            "การส่งสินค้า",
+            "ลดราคา"
     };
 
     public String[] slide_desc = {
-            "Data text test By Date 18 07 61",
-            "Data text test By Date 18 07 61",
-            "Data text test By Date 18 07 61"
+            "รวมราเมงทั่วญี่ปุ่นรสชาติอร่อย\nไวในแอพนี้",
+            "ไม่ว่าอยู่ที่ไหนก็สั่งได้",
+            "ทุกครั้งที่มีการสั่งซื้อจะได้รับ point ที่สามารถนำมาแลก\nคูปองส่วนลดได้"
     };
 
     @Override
