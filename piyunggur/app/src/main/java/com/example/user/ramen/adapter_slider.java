@@ -60,6 +60,7 @@ public class adapter_slider extends PagerAdapter{
         TextView slideDescription = (TextView) view.findViewById(R.id.slide_desc);
 
         slideHeading.setTypeface(CustomFont.getInstance().getFontHead(context));
+        slideDescription.setTypeface(CustomFont.getInstance().getFontData(context));
 
         slideImageView.setImageResource(slide_images[position]);
         slideHeading.setText(slide_headings[position]);

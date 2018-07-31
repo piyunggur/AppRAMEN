@@ -8,6 +8,9 @@ import android.text.Html;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class activity_home extends AppCompatActivity {
 
     private ViewPager vSlideViewPager;
@@ -15,6 +18,8 @@ public class activity_home extends AppCompatActivity {
     private adapter_home_slider_news aSliderAdapter;
     private TextView[] mDots;
     private int nCurrentPage;
+    private int coutpage;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,15 +28,14 @@ public class activity_home extends AppCompatActivity {
 
         vSlideViewPager = (ViewPager) findViewById(R.id.home_slide_vp_news);
         lDotLayout = (LinearLayout) findViewById(R.id.home_slide_dots);
-
-        Typeface font_head = Typeface.createFromAsset(getAssets(),"fonts/Kanit-SemiBold.ttf");
-        Typeface font_data = Typeface.createFromAsset(getAssets(),"fonts/Kanit-Light.ttf");
-
         aSliderAdapter = new adapter_home_slider_news(this);
+
         vSlideViewPager.setAdapter(aSliderAdapter);
         addDotsIndicator(0);
         vSlideViewPager.addOnPageChangeListener(viewListener);
 
+        Timer timer = new Timer();
+        timer.scheduleAtFixedRate(new SetAutoSlider(),2000,4000);
 
     }
 
@@ -43,7 +47,7 @@ public class activity_home extends AppCompatActivity {
             mDots[i] = new TextView(this);
             mDots[i].setText(Html.fromHtml("&#8226;"));
             mDots[i].setTextSize(35);
-            mDots[i].setTextColor(getResources().getColor(R.color.BackTextColor));
+            mDots[i].setTextColor(getResources().getColor(R.color.MainColor));
 
             lDotLayout.addView(mDots[i]);
 
@@ -59,7 +63,7 @@ public class activity_home extends AppCompatActivity {
 
     ViewPager.OnPageChangeListener viewListener = new ViewPager.OnPageChangeListener() {
         @Override
-        public void onPageScrolled(int i, float v, int i1) {
+        public void onPageScrolled(int coutpage, float v, int i1) {
 
         }
 
@@ -71,7 +75,7 @@ public class activity_home extends AppCompatActivity {
                 if (i==page){
                     mDots[i].setTextColor(getResources().getColor(R.color.colorWhite));
                 }else
-                    mDots[i].setTextColor(getResources().getColor(R.color.BackTextColor));
+                    mDots[i].setTextColor(getResources().getColor(R.color.MainColor));
 
             }
             nCurrentPage = page;
@@ -83,5 +87,24 @@ public class activity_home extends AppCompatActivity {
 
         }
     };
+    public class SetAutoSlider extends TimerTask{
+
+        @Override
+        public void run() {
+
+            activity_home.this.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    if(vSlideViewPager.getCurrentItem() == 0){
+                        vSlideViewPager.setCurrentItem(1);
+                    }else if (vSlideViewPager.getCurrentItem() == 1){
+                        vSlideViewPager.setCurrentItem(2);
+                    } else{
+                        vSlideViewPager.setCurrentItem(0);
+                    }
+                }
+            });
+        }
+    }
 
 }

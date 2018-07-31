@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_blackground"
+    tools:context=".activity_regiter">
+
+    <ImageView
+        android:id="@+id/register_iv_head"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="#d31016"
+        android:layout_alignParentTop="true"
+        />
+
+    <Button
+        android:id="@+id/register_bt_back"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="37dp"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/back"
+        />
+
+    <TextView
+        android:id="@+id/register_tv_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="สมัครสมาชิก"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="27dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="30dp"
+        />
+
+    <EditText
+        android:id="@+id/register_et_user"
+        android:layout_width="295dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_iv_head"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:theme="@style/EdittextWhite"
+        android:hint="ชื่อผู้ใช้"
+        android:textColorHint="@color/colorWhite"
+        android:textColor="@color/colorWhite"
+        android:gravity="center"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        />
+
+    <EditText
+        android:id="@+id/register_et_pass1"
+        android:layout_width="295dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/register_et_user"
+        android:layout_marginTop="25dp"
+        android:hint="รหัสผ่าน"
+        android:gravity="center"
+        android:textColorHint="@color/colorWhite"
+        android:textColor="@color/colorWhite"
+        android:theme="@style/EdittextWhite"
+        />
+
+    <EditText
+        android:layout_width="295dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/register_et_pass2"
+        android:layout_below="@id/register_et_pass1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:hint="รหัสผ่านอีกครั้งเพื่อยืนยัน"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        android:textColorHint="@color/colorWhite"
+        android:theme="@style/EdittextWhite"
+        />
+
+    <Button
+        android:id="@+id/register_bt_summit"
+        android:layout_width="295dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/register_et_pass2"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:background="@drawable/s_bg_button_register"
+        android:text="ดำเนินการต่อ"
+        android:textColorHint="@color/MainColor"
+        android:textColor="@color/MainColor"
+        android:textSize="18dp"
+        />
+
+</RelativeLayout>

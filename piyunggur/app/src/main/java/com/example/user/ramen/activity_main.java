@@ -30,6 +30,7 @@ public class activity_main extends AppCompatActivity {
     private TextView sTextDesc;
 
 
+
     private int mCurrentPage;
 
 
@@ -65,14 +66,13 @@ public class activity_main extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                mSlideViewPager.setCurrentItem(mCurrentPage + 1);
-
                 Button set_bt_next = (Button)view;
                 String text_bt_next = set_bt_next.getText().toString();
                 if(text_bt_next.equalsIgnoreCase("FINISH")){
                     startActivity(new Intent(activity_main.this,activity_login.class));
                     finish();
                 }
+                mSlideViewPager.setCurrentItem(mCurrentPage + 1);
 
             }
         });
