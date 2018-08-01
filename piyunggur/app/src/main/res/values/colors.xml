@@ -8,4 +8,5 @@
     <color name="nullcolor">#00cccccc</color>
     <color name="MainColor">#342f31</color>
     <color name="BackTextColor">#95848a</color>
+    <color name="MainBlackground">#a0000000</color>
 </resources>
