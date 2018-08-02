@@ -3,6 +3,7 @@ package com.example.user.ramen;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.BundleCompat;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,29 +11,30 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class fragment_a extends Fragment {
-    private FragmentAListener listener;
+public class fragment_b extends Fragment{
+    private FragmentBListener listener;
     private EditText editText;
     private Button buttonOk;
 
-    public interface FragmentAListener{
-        void onInputASent(CharSequence input);
+    public interface FragmentBListener{
+        void onInputBSent(CharSequence input);
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
+        View v = inflater.inflate(R.layout.test_fragment_b, container, false);
 
-        View v = inflater.inflate(R.layout.test_fragment_a,container,false);
-        editText = v.findViewById(R.id.edit_text_a);
-        buttonOk = v.findViewById(R.id.button_ok_a);
+        editText = v.findViewById(R.id.edit_text_b);
+        buttonOk = v.findViewById(R.id.button_ok_b);
         buttonOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 CharSequence input = editText.getText();
-                listener.onInputASent(input);
+                listener.onInputBSent(input);
             }
         });
+
         return v;
     }
 
@@ -43,11 +45,11 @@ public class fragment_a extends Fragment {
     @Override
     public void onAttach(Context context){
         super.onAttach(context);
-        if(context instanceof FragmentAListener) {
-            listener = (FragmentAListener) context;
-        }else{
+        if(context instanceof FragmentBListener){
+            listener = (FragmentBListener) context;
+        } else {
             throw new RuntimeException(context.toString()
-                    + "must implement FragmentAlistener");
+            + "must implement FragmentBListener");
         }
     }
 
@@ -56,5 +58,4 @@ public class fragment_a extends Fragment {
         super.onDetach();
         listener = null;
     }
-
 }

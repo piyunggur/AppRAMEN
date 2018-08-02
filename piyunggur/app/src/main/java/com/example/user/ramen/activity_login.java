@@ -51,7 +51,7 @@ public class activity_login extends AppCompatActivity {
         bRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(activity_login.this,activity_regiter.class));
+                startActivity(new Intent(activity_login.this,test_fragment.class));
                 finish();
             }
         });
