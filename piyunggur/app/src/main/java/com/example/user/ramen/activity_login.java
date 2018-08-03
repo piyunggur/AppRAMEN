@@ -44,7 +44,7 @@ public class activity_login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(activity_login.this,activity_home.class));
-                finish();
+
             }
         });
 
@@ -52,7 +52,7 @@ public class activity_login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(activity_login.this,test_fragment.class));
-                finish();
+
             }
         });
 

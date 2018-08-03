@@ -54,23 +54,5 @@
         android:text="next"
         />
 
-    <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv_fragment_manu_promotion"
-
-        aap:cardCornerRadius="8dp"
-        android:layout_margin="5dp"
-        android:elevation="10dp"
-        >
-
-        <ImageView
-            android:id="@+id/fragment_mpromotion_iv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scr="@drawable/promotion_test_2"
-            />
-
-    </android.support.v7.widget.CardView>
 
 </RelativeLayout>

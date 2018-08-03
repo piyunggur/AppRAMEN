@@ -18,7 +18,7 @@ public class activity_logo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logo);
 
-        new CountDownTimer(2000,1) {
+        new CountDownTimer(1500,1) {
 
             public void onTick(long millisUntilFinished) {
 

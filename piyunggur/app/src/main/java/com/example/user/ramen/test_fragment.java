@@ -8,6 +8,9 @@ public class test_fragment extends AppCompatActivity implements fragment_a.Fragm
     private fragment_a fragmentA;
     private fragment_b fragmentB;
     private fragment_manu_promotion manu_promotion;
+    private CardViewTest fCardViewTest;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,12 +20,17 @@ public class test_fragment extends AppCompatActivity implements fragment_a.Fragm
         fragmentA = new fragment_a();
         fragmentB = new fragment_b();
         manu_promotion = new fragment_manu_promotion();
+        fCardViewTest = new CardViewTest();
 
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.container_a, fragmentA)
                 .replace(R.id.container_b, fragmentB)
                 .replace(R.id.container_c, manu_promotion)
+                .replace(R.id.container_d, fCardViewTest)
                 .commit();
+
+
+
 
     }
 

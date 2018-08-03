@@ -1,6 +1,5 @@
 package com.example.user.ramen;
 
-import android.graphics.Typeface;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,12 +13,14 @@ import java.util.TimerTask;
 public class activity_home extends AppCompatActivity {
 
     private ViewPager vSlideViewPager;
+    private HomeSlideAdapter aSliderAdapter;
     private LinearLayout lDotLayout;
-    private adapter_home_slider_news aSliderAdapter;
     private TextView[] mDots;
     private int nCurrentPage;
     private int coutpage;
 
+    private ViewPager vPromotion;
+    private PromotionAdapter aPromotion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +29,17 @@ public class activity_home extends AppCompatActivity {
 
         vSlideViewPager = (ViewPager) findViewById(R.id.home_slide_vp_news);
         lDotLayout = (LinearLayout) findViewById(R.id.home_slide_dots);
-        aSliderAdapter = new adapter_home_slider_news(this);
-
+        aSliderAdapter = new HomeSlideAdapter(this);
         vSlideViewPager.setAdapter(aSliderAdapter);
         addDotsIndicator(0);
         vSlideViewPager.addOnPageChangeListener(viewListener);
+
+
+        vPromotion = (ViewPager) findViewById(R.id.promotion_slide);
+        aPromotion = new PromotionAdapter(this);
+        vPromotion.setAdapter(aPromotion);
+
+
 
         Timer timer = new Timer();
         timer.scheduleAtFixedRate(new SetAutoSlider(),2000,4000);
