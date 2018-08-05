@@ -12,12 +12,12 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-public class adapter_slider extends PagerAdapter{
+public class LearnAdapter extends PagerAdapter{
 
     Context context;
     LayoutInflater layoutInflater;
 
-    public adapter_slider(Context context){
+    public LearnAdapter(Context context){
         this.context = context;
     }
 

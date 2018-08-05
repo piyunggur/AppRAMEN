@@ -10,7 +10,7 @@ import android.widget.TextView;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class activity_home extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
 
     private ViewPager vSlideViewPager;
     private HomeSlideAdapter aSliderAdapter;
@@ -99,7 +99,7 @@ public class activity_home extends AppCompatActivity {
         @Override
         public void run() {
 
-            activity_home.this.runOnUiThread(new Runnable() {
+            HomeActivity.this.runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
                     if(vSlideViewPager.getCurrentItem() == 0){

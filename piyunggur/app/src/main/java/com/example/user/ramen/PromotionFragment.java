@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class fragment_manu_promotion extends Fragment {
+public class PromotionFragment extends Fragment {
     //private FragmentManuPromotionListener listener;
     private Button next_activity;
     private TextView text;
@@ -18,7 +18,7 @@ public class fragment_manu_promotion extends Fragment {
 //        void onInputASent(Ch)
 //    }
 
-    public fragment_manu_promotion(){
+    public PromotionFragment(){
         //Required empty public construtor
     }
 
@@ -30,7 +30,7 @@ public class fragment_manu_promotion extends Fragment {
         next_activity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(),activity_login.class));
+                startActivity(new Intent(getActivity(),LoginActivity.class));
             }
         });
 

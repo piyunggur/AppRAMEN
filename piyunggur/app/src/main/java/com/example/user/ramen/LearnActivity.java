@@ -1,27 +1,23 @@
 package com.example.user.ramen;
 
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class activity_main extends AppCompatActivity {
+public class LearnActivity extends AppCompatActivity {
 
     private ViewPager mSlideViewPager;
     private LinearLayout mDotLayout;
 
     private TextView[] mDots;
 
-    private adapter_slider sliderAdapter;
+    private LearnAdapter sliderAdapter;
 
     private Button mNextBt;
     private Button mBackBt;
@@ -52,7 +48,7 @@ public class activity_main extends AppCompatActivity {
         mBackBt.setTypeface(CustomFont.getInstance().getFontData(this));
 
 
-        sliderAdapter = new adapter_slider(this);
+        sliderAdapter = new LearnAdapter(this);
 
         mSlideViewPager.setAdapter(sliderAdapter);
 
@@ -69,7 +65,7 @@ public class activity_main extends AppCompatActivity {
                 Button set_bt_next = (Button)view;
                 String text_bt_next = set_bt_next.getText().toString();
                 if(text_bt_next.equalsIgnoreCase("FINISH")){
-                    startActivity(new Intent(activity_main.this,activity_login.class));
+                    startActivity(new Intent(LearnActivity.this,LoginActivity.class));
                     finish();
                 }
                 mSlideViewPager.setCurrentItem(mCurrentPage + 1);

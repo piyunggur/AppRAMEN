@@ -3,12 +3,12 @@ package com.example.user.ramen;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class test_fragment extends AppCompatActivity implements fragment_a.FragmentAListener, fragment_b.FragmentBListener{
+public class TestFragment extends AppCompatActivity implements fragment_a.FragmentAListener, fragment_b.FragmentBListener{
 
     private fragment_a fragmentA;
     private fragment_b fragmentB;
-    private fragment_manu_promotion manu_promotion;
-    private CardViewTest fCardViewTest;
+    private PromotionFragment manu_promotion;
+    private PromotionCardView fCardViewTest;
 
 
 
@@ -19,8 +19,8 @@ public class test_fragment extends AppCompatActivity implements fragment_a.Fragm
 
         fragmentA = new fragment_a();
         fragmentB = new fragment_b();
-        manu_promotion = new fragment_manu_promotion();
-        fCardViewTest = new CardViewTest();
+        manu_promotion = new PromotionFragment();
+        fCardViewTest = new PromotionCardView();
 
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.container_a, fragmentA)

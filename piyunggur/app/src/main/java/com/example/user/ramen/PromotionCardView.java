@@ -8,11 +8,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-public class CardViewTest extends Fragment{
+public class PromotionCardView extends Fragment{
 
     private Button btNextActivity;
 
-    public CardViewTest(){
+    public PromotionCardView(){
         //Required empty bublic contrutor
     }
 
@@ -24,14 +24,14 @@ public class CardViewTest extends Fragment{
         btNextActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(),activity_login.class));
+                startActivity(new Intent(getActivity(),LoginActivity.class));
             }
         });
 
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(),activity_login.class));
+                startActivity(new Intent(getActivity(),LoginActivity.class));
                 getActivity().finish();
             }
         });

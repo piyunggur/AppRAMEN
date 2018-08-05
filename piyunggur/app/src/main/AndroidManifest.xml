@@ -9,19 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity_main" />
-        <activity android:name=".activity_logo">
+        <activity android:name=".LearnActivity" />
+        <activity android:name=".LogoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity_login" />
-        <activity android:name=".activity_home" />
-        <activity android:name=".activity_regiter" />
-        <activity android:name=".test_fragment" />
-        <activity android:name=".activity_test"></activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".TestFragment" />
+        <activity android:name=".TestActivity"></activity>
     </application>
 
 </manifest>

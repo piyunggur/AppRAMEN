@@ -4,12 +4,9 @@ import android.content.Intent;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 
-public class activity_logo extends AppCompatActivity {
+public class LogoActivity extends AppCompatActivity {
 
     private Button bNext;
 
@@ -25,7 +22,7 @@ public class activity_logo extends AppCompatActivity {
             }
 
             public void onFinish() {
-                startActivity(new Intent(activity_logo.this,activity_main.class));
+                startActivity(new Intent(LogoActivity.this,LearnActivity.class));
                 finish();
             }
         }.start();

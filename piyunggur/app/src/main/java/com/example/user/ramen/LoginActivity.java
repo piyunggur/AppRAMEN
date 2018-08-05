@@ -2,7 +2,6 @@ package com.example.user.ramen;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -10,11 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
-import static com.example.user.ramen.R.color.MainColor;
-
-public class activity_login extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     private TextView tHead;
     private EditText eUser;
@@ -43,7 +38,7 @@ public class activity_login extends AppCompatActivity {
             @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(activity_login.this,activity_home.class));
+                startActivity(new Intent(LoginActivity.this,HomeActivity.class));
 
             }
         });
@@ -51,7 +46,7 @@ public class activity_login extends AppCompatActivity {
         bRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(activity_login.this,test_fragment.class));
+                startActivity(new Intent(LoginActivity.this,TestFragment.class));
 
             }
         });

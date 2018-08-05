@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class activity_regiter extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
 
     private Button bBack;
     private TextView tHead;
@@ -38,7 +38,7 @@ public class activity_regiter extends AppCompatActivity {
         bBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(activity_regiter.this,activity_login.class));
+                startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
                 finish();
             }
         });
@@ -46,7 +46,7 @@ public class activity_regiter extends AppCompatActivity {
         bSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(activity_regiter.this,activity_login.class));
+                startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
                 finish();
             }
         });

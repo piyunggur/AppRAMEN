@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login_blackground"
-    tools:context=".activity_regiter">
+    tools:context=".RegisterActivity">
 
     <ImageView
         android:id="@+id/register_iv_head"
