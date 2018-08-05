@@ -1,8 +1,6 @@
 package com.example.user.ramen;
 
 import android.content.Context;
-import android.content.res.AssetManager;
-import android.graphics.Typeface;
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
@@ -23,9 +21,9 @@ public class LearnAdapter extends PagerAdapter{
 
     // arrays
     public int[] slide_images = {
-            R.drawable.learn_ic_ramen,
-            R.drawable.learn_ic_car,
-            R.drawable.learn_ic_sale
+            R.drawable.ramen,
+            R.drawable.car,
+            R.drawable.sale
     };
 
     public String[] slide_headings = {

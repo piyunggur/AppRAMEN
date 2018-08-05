@@ -20,7 +20,7 @@ public class RegisterActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_regiter);
+        setContentView(R.layout.regiter_layout);
 
         bBack = (Button) findViewById(R.id.register_bt_back);
         tHead = (TextView) findViewById(R.id.register_tv_head);

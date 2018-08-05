@@ -15,7 +15,7 @@ public class TestFragment extends AppCompatActivity implements fragment_a.Fragme
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test_fragment);
+        setContentView(R.layout.test_fragment);
 
         fragmentA = new fragment_a();
         fragmentB = new fragment_b();

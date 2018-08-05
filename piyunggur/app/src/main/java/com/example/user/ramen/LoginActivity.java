@@ -20,7 +20,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.login_layout);
 
         tHead = (TextView) findViewById(R.id.login_text_head);
         eUser = (EditText) findViewById(R.id.login_add_user);
@@ -46,7 +46,7 @@ public class LoginActivity extends AppCompatActivity {
         bRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this,TestFragment.class));
+                startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
 
             }
         });

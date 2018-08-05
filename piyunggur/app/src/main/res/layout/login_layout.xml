@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_blackground"
+    android:background="@drawable/background_fornt"
     tools:context=".LoginActivity">
 
     <ImageView
@@ -14,7 +14,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        app:srcCompat="@drawable/logo_ic_logo"
+        app:srcCompat="@drawable/logo"
         />
 
     <TextView

@@ -18,7 +18,7 @@ public class PromotionCardView extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState){
-        View view = inflater.inflate(R.layout.cradview_manu_promotion, container, false);
+        View view = inflater.inflate(R.layout.promotion_cradview, container, false);
 
         btNextActivity = (Button) view.findViewById(R.id.cradview_promotion_bt);
         btNextActivity.setOnClickListener(new View.OnClickListener() {

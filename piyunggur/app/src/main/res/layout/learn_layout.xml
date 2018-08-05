@@ -40,7 +40,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:background="@color/nullcolor"
-        android:text="NEXT"
+        android:text="ต่อไป"
         android:textColor="@color/colorWhite" />
 
 </RelativeLayout>

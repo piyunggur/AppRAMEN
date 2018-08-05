@@ -34,7 +34,7 @@ public class LearnActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-      setContentView(R.layout.activity_main);
+      setContentView(R.layout.learn_layout);
 
         mSlideViewPager = (ViewPager) findViewById(R.id.slideViewPager);
         mDotLayout = (LinearLayout) findViewById(R.id.dotsLayout);
@@ -64,7 +64,7 @@ public class LearnActivity extends AppCompatActivity {
 
                 Button set_bt_next = (Button)view;
                 String text_bt_next = set_bt_next.getText().toString();
-                if(text_bt_next.equalsIgnoreCase("FINISH")){
+                if(text_bt_next.equalsIgnoreCase("ดำเนินการต่อ")){
                     startActivity(new Intent(LearnActivity.this,LoginActivity.class));
                     finish();
                 }
@@ -116,34 +116,32 @@ public class LearnActivity extends AppCompatActivity {
                 if (i==page)
                     mDots[i].setTextColor(getResources().getColor(R.color.colorWhite));
                 else
-                    mDots[i].setTextColor(getResources().getColor(R.color.colortransparentWhite));
+                    mDots[i].setTextColor(getResources().getColor(R.color.BackTextColor));
             }
 
             mCurrentPage = page;
 
             if(page == 0){
-                mNextBt.setEnabled(true);
                 mBackBt.setEnabled(false);
+                mNextBt.setEnabled(true);
                 mBackBt.setVisibility(View.INVISIBLE);
 
-                mNextBt.setText("Next");
                 mBackBt.setText("");
+                mNextBt.setText("ต่อไป");
             }else if (page == mDots.length-1) {
-                mNextBt.setEnabled(true);
                 mBackBt.setEnabled(true);
+                mNextBt.setEnabled(true);
                 mBackBt.setVisibility(View.VISIBLE);
 
-                mNextBt.setText("Finish");
-                mBackBt.setText("Black");
-
+                mBackBt.setText("ย้อนกลับ");
+                mNextBt.setText("ดำเนินการต่อ");
             }else {
-                mNextBt.setEnabled(true);
                 mBackBt.setEnabled(true);
                 mBackBt.setVisibility(View.VISIBLE);
+                mNextBt.setEnabled(true);
 
-                mNextBt.setText("Next");
-                mBackBt.setText("Back");
-
+                mBackBt.setText("ย้อนกลับ");
+                mNextBt.setText("ต่อไป");
             }
 
         }

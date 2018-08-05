@@ -3,13 +3,11 @@ package com.example.user.ramen;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 public class HomeSlideAdapter extends PagerAdapter{
 
@@ -22,9 +20,9 @@ public class HomeSlideAdapter extends PagerAdapter{
 
     // arrays
     public int[] slide_images = {
-            R.drawable.home_img_news,
-            R.drawable.home_img_news,
-            R.drawable.home_img_news
+            R.drawable.news1,
+            R.drawable.news1,
+            R.drawable.news1
     };
 
     @Override
@@ -40,7 +38,7 @@ public class HomeSlideAdapter extends PagerAdapter{
     @Override
     public Object instantiateItem(ViewGroup container, int position){
         layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        View view = layoutInflater.inflate(R.layout.home_slide_news,null);
+        View view = layoutInflater.inflate(R.layout.home_news,null);
 
         ImageView slideImageView = (ImageView) view.findViewById(R.id.home_slide_img);
 

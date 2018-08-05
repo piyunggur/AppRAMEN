@@ -24,7 +24,7 @@ public class PromotionFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        View view = inflater.inflate(R.layout.fragment_manu_promotion, container, false);
+        View view = inflater.inflate(R.layout.promotion_fragment, container, false);
 
         next_activity = (Button) view.findViewById(R.id.bt_fragment_manu_promotion);
         next_activity.setOnClickListener(new View.OnClickListener() {

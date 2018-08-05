@@ -40,7 +40,7 @@ public class CustomAdapter extends BaseAdapter {
         }else{
             imageView = (ImageView) convertView;
         }
-        imageView.setImageResource(R.drawable.learn_ic_ramen);
+        imageView.setImageResource(R.drawable.ramen);
         return imageView;
     }
 }

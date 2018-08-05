@@ -10,7 +10,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="53dp"
-        app:srcCompat="@drawable/learn_ic_ramen" />
+        app:srcCompat="@drawable/ramen" />
 
     <TextView
         android:id="@+id/slide_heading"

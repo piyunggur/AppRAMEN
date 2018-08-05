@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 
 public class PromotionAdapter extends PagerAdapter{
     Context context;
@@ -37,7 +36,7 @@ public class PromotionAdapter extends PagerAdapter{
     @Override
     public Object instantiateItem(ViewGroup container, int position){
         layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        View view = layoutInflater.inflate(R.layout.cradview_manu_promotion,null);
+        View view = layoutInflater.inflate(R.layout.promotion_cradview,null);
 
         ImageView slideImageView = (ImageView) view.findViewById(R.id.cradview_promotion_iv);
 
