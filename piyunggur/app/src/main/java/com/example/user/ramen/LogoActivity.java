@@ -8,8 +8,6 @@ import android.widget.Button;
 
 public class LogoActivity extends AppCompatActivity {
 
-    private Button bNext;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

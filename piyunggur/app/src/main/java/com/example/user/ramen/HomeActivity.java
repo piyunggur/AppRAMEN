@@ -3,10 +3,14 @@ package com.example.user.ramen;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -22,6 +26,9 @@ public class HomeActivity extends AppCompatActivity {
     private ViewPager vPromotion;
     private PromotionAdapter aPromotion;
 
+//    private RecyclerView recyclerView;
+//    private MainAdapter mainAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +41,14 @@ public class HomeActivity extends AppCompatActivity {
         addDotsIndicator(0);
         vSlideViewPager.addOnPageChangeListener(viewListener);
 
+//        recyclerView = (RecyclerView) findViewById(R.id.recycleview);
+//        recyclerView.setLayoutManager(new LinearLayoutManager
+//                (this,LinearLayoutManager.VERTICAL,false));
+//
+//        mainAdapter = new MainAdapter();
+////        mainAdapter.setItemList(createItem());
+//        recyclerView.setAdapter(mainAdapter);
+
 
         vPromotion = (ViewPager) findViewById(R.id.promotion_slide);
         aPromotion = new PromotionAdapter(this);
@@ -45,6 +60,15 @@ public class HomeActivity extends AppCompatActivity {
         timer.scheduleAtFixedRate(new SetAutoSlider(),2000,4000);
 
     }
+
+//    private List<BaseItem> createItem() {
+//
+//        List<BaseItem> itemList = new ArrayList<>();
+//        itemList.add(new CardViewItem()
+//                .setCardViewImage(R.drawable.ramen1)
+//
+//
+//    }
 
     public void addDotsIndicator(int position){
         mDots = new TextView[3];

@@ -9,4 +9,6 @@
     <color name="MainColor">#342f31</color>
     <color name="BackTextColor">#95848a</color>
     <color name="MainBlackground">#a0000000</color>
+    <color name="HeadColor">#d71f1f</color>
+    <color name="YellowColor">#ffcc00</color>
 </resources>

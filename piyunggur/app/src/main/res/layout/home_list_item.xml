@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="310dp"
+    android:layout_height="200dp"
+    xmlns:card_ivew="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="20dp"
+    android:orientation="horizontal"
+    android:background="@color/HeadColor"
+    card_ivew:cardCornerRadius="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/HeadColor"
+        >
+
+        <ImageView
+            android:id="@+id/img_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/ramen1"
+            />
+
+        <TextView
+            android:id="@+id/text_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorWhite"
+            android:layout_marginStart="10dp"
+            tools:text="พิเศษ 2 ถ้วย จากราคา 300฿ เหลือ 290฿"
+            android:fontFamily="@fonts/Kanit-Light"
+            android:textSize="14dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/colorWhite"
+            android:layout_marginStart="10dp"
+            tools:text="290฿"
+            android:fontFamily="@fonts/Kanit-Light"
+            android:textSize="20dp"
+            />
+
+    </LinearLayout>
+
+
+
+</android.support.v7.widget.CardView>
