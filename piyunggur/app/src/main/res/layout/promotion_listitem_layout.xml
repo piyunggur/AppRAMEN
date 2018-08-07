@@ -2,13 +2,14 @@
 <android.support.v7.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="310dp"
-    android:layout_height="200dp"
+    android:layout_width="290dp"
+    android:layout_height="215dp"
     xmlns:card_ivew="http://schemas.android.com/apk/res-auto"
     android:layout_marginStart="20dp"
+    android:layout_marginTop="15dp"
     android:orientation="horizontal"
     android:background="@color/HeadColor"
-    card_ivew:cardCornerRadius="5dp"
+    card_ivew:cardCornerRadius="8dp"
     android:id="@+id/parent_layout"
     >
 
@@ -34,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:textColor="@color/colorWhite"
+            android:textColor="@color/YellowColor"
             android:layout_marginStart="10dp"
             tools:text="พิเศษ 2 ถ้วย จากราคา 300฿ เหลือ 290฿"
             android:textSize="14dp"
@@ -44,12 +45,11 @@
             android:id="@+id/text_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
             android:layout_marginStart="10dp"
             tools:text="290฿"
             android:fontFamily="@fonts/Kanit-Light"
             android:textSize="20dp"
-            android:textColor="@color/YellowColor"
+            android:textColor="@color/colorWhite"
             />
 
     </LinearLayout>

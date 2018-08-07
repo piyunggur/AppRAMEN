@@ -7,11 +7,11 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -28,6 +28,15 @@ public class HomeActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     private ArrayList<String> mNames = new ArrayList<>();
     private ArrayList<Integer> mImageResources = new ArrayList<>();
+    private ArrayList<String> mPrice = new ArrayList<>();
+
+    //set button main manu
+    private Button main_manu1;
+    private Button main_manu2;
+    private Button main_manu3;
+
+    //set text main manu
+    private TextView main_manu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +51,7 @@ public class HomeActivity extends AppCompatActivity {
         addDotsIndicator(0);
         vSlideViewPager.addOnPageChangeListener(viewListener);
 
+        //set time auto slider news
         Timer timer = new Timer();
         timer.scheduleAtFixedRate(new SetAutoSlider(),2000,4000);
 
@@ -49,6 +59,19 @@ public class HomeActivity extends AppCompatActivity {
         Log.d(TAG, "onCreate: started.");
         initImageBitmaps();
 
+        //set button main manu
+        main_manu1 = (Button) findViewById(R.id.home_main_manu1);
+        main_manu2 = (Button) findViewById(R.id.home_main_manu2);
+        main_manu3 = (Button) findViewById(R.id.home_main_manu3);
+        //text
+        main_manu = (TextView) findViewById(R.id.text_sale);
+
+        //set font on main manu
+        main_manu1.setTypeface(CustomFont.getInstance().getFontHead(this));
+        main_manu2.setTypeface(CustomFont.getInstance().getFontHead(this));
+        main_manu3.setTypeface(CustomFont.getInstance().getFontHead(this));
+        //text
+        main_manu.setTypeface(CustomFont.getInstance().getFontHead(this));
 
     }
 
@@ -122,16 +145,20 @@ public class HomeActivity extends AppCompatActivity {
         Log.d(TAG, "initImageBitmaps: preparing bitmaps.");
 
         mImageResources.add(R.drawable.ramen1);
-        mNames.add("1");
+        mNames.add("พิเศษสั่ง 2 ถ้วยจากราคา 200฿ เหลือ 190฿");
+        mPrice.add("190฿");
 
         mImageResources.add(R.drawable.ramen2);
-        mNames.add("2");
+        mNames.add("พิเศษสั่ง 3 ถ้วยจากราคา 400฿ เหลือ 290฿");
+        mPrice.add("290฿");
 
         mImageResources.add(R.drawable.ramen3);
-        mNames.add("3");
+        mNames.add("พิเศษสั่ง 4 ถ้วยจากราคา 500฿ เหลือ 380฿");
+        mPrice.add("380฿");
 
         mImageResources.add(R.drawable.ramen4);
-        mNames.add("4");
+        mNames.add("พิเศษสั่ง 5 ถ้วยจากราคา 600฿ เหลือ 480฿");
+        mPrice.add("148฿");
 
         initRecyclerView();
 
@@ -141,7 +168,7 @@ public class HomeActivity extends AppCompatActivity {
     private void initRecyclerView(){
         Log.d(TAG, "initRecyclerView: init recyclerivew.");
         RecyclerView recyclerView = findViewById(R.id.test_recyclerview);
-        TestRecyclerViewAdapter adapter = new TestRecyclerViewAdapter(this,mNames,mImageResources);
+        PromotionRecyclerViewAdapter adapter = new PromotionRecyclerViewAdapter(this,mNames,mImageResources,mPrice);
         recyclerView.setAdapter(adapter);
         LinearLayoutManager layoutManager
                 = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
