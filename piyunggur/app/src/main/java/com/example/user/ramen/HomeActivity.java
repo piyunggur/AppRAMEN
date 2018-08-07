@@ -38,6 +38,10 @@ public class HomeActivity extends AppCompatActivity {
     //set text main manu
     private TextView main_manu;
 
+    //manu slider
+    private static final String tag = "Manu";
+    private ArrayList<String> mNameManu = new ArrayList<>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +62,10 @@ public class HomeActivity extends AppCompatActivity {
         //promotion slider
         Log.d(TAG, "onCreate: started.");
         initImageBitmaps();
+
+        //manu slider
+        Log.d(tag,"onCreate: started.");
+        AdddataManu();
 
         //set button main manu
         main_manu1 = (Button) findViewById(R.id.home_main_manu1);
@@ -167,8 +175,36 @@ public class HomeActivity extends AppCompatActivity {
     //set promotion on layout
     private void initRecyclerView(){
         Log.d(TAG, "initRecyclerView: init recyclerivew.");
-        RecyclerView recyclerView = findViewById(R.id.test_recyclerview);
+        RecyclerView recyclerView = findViewById(R.id.promotion_recyclerview);
         PromotionRecyclerViewAdapter adapter = new PromotionRecyclerViewAdapter(this,mNames,mImageResources,mPrice);
+        recyclerView.setAdapter(adapter);
+        LinearLayoutManager layoutManager
+                = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerView.setLayoutManager(layoutManager);
+    }
+
+    //add data in manu
+    private  void AdddataManu(){
+        Log.d(tag, "initImageBitmaps: preparing bitmaps.");
+
+        mNameManu.add("โชยุราเมง");
+
+        mNameManu.add("มิโสะราเมง");
+
+        mNameManu.add("ชิโอะราเมง");
+
+        mNameManu.add("ทงคตสึราเมง");
+
+        mNameManu.add("สึเคเมง");
+
+        setRecyclerViewOnManu();
+    }
+
+    //set manu on layout
+    private void setRecyclerViewOnManu(){
+        Log.d(tag, "initRecyclerView: init recyclerivew.");
+        RecyclerView recyclerView = findViewById(R.id.manu_recyclerview);
+        ManuRecyclerViewAdapter adapter = new ManuRecyclerViewAdapter(this,mNameManu);
         recyclerView.setAdapter(adapter);
         LinearLayoutManager layoutManager
                 = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);

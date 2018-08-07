@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="125dp"
+    android:layout_height="125dp"
+    xmlns:card_ivew="http://schemas.android.com/apk/res-auto"
+    android:layout_marginEnd="50dp"
+    android:layout_marginTop="30dp"
+    android:orientation="horizontal"
+    card_ivew:cardCornerRadius="10dp"
+    android:id="@+id/manu_layout"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/Manucolor"
+        >
+
+        <TextView
+            android:id="@+id/name_manu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_gravity="center_horizontal"
+            tools:text="โชยุราเมง"
+            android:textSize="20dp"
+            android:textColor="@color/colorWhite"
+            />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

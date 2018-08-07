@@ -8,17 +8,18 @@
     android:layout_marginStart="20dp"
     android:layout_marginTop="15dp"
     android:orientation="horizontal"
-    android:background="@color/HeadColor"
     card_ivew:cardCornerRadius="8dp"
     android:id="@+id/parent_layout"
+    android:background="@color/BackColor"
     >
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@color/HeadColor"
+        android:background="@color/BackColor"
         >
+
 
         <ImageView
             android:id="@+id/img_card"
@@ -28,12 +29,21 @@
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
             tools:src="@drawable/ramen1"
+            android:background="@color/BackColor"
+            />
+
+        <ImageView
+            android:layout_below="@id/img_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/HeadColor"
             />
 
         <TextView
             android:id="@+id/text_card"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/img_card"
             android:layout_marginTop="10dp"
             android:textColor="@color/YellowColor"
             android:layout_marginStart="10dp"
@@ -46,12 +56,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
+            android:layout_below="@id/text_card"
             tools:text="290฿"
-            android:fontFamily="@fonts/Kanit-Light"
             android:textSize="20dp"
             android:textColor="@color/colorWhite"
             />
 
-    </LinearLayout>
+
+
+    </RelativeLayout>
 
 </android.support.v7.widget.CardView>

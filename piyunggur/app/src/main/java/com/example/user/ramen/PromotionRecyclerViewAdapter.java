@@ -44,7 +44,9 @@ public class PromotionRecyclerViewAdapter extends RecyclerView.Adapter<Promotion
 
         holder.img.setImageResource(arr_Img.get(position));
         holder.data_text.setText(arr_datatext.get(position));
+        holder.data_text.setTypeface(CustomFont.getInstance().getFontData(mContext));
         holder.data_price.setText(arr_price.get(position));
+        holder.data_price.setTypeface(CustomFont.getInstance().getFontData(mContext));
 
         holder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
