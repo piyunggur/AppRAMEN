@@ -39,15 +39,13 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(LoginActivity.this,HomeActivity.class));
-
             }
         });
 
         bRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
-                startActivity(new Intent(LoginActivity.this,TestRecyclerView.class));
+                startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
             }
         });
 

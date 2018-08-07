@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
+import android.util.Log;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -16,24 +17,24 @@ import java.util.TimerTask;
 
 public class HomeActivity extends AppCompatActivity {
 
+    //news slider
     private ViewPager vSlideViewPager;
     private HomeSlideAdapter aSliderAdapter;
     private LinearLayout lDotLayout;
     private TextView[] mDots;
     private int nCurrentPage;
-    private int coutpage;
 
-    private ViewPager vPromotion;
-    private PromotionAdapter aPromotion;
-
-//    private RecyclerView recyclerView;
-//    private MainAdapter mainAdapter;
+    //promotion slider
+    private static final String TAG = "MainActivity";
+    private ArrayList<String> mNames = new ArrayList<>();
+    private ArrayList<Integer> mImageResources = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_layout);
 
+        //new slider
         vSlideViewPager = (ViewPager) findViewById(R.id.home_slide_vp_news);
         lDotLayout = (LinearLayout) findViewById(R.id.home_slide_dots);
         aSliderAdapter = new HomeSlideAdapter(this);
@@ -41,35 +42,17 @@ public class HomeActivity extends AppCompatActivity {
         addDotsIndicator(0);
         vSlideViewPager.addOnPageChangeListener(viewListener);
 
-//        recyclerView = (RecyclerView) findViewById(R.id.recycleview);
-//        recyclerView.setLayoutManager(new LinearLayoutManager
-//                (this,LinearLayoutManager.VERTICAL,false));
-//
-//        mainAdapter = new MainAdapter();
-////        mainAdapter.setItemList(createItem());
-//        recyclerView.setAdapter(mainAdapter);
-
-
-        vPromotion = (ViewPager) findViewById(R.id.promotion_slide);
-        aPromotion = new PromotionAdapter(this);
-        vPromotion.setAdapter(aPromotion);
-
-
-
         Timer timer = new Timer();
         timer.scheduleAtFixedRate(new SetAutoSlider(),2000,4000);
 
+        //promotion slider
+        Log.d(TAG, "onCreate: started.");
+        initImageBitmaps();
+
+
     }
 
-//    private List<BaseItem> createItem() {
-//
-//        List<BaseItem> itemList = new ArrayList<>();
-//        itemList.add(new CardViewItem()
-//                .setCardViewImage(R.drawable.ramen1)
-//
-//
-//    }
-
+    //create dot in news slider
     public void addDotsIndicator(int position){
         mDots = new TextView[3];
 
@@ -83,20 +66,17 @@ public class HomeActivity extends AppCompatActivity {
             lDotLayout.addView(mDots[i]);
 
         }
-
         if(mDots.length > 0){
 
             mDots[position].setTextColor((getResources().getColor(R.color.colorWhite)));
 
         }
-
     }
 
+    //chang news slider
     ViewPager.OnPageChangeListener viewListener = new ViewPager.OnPageChangeListener() {
         @Override
-        public void onPageScrolled(int coutpage, float v, int i1) {
-
-        }
+        public void onPageScrolled(int coutpage, float v, int i1) { }
 
         @Override
         public void onPageSelected(int page) {
@@ -110,14 +90,13 @@ public class HomeActivity extends AppCompatActivity {
 
             }
             nCurrentPage = page;
-
         }
 
         @Override
-        public void onPageScrollStateChanged(int i) {
-
-        }
+        public void onPageScrollStateChanged(int i) { }
     };
+
+    //auto news slider
     public class SetAutoSlider extends TimerTask{
 
         @Override
@@ -136,6 +115,37 @@ public class HomeActivity extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    //add data in promotion
+    private  void initImageBitmaps(){
+        Log.d(TAG, "initImageBitmaps: preparing bitmaps.");
+
+        mImageResources.add(R.drawable.ramen1);
+        mNames.add("1");
+
+        mImageResources.add(R.drawable.ramen2);
+        mNames.add("2");
+
+        mImageResources.add(R.drawable.ramen3);
+        mNames.add("3");
+
+        mImageResources.add(R.drawable.ramen4);
+        mNames.add("4");
+
+        initRecyclerView();
+
+    }
+
+    //set promotion on layout
+    private void initRecyclerView(){
+        Log.d(TAG, "initRecyclerView: init recyclerivew.");
+        RecyclerView recyclerView = findViewById(R.id.test_recyclerview);
+        TestRecyclerViewAdapter adapter = new TestRecyclerViewAdapter(this,mNames,mImageResources);
+        recyclerView.setAdapter(adapter);
+        LinearLayoutManager layoutManager
+                = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerView.setLayoutManager(layoutManager);
     }
 
 }
