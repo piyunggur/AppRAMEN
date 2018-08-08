@@ -206,8 +206,7 @@ public class HomeActivity extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.manu_recyclerview);
         ManuRecyclerViewAdapter adapter = new ManuRecyclerViewAdapter(this,mNameManu);
         recyclerView.setAdapter(adapter);
-        LinearLayoutManager layoutManager
-                = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(layoutManager);
     }
 
