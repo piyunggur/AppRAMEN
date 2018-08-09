@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/testgrid3_listitem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/BackColor"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+
+    android:paddingTop="10dp"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardUseCompatPadding="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/testgrid3_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:adjustViewBounds="true"
+            android:background="@color/colorWhite"
+            android:scaleType="fitCenter"
+            tools:src="@drawable/ramens1"
+            />
+
+        <TextView
+            android:id="@+id/testgrid3_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/testgrid3_image"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/MainColor"
+            android:textSize="18dp"
+            tools:text="ซับโปโร ราเมง"
+            />
+
+        <TextView
+            android:id="@+id/testgrid3_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/testgrid3_text"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/Green"
+            android:textSize="18dp"
+            tools:text="115฿"
+            />
+
+        <ImageView
+            android:id="@+id/testgrid3_bgkcal"
+            android:layout_width="110dp"
+            android:layout_height="35dp"
+            android:paddingBottom="50dp"
+            android:background="@color/colorKcal"
+            />
+
+        <TextView
+            android:id="@+id/testgrid3_kcal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp"
+            android:text="436.2 kcal"
+            android:textSize="18sp"
+            android:textColor="@color/colorWhite"
+            />
+
+        <ImageView
+            android:id="@+id/testgrid3_bgsale"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_alignEnd="@id/testgrid3_image"
+            android:layout_alignBottom="@id/testgrid3_image"
+            android:background="@color/colorSale"
+            />
+
+        <TextView
+            android:id="@+id/testgrid3_sale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/testgrid3_image"
+            android:layout_alignBottom="@id/testgrid3_image"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="5dp"
+            android:text="10%"
+            android:textColor="@color/colorWhite"
+            />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="210dp"
+    android:layout_height="170dp"
+    xmlns:card_ivew="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="10dp"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal"
+    card_ivew:cardCornerRadius="8dp"
+    android:id="@+id/testgrid3_listitem"
+    android:background="@color/BackColor"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/BackColor"
+        >
+
+
+        <ImageView
+            android:id="@+id/testgrid3_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/ramen1"
+            android:background="@color/BackColor"
+            />
+
+        <ImageView
+            android:layout_below="@id/testgrid3_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            />
+
+        <TextView
+            android:id="@+id/testgrid3_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/testgrid3_image"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/MainColor"
+            android:layout_marginStart="10dp"
+            tools:text="ซับโปโร ราเมง"
+            android:textSize="14dp"
+            />
+
+        <TextView
+            android:id="@+id/testgrid3_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_below="@id/testgrid3_text"
+            tools:text="115฿"
+            android:textSize="18dp"
+            android:textColor="@color/Green"
+            />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

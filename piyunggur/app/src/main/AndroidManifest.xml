@@ -23,7 +23,9 @@
         <activity android:name=".HomeActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".TestGridActivity" />
-        <activity android:name=".TestGrid2Activity"></activity>
+        <activity android:name=".TestGrid2Activity" />
+        <activity android:name=".TestGrid3Activity" />
+        <activity android:name=".TestGrid4Activity"></activity>
     </application>
 
 </manifest>

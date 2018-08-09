@@ -12,5 +12,8 @@
     <color name="HeadColor">#ebd71f1f</color>
     <color name="YellowColor">#ffcc00</color>
     <color name="BackColor">#a0000000</color>
-    <color name="Manucolor">#F26623</color>
+    <color name="Manucolor">#e4ff0000</color>
+    <color name="Green">#53BD60</color>
+    <color name="colorKcal">#be53bd60</color>
+    <color name="colorSale">#beff0000</color>
 </resources>
