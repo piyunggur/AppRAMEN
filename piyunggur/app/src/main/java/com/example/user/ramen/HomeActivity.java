@@ -39,6 +39,7 @@ public class HomeActivity extends AppCompatActivity {
     //set text main manu
     private TextView main_manu;
 
+    //set allmanu slide
     private ArrayList<Integer> arraylistImage_testgrid3 = new ArrayList<>();
     private ArrayList<String> arraylistName_testgrid3 = new ArrayList<>();
     private ArrayList<Integer> arraylistPrice_testgrid3 = new ArrayList<>();

@@ -1,6 +1,7 @@
 package com.example.user.ramen;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -42,7 +43,7 @@ public class ManuRecyclerViewAdapter extends RecyclerView.Adapter<ManuRecyclerVi
             @Override
             public void onClick(View view) {
                 Log.d(TAG, "onClick: clicked on : " + arr_manu.get(position));
-
+                mContext.startActivities(new Intent[]{new Intent(mContext, Manu1Activity.class)});
                 Toast.makeText(mContext, arr_manu.get(position), Toast.LENGTH_SHORT).show();
             }
         });

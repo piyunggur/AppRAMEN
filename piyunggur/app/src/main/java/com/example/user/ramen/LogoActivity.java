@@ -21,6 +21,7 @@ public class LogoActivity extends AppCompatActivity {
 
             public void onFinish() {
                 startActivity(new Intent(LogoActivity.this,LearnActivity.class));
+                //startActivity(new Intent(LogoActivity.this,TestBottomNavigationActivity.class));
                 finish();
             }
         }.start();
