@@ -12,23 +12,16 @@ import android.widget.TextView;
 
 public class LearnActivity extends AppCompatActivity {
 
-    private ViewPager mSlideViewPager;
-    private LinearLayout mDotLayout;
-
-    private TextView[] mDots;
-
+    private ViewPager viewpagerSlide;
+    private LinearLayout layoutDot;
+    private TextView[] arr_dot;
     private LearnAdapter sliderAdapter;
-
-    private Button mNextBt;
-    private Button mBackBt;
-
-    private TextView sTextHead;
-    private TextView sTextDesc;
-
-
+    private Button buttonNext;
+    private Button buttonBack;
+    private TextView textHead;
+    private TextView texttData;
 
     private int mCurrentPage;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,29 +29,24 @@ public class LearnActivity extends AppCompatActivity {
 
       setContentView(R.layout.learn_layout);
 
-        mSlideViewPager = (ViewPager) findViewById(R.id.slideViewPager);
-        mDotLayout = (LinearLayout) findViewById(R.id.dotsLayout);
+        viewpagerSlide = (ViewPager) findViewById(R.id.learnslider_view);
+        layoutDot = (LinearLayout) findViewById(R.id.learn_dots);
 
-        mNextBt = (Button) findViewById(R.id.bt_next);
-        mBackBt = (Button) findViewById(R.id.bt_back);
-        sTextHead = (TextView) findViewById(R.id.slide_heading);
-        sTextDesc = (TextView) findViewById(R.id.slide_desc);
+        buttonNext = (Button) findViewById(R.id.learn_next);
+        buttonBack = (Button) findViewById(R.id.learn_back);
+        textHead = (TextView) findViewById(R.id.learn_head);
+        texttData = (TextView) findViewById(R.id.learn_data);
 
-        mNextBt.setTypeface(CustomFont.getInstance().getFontData(this));
-        mBackBt.setTypeface(CustomFont.getInstance().getFontData(this));
-
+        buttonNext.setTypeface(CustomFont.getInstance().getFontData(this));
+        buttonBack.setTypeface(CustomFont.getInstance().getFontData(this));
 
         sliderAdapter = new LearnAdapter(this);
-
-        mSlideViewPager.setAdapter(sliderAdapter);
-
+        viewpagerSlide.setAdapter(sliderAdapter);
         addDotsIndicator(0);
-
-        mSlideViewPager.addOnPageChangeListener(viewListener);
+        viewpagerSlide.addOnPageChangeListener(viewListener);
 
         //OnclickListeners
-
-        mNextBt.setOnClickListener(new View.OnClickListener() {
+        buttonNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -68,37 +56,30 @@ public class LearnActivity extends AppCompatActivity {
                     startActivity(new Intent(LearnActivity.this,LoginActivity.class));
                     finish();
                 }
-                mSlideViewPager.setCurrentItem(mCurrentPage + 1);
-
+                viewpagerSlide.setCurrentItem(mCurrentPage + 1);
             }
         });
-
-        mBackBt.setOnClickListener(new View.OnClickListener() {
+        buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mSlideViewPager.setCurrentItem(mCurrentPage - 1);
+                viewpagerSlide.setCurrentItem(mCurrentPage - 1);
             }
         });
     }
 
     public void  addDotsIndicator(int position){
-        mDots = new TextView[3];
+        arr_dot = new TextView[3];
 
-        for (int i = 0; i < mDots.length; i++) {
-
-            mDots[i] = new TextView(this);
-            mDots[i].setText(Html.fromHtml("&#8226;"));
-            mDots[i].setTextSize(45);
-            mDots[i].setTextColor(getResources().getColor((R.color.BackTextColor)));
-
-            mDotLayout.addView(mDots[i]);
-
+        for (int i = 0; i < arr_dot.length; i++) {
+            arr_dot[i] = new TextView(this);
+            arr_dot[i].setText(Html.fromHtml("&#8226;"));
+            arr_dot[i].setTextSize(45);
+            arr_dot[i].setTextColor(getResources().getColor((R.color.colorBackText)));
+            layoutDot.addView(arr_dot[i]);
         }
 
-        if(mDots.length > 0){
-
-            mDots[position].setTextColor(getResources().getColor(R.color.colorWhite));
-
+        if(arr_dot.length > 0){
+            arr_dot[position].setTextColor(getResources().getColor(R.color.colorWhite));
         }
     }
 
@@ -111,39 +92,35 @@ public class LearnActivity extends AppCompatActivity {
         @Override
         public void onPageSelected(int page) {
 //            addDotsIndicator(i);
-            for(int i = 0; i < mDots.length ; i++) {
-
+            for(int i = 0; i < arr_dot.length ; i++) {
                 if (i==page)
-                    mDots[i].setTextColor(getResources().getColor(R.color.colorWhite));
+                    arr_dot[i].setTextColor(getResources().getColor(R.color.colorWhite));
                 else
-                    mDots[i].setTextColor(getResources().getColor(R.color.BackTextColor));
+                    arr_dot[i].setTextColor(getResources().getColor(R.color.colorBackText));
             }
 
             mCurrentPage = page;
 
             if(page == 0){
-                mBackBt.setEnabled(false);
-                mNextBt.setEnabled(true);
-                mBackBt.setVisibility(View.INVISIBLE);
+                buttonBack.setEnabled(false);
+                buttonNext.setEnabled(true);
+                buttonBack.setVisibility(View.INVISIBLE);
+                buttonNext.setText("ต่อไป");
 
-                mBackBt.setText("");
-                mNextBt.setText("ต่อไป");
-            }else if (page == mDots.length-1) {
-                mBackBt.setEnabled(true);
-                mNextBt.setEnabled(true);
-                mBackBt.setVisibility(View.VISIBLE);
+            }else if (page == arr_dot.length-1) {
+                buttonBack.setEnabled(true);
+                buttonNext.setEnabled(true);
+                buttonBack.setVisibility(View.VISIBLE);
+                buttonBack.setText("ย้อนกลับ");
+                buttonNext.setText("ดำเนินการต่อ");
 
-                mBackBt.setText("ย้อนกลับ");
-                mNextBt.setText("ดำเนินการต่อ");
             }else {
-                mBackBt.setEnabled(true);
-                mBackBt.setVisibility(View.VISIBLE);
-                mNextBt.setEnabled(true);
-
-                mBackBt.setText("ย้อนกลับ");
-                mNextBt.setText("ต่อไป");
+                buttonBack.setEnabled(true);
+                buttonBack.setVisibility(View.VISIBLE);
+                buttonNext.setEnabled(true);
+                buttonBack.setText("ย้อนกลับ");
+                buttonNext.setText("ต่อไป");
             }
-
         }
 
         @Override

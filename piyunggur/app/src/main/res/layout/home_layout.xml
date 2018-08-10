@@ -64,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="เมนูประหยัด"
-                android:textColor="@color/YellowColor"
+                android:textColor="@color/colorYellow"
                 android:textSize="20sp"
                 android:gravity="start"
                 android:paddingStart="7dp"
@@ -78,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="เมนูสุขภาพ"
-                android:textColor="@color/YellowColor"
+                android:textColor="@color/colorYellow"
                 android:textSize="20sp"
                 android:gravity="start"
                 android:paddingStart="7dp"
@@ -92,7 +92,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="สั่งแยก"
-                android:textColor="@color/YellowColor"
+                android:textColor="@color/colorYellow"
                 android:textSize="20sp"
                 android:gravity="start"
                 android:paddingStart="7dp"
@@ -104,7 +104,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="310dp"
                 android:layout_marginTop="20dp"
-                android:background="@color/BackColor"
+                android:background="@color/colorBack"
                 >
 
                 <ImageView
@@ -156,6 +156,24 @@
                 </android.support.v7.widget.RecyclerView>
 
             </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:background="#c8000000"
+                >
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/testgrid3_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
 
         </LinearLayout>
 

@@ -26,13 +26,13 @@ public class LearnAdapter extends PagerAdapter{
             R.drawable.sale
     };
 
-    public String[] slide_headings = {
+    public String[] slide_head = {
             "ราเมง",
             "การส่งสินค้า",
             "ลดราคา"
     };
 
-    public String[] slide_desc = {
+    public String[] slide_data = {
             "รวมราเมงทั่วญี่ปุ่นรสชาติอร่อย\nไวในแอพนี้",
             "ไม่ว่าอยู่ที่ไหนก็สั่งได้",
             "ทุกครั้งที่มีการสั่งซื้อจะได้รับ point ที่สามารถนำมาแลก\nคูปองส่วนลดได้"
@@ -40,7 +40,7 @@ public class LearnAdapter extends PagerAdapter{
 
     @Override
     public int getCount() {
-        return slide_headings.length;
+        return slide_head.length;
     }
 
     @Override
@@ -51,21 +51,17 @@ public class LearnAdapter extends PagerAdapter{
     @Override
     public Object instantiateItem(ViewGroup container, int position){
         layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        View view = layoutInflater.inflate(R.layout.slide_layout,container,false);
+        View view = layoutInflater.inflate(R.layout.learn_slider,container,false);
 
-        ImageView slideImageView = (ImageView) view.findViewById(R.id.slide_image);
-        TextView slideHeading = (TextView) view.findViewById(R.id.slide_heading);
-        TextView slideDescription = (TextView) view.findViewById(R.id.slide_desc);
-
-        slideHeading.setTypeface(CustomFont.getInstance().getFontHead(context));
-        slideDescription.setTypeface(CustomFont.getInstance().getFontData(context));
-
-        slideImageView.setImageResource(slide_images[position]);
-        slideHeading.setText(slide_headings[position]);
-        slideDescription.setText(slide_desc[position]);
-
+        ImageView slideImage = (ImageView) view.findViewById(R.id.learn_image);
+        TextView slideHead = (TextView) view.findViewById(R.id.learn_head);
+        TextView slideData = (TextView) view.findViewById(R.id.learn_data);
+        slideHead.setTypeface(CustomFont.getInstance().getFontHead(context));
+        slideData.setTypeface(CustomFont.getInstance().getFontData(context));
+        slideImage.setImageResource(slide_images[position]);
+        slideHead.setText(slide_head[position]);
+        slideData.setText(slide_data[position]);
         container.addView(view);
-
         return view;
     }
 

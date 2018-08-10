@@ -10,14 +10,14 @@
     android:orientation="horizontal"
     card_ivew:cardCornerRadius="8dp"
     android:id="@+id/parent_layout"
-    android:background="@color/BackColor"
+    android:background="@color/colorBack"
     >
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@color/BackColor"
+        android:background="@color/colorBack"
         >
 
 
@@ -29,14 +29,14 @@
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
             tools:src="@drawable/ramen1"
-            android:background="@color/BackColor"
+            android:background="@color/colorBack"
             />
 
         <ImageView
             android:layout_below="@id/img_card"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/HeadColor"
+            android:background="@color/colorHead"
             />
 
         <TextView
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/img_card"
             android:layout_marginTop="10dp"
-            android:textColor="@color/YellowColor"
+            android:textColor="@color/colorYellow"
             android:layout_marginStart="10dp"
             tools:text="พิเศษ 2 ถ้วย จากราคา 300฿ เหลือ 290฿"
             android:textSize="14dp"

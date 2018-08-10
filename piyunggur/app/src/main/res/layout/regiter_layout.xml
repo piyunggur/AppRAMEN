@@ -93,8 +93,8 @@
         android:gravity="center"
         android:background="@drawable/s_bg_button_register"
         android:text="ดำเนินการต่อ"
-        android:textColorHint="@color/MainColor"
-        android:textColor="@color/MainColor"
+        android:textColorHint="@color/colorMain"
+        android:textColor="@color/colorMain"
         android:textSize="18dp"
         />
 

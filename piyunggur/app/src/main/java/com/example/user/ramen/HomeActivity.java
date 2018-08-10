@@ -3,6 +3,7 @@ package com.example.user.ramen;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
@@ -37,6 +38,15 @@ public class HomeActivity extends AppCompatActivity {
 
     //set text main manu
     private TextView main_manu;
+
+    private ArrayList<Integer> arraylistImage_testgrid3 = new ArrayList<>();
+    private ArrayList<String> arraylistName_testgrid3 = new ArrayList<>();
+    private ArrayList<Integer> arraylistPrice_testgrid3 = new ArrayList<>();
+
+    private ArrayList<Integer> arrayListbgKcal = new ArrayList<>();
+    private ArrayList<Float> arrayListKcal = new ArrayList<>();
+    private ArrayList<Integer> arrayListbgSale = new ArrayList<>();
+    private ArrayList<Integer> arrayListSale = new ArrayList<>();
 
     //manu slider
     private static final String tag = "Manu";
@@ -81,6 +91,8 @@ public class HomeActivity extends AppCompatActivity {
         //text
         main_manu.setTypeface(CustomFont.getInstance().getFontHead(this));
 
+        addTestGrid3();
+
     }
 
     //create dot in news slider
@@ -92,7 +104,7 @@ public class HomeActivity extends AppCompatActivity {
             mDots[i] = new TextView(this);
             mDots[i].setText(Html.fromHtml("&#8226;"));
             mDots[i].setTextSize(35);
-            mDots[i].setTextColor(getResources().getColor(R.color.MainColor));
+            mDots[i].setTextColor(getResources().getColor(R.color.colorMain));
 
             lDotLayout.addView(mDots[i]);
 
@@ -117,7 +129,7 @@ public class HomeActivity extends AppCompatActivity {
                 if (i==page){
                     mDots[i].setTextColor(getResources().getColor(R.color.colorWhite));
                 }else
-                    mDots[i].setTextColor(getResources().getColor(R.color.MainColor));
+                    mDots[i].setTextColor(getResources().getColor(R.color.colorMain));
 
             }
             nCurrentPage = page;
@@ -208,6 +220,33 @@ public class HomeActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(layoutManager);
+    }
+
+    private void addTestGrid3(){
+
+        for (int i = 0; i < 10; i++) {
+
+            arraylistImage_testgrid3.add(R.drawable.ramens1);
+            arraylistName_testgrid3.add("ราเมง"+i);
+            arraylistPrice_testgrid3.add(155);
+            arrayListbgKcal.add(R.color.colorKcal);
+            arrayListKcal.add(436.2f);
+            arrayListbgSale.add(R.color.colorSale);
+            arrayListSale.add(10);
+        }
+
+        setTestGrid3();
+    }
+
+    private void setTestGrid3(){
+
+        RecyclerView gridView = findViewById(R.id.testgrid3_view);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this,2);
+
+        TestGrid3ViewAdapter testGrid3Adapter = new TestGrid3ViewAdapter(this,arraylistImage_testgrid3,arraylistName_testgrid3,
+                arraylistPrice_testgrid3, arrayListbgKcal, arrayListKcal, arrayListbgSale, arrayListSale);
+        gridView.setLayoutManager(gridLayoutManager);
+        gridView.setAdapter(testGrid3Adapter);
     }
 
 }

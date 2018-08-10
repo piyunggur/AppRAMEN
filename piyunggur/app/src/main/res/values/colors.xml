@@ -4,16 +4,16 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#342f31</color>
     <color name="colorWhite">#ffffff</color>
-    <color name="colortransparentWhite">#999999</color>
-    <color name="nullcolor">#00cccccc</color>
-    <color name="MainColor">#342f31</color>
-    <color name="BackTextColor">#95848a</color>
-    <color name="MainBlackground">#a0000000</color>
-    <color name="HeadColor">#ebd71f1f</color>
-    <color name="YellowColor">#ffcc00</color>
-    <color name="BackColor">#a0000000</color>
-    <color name="Manucolor">#e4ff0000</color>
-    <color name="Green">#53BD60</color>
+    <color name="colorTransparentWhite">#999999</color>
+    <color name="colorNull">#00cccccc</color>
+    <color name="colorMain">#342f31</color>
+    <color name="colorBackText">#95848a</color>
+    <color name="colorMainBlackground">#a0000000</color>
+    <color name="colorHead">#ebd71f1f</color>
+    <color name="colorYellow">#ffcc00</color>
+    <color name="colorBack">#a0000000</color>
+    <color name="colorManu">#e4ff0000</color>
+    <color name="colorGreen">#53BD60</color>
     <color name="colorKcal">#be53bd60</color>
-    <color name="colorSale">#beff0000</color>
+    <color name="colorSale">#72ff0000</color>
 </resources>

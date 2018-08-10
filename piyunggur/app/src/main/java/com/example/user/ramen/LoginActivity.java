@@ -22,11 +22,11 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_layout);
 
-        tHead = (TextView) findViewById(R.id.login_text_head);
-        eUser = (EditText) findViewById(R.id.login_add_user);
-        ePassword = (EditText) findViewById(R.id.login_add_password);
-        bSubmit = (Button) findViewById(R.id.login_button_submit);
-        bRegister = (Button) findViewById(R.id.login_button_register);
+        tHead = (TextView) findViewById(R.id.login_head);
+        eUser = (EditText) findViewById(R.id.login_user);
+        ePassword = (EditText) findViewById(R.id.login_password);
+        bSubmit = (Button) findViewById(R.id.login_submit);
+        bRegister = (Button) findViewById(R.id.login_register);
 
         tHead.setTypeface(CustomFont.getInstance().getFontHead(this));
         eUser.setTypeface(CustomFont.getInstance().getFontData(this));
@@ -46,7 +46,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
-                startActivity(new Intent(LoginActivity.this,TestGrid3Activity.class));
+                startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
             }
         });
 
