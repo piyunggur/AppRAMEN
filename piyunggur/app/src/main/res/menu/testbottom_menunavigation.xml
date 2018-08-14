@@ -4,17 +4,20 @@
     >
 
     <item
-        android:icon="@drawable/sale"
+        android:id="@+id/bottomnav_itemhome"
+        android:icon="@drawable/icon_home"
         android:title="หน้าหลัก"
         />
 
     <item
-        android:icon="@drawable/sale"
-        android:title="หน้าหลัก2"
+        android:id="@+id/bottomnav_itemshopping"
+        android:icon="@drawable/icon_shopping"
+        android:title="รถเข็น"
         />
 
     <item
-        android:icon="@drawable/sale"
-        android:title="หน้าหลัก3"
+        android:id="@+id/bottomnav_itemuser"
+        android:icon="@drawable/icon_user"
+        android:title="ผู้ใช้"
         />
 </menu>

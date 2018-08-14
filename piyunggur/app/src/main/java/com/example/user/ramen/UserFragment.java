@@ -7,12 +7,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class TestTabFrag1 extends Fragment {
+public class UserFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
-        return inflater.inflate(R.layout.testtabfrag1, container, false);
+        return inflater.inflate(R.layout.userfragment_layout, container, false);
     }
 
 }
