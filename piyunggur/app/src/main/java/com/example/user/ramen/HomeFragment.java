@@ -24,12 +24,27 @@ public class HomeFragment extends Fragment {
     private LinearLayout lDotLayout;
     private TextView[] mDots;
     private int nCurrentPage;
+    private final int delay = 2000;
+    private final int period = 4000;
 
+    private Context mContext;
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        nCurrentPage = vSlideViewPager.getCurrentItem();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        mContext = getContext();
+        vSlideViewPager.setCurrentItem(nCurrentPage);
+    }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
-
         View v = inflater.inflate(R.layout.homefragment_layout, container, false);
 
         //new slider
@@ -42,7 +57,7 @@ public class HomeFragment extends Fragment {
 
         //set time auto slider news
         Timer timer = new Timer();
-        timer.scheduleAtFixedRate(new SetAutoSlider(getActivity()),2000,4000);
+        timer.scheduleAtFixedRate(new SetAutoSlider(getActivity()),delay,period);
 
         return v;
     }
@@ -79,9 +94,9 @@ public class HomeFragment extends Fragment {
             for (int i = 0; i < mDots.length; i++) {
 
                 if (i==page){
-                    mDots[i].setTextColor(getResources().getColor(R.color.colorWhite));
+                    mDots[i].setTextColor(mContext.getResources().getColor(R.color.colorWhite));
                 }else
-                    mDots[i].setTextColor(getResources().getColor(R.color.colorMain));
+                    mDots[i].setTextColor(mContext.getResources().getColor(R.color.colorMain));
 
             }
             nCurrentPage = page;
@@ -108,15 +123,20 @@ public class HomeFragment extends Fragment {
                 public void run() {
                     if(vSlideViewPager.getCurrentItem() == 0){
                         vSlideViewPager.setCurrentItem(1);
+                        nCurrentPage = vSlideViewPager.getCurrentItem();
                     }else if (vSlideViewPager.getCurrentItem() == 1){
                         vSlideViewPager.setCurrentItem(2);
+                        nCurrentPage = vSlideViewPager.getCurrentItem();
                     } else{
                         vSlideViewPager.setCurrentItem(0);
+                        nCurrentPage = vSlideViewPager.getCurrentItem();
                     }
                 }
             });
         }
     }
+
+
 
 
 
