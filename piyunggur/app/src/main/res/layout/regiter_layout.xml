@@ -11,7 +11,7 @@
         android:id="@+id/register_iv_head"
         android:layout_width="match_parent"
         android:layout_height="75dp"
-        android:background="#d31016"
+        android:background="@color/colorMenu"
         android:layout_alignParentTop="true"
         />
 

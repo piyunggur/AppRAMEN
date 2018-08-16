@@ -19,7 +19,7 @@ class CustomFont {
 
     public Typeface getFontHead(Context context) {
         if(fontHead==null){
-            fontHead = Typeface.createFromAsset(context.getAssets(),"fonts/Kanit-SemiBold.ttf");
+            fontHead = Typeface.createFromAsset(context.getAssets(),"fonts/Kanit-Medium.ttf");
         }
         return fontHead;
     }

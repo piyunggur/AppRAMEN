@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:background="@drawable/background_main"
     >
 
     <RelativeLayout
+        android:id="@+id/homefm_relativelayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorBack"
         >
 
         <ImageView
@@ -45,6 +47,129 @@
                 />
 
         </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/homefm_news"
+            android:orientation="vertical"
+            >
+
+            <Button
+                android:id="@+id/homefm_main_menu1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="เมนูประหยัด"
+                android:textColor="@color/colorYellow"
+                android:textSize="20sp"
+                android:gravity="start"
+                android:paddingStart="7dp"
+                android:paddingTop="5dp"
+                android:background="@drawable/main_manu1"
+                />
+
+            <Button
+                android:id="@+id/homefm_main_menu2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="เมนูสุขภาพ"
+                android:textColor="@color/colorYellow"
+                android:textSize="20sp"
+                android:gravity="start"
+                android:paddingStart="7dp"
+                android:paddingTop="5dp"
+                android:background="@drawable/main_manu2"
+                />
+
+            <Button
+                android:id="@+id/homefm_main_menu3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="สั่งแยก"
+                android:textColor="@color/colorYellow"
+                android:textSize="20sp"
+                android:gravity="start"
+                android:paddingStart="7dp"
+                android:paddingTop="5dp"
+                android:background="@drawable/main_manu3"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="310dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorBack"
+                >
+
+                <ImageView
+                    android:id="@+id/homefm_icon_sale"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/label_sale"
+                    />
+
+                <TextView
+                    android:id="@+id/homefm_text_sale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/icon_sale"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="50dp"
+                    android:text="โปรโมชั่น"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp"
+                    />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/homefm_promotion_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/homefm_icon_sale"
+                    android:orientation="horizontal"
+                    >
+                </android.support.v7.widget.RecyclerView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                >
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/homefm_manu_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    >
+
+                </android.support.v7.widget.RecyclerView>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                >
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/homefm_testgrid3_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+        </LinearLayout>
 
     </RelativeLayout>
 

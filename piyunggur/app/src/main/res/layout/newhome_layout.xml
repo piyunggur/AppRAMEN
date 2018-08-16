@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:design="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_main"
     tools:context=".NewHomeActivity">
 
     <android.support.v4.view.ViewPager
@@ -21,6 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         design:menu="@menu/testbottom_menunavigation"
+        android:background="@color/colorWhite"
         >
 
     </android.support.design.widget.BottomNavigationView>
