@@ -1,4 +1,4 @@
-package com.example.user.ramen;
+package com.example.user.ramen.Custom;
 
 public class Ramen {
     String name;

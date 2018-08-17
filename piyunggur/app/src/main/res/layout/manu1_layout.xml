@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="5dp"
-    tools:context=".Manu1Activity">
+    tools:context=".Activity.Manu1Activity">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/nanu1allmanu_view"

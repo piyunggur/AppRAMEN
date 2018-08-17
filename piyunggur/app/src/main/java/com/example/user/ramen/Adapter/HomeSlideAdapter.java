@@ -1,4 +1,4 @@
-package com.example.user.ramen;
+package com.example.user.ramen.Adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+
+import com.example.user.ramen.R;
 
 public class HomeSlideAdapter extends PagerAdapter{
 

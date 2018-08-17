@@ -1,4 +1,4 @@
-package com.example.user.ramen;
+package com.example.user.ramen.Fragment;
 
 import android.app.Activity;
 import android.content.Context;
@@ -17,6 +17,13 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.example.user.ramen.Custom.CustomFont;
+import com.example.user.ramen.Adapter.HomeSlideAdapter;
+import com.example.user.ramen.Adapter.ManuRecyclerViewAdapter;
+import com.example.user.ramen.Adapter.PromotionRecyclerViewAdapter;
+import com.example.user.ramen.R;
+import com.example.user.ramen.Adapter.TestGrid3ViewAdapter;
 
 import java.util.ArrayList;
 import java.util.Timer;

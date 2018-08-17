@@ -1,4 +1,4 @@
-package com.example.user.ramen;
+package com.example.user.ramen.Activity;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -10,6 +10,9 @@ import android.os.Bundle;
 import android.util.AttributeSet;
 import android.view.MenuItem;
 import android.view.MotionEvent;
+
+import com.example.user.ramen.Adapter.NewHomeSlideAdapter;
+import com.example.user.ramen.R;
 
 public class NewHomeActivity extends AppCompatActivity {
 

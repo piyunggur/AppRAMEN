@@ -1,4 +1,4 @@
-package com.example.user.ramen;
+package com.example.user.ramen.Activity;
 
 import android.content.Intent;
 import android.support.v4.view.ViewPager;
@@ -9,6 +9,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.example.user.ramen.Custom.CustomFont;
+import com.example.user.ramen.Adapter.LearnAdapter;
+import com.example.user.ramen.R;
 
 public class LearnActivity extends AppCompatActivity {
 

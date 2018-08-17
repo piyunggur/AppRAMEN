@@ -1,4 +1,4 @@
-package com.example.user.ramen;
+package com.example.user.ramen.Adapter;
 
 import android.content.Context;
 import android.support.v7.widget.CardView;
@@ -10,6 +10,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.user.ramen.Custom.CustomFont;
+import com.example.user.ramen.R;
 
 import java.util.ArrayList;
 

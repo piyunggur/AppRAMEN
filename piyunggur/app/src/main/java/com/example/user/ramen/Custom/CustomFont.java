@@ -1,12 +1,12 @@
-package com.example.user.ramen;
+package com.example.user.ramen.Custom;
 
 import android.content.Context;
 import android.graphics.Typeface;
 
-class CustomFont {
+public class CustomFont {
     private static final CustomFont ourInstance = new CustomFont();
 
-    static CustomFont getInstance() {
+    public static CustomFont getInstance() {
         return ourInstance;
     }
 

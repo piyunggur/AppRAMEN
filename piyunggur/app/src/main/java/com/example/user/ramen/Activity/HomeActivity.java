@@ -1,4 +1,4 @@
-package com.example.user.ramen;
+package com.example.user.ramen.Activity;
 
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +11,13 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.example.user.ramen.Custom.CustomFont;
+import com.example.user.ramen.Adapter.HomeSlideAdapter;
+import com.example.user.ramen.Adapter.ManuRecyclerViewAdapter;
+import com.example.user.ramen.Adapter.PromotionRecyclerViewAdapter;
+import com.example.user.ramen.R;
+import com.example.user.ramen.Adapter.TestGrid3ViewAdapter;
 
 import java.util.ArrayList;
 import java.util.Timer;

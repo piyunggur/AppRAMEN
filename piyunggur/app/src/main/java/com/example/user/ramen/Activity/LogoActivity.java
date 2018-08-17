@@ -1,10 +1,11 @@
-package com.example.user.ramen;
+package com.example.user.ramen.Activity;
 
 import android.content.Intent;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Button;
+
+import com.example.user.ramen.R;
 
 public class LogoActivity extends AppCompatActivity {
 

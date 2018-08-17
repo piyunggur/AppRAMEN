@@ -1,12 +1,13 @@
-package com.example.user.ramen;
+package com.example.user.ramen.Adapter;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.util.AttributeSet;
-import android.view.MotionEvent;
+
+import com.example.user.ramen.Fragment.HomeFragment;
+import com.example.user.ramen.Fragment.ShoppingFragment;
+import com.example.user.ramen.Fragment.UserFragment;
 
 public class NewHomeSlideAdapter extends FragmentPagerAdapter{
 

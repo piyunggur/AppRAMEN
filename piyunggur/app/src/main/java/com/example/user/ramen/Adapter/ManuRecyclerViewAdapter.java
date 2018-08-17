@@ -1,4 +1,4 @@
-package com.example.user.ramen;
+package com.example.user.ramen.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,9 +8,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.user.ramen.Activity.Manu1Activity;
+import com.example.user.ramen.Custom.CustomFont;
+import com.example.user.ramen.R;
 
 import java.util.ArrayList;
 

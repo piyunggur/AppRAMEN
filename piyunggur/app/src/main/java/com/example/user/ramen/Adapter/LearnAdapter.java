@@ -1,4 +1,4 @@
-package com.example.user.ramen;
+package com.example.user.ramen.Adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -9,6 +9,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.example.user.ramen.Custom.CustomFont;
+import com.example.user.ramen.R;
 
 public class LearnAdapter extends PagerAdapter{
 

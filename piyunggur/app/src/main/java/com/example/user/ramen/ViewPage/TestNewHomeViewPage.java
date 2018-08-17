@@ -1,4 +1,4 @@
-package com.example.user.ramen;
+package com.example.user.ramen.ViewPage;
 
 import android.app.FragmentManager;
 import android.content.Context;

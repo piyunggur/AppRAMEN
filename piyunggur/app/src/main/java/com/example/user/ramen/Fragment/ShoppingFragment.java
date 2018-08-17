@@ -1,4 +1,4 @@
-package com.example.user.ramen;
+package com.example.user.ramen.Fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,12 +7,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class UserFragment extends Fragment {
+import com.example.user.ramen.R;
+
+public class ShoppingFragment extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
-        View view = inflater.inflate(R.layout.userfragment_layout, container, false);
+        View view = inflater.inflate(R.layout.shoppingfragment_layout, container, false);
         return view;
     }
 

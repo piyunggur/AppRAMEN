@@ -12,11 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".LearnActivity"
+        <activity android:name=".Activity.LearnActivity"
             android:screenOrientation="portrait"
             />
 
-        <activity android:name=".LogoActivity"
+        <activity android:name=".Activity.LogoActivity"
             android:screenOrientation="portrait"
             >
             <intent-filter>
@@ -26,27 +26,27 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".LoginActivity"
+        <activity android:name=".Activity.LoginActivity"
             android:screenOrientation="portrait"
             />
 
-        <activity android:name=".HomeActivity"
+        <activity android:name=".Activity.HomeActivity"
             android:screenOrientation="portrait"
             />
 
-        <activity android:name=".RegisterActivity"
+        <activity android:name=".Activity.RegisterActivity"
             android:screenOrientation="portrait"
             />
 
-        <activity android:name=".Manu1Activity"
+        <activity android:name=".Activity.Manu1Activity"
             android:screenOrientation="portrait"
             />
 
-        <activity android:name=".TestBottomNavigationActivity"
+        <activity android:name=".Activity.TestBottomNavigationActivity"
             android:screenOrientation="portrait"
             />
 
-        <activity android:name=".NewHomeActivity"
+        <activity android:name=".Activity.NewHomeActivity"
             android:screenOrientation="portrait"
             />
 

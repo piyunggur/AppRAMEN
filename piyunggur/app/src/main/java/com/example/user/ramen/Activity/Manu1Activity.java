@@ -1,9 +1,12 @@
-package com.example.user.ramen;
+package com.example.user.ramen.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+
+import com.example.user.ramen.R;
+import com.example.user.ramen.Adapter.TestGrid3ViewAdapter;
 
 import java.util.ArrayList;
 

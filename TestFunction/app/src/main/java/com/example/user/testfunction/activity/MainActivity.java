@@ -1,9 +1,11 @@
-package com.example.user.testfunction;
+package com.example.user.testfunction.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainLayoutActivity extends AppCompatActivity {
+import com.example.user.testfunction.R;
+
+public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
