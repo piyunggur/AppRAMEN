@@ -54,7 +54,7 @@ public class LearnAdapter extends PagerAdapter{
     @Override
     public Object instantiateItem(ViewGroup container, int position){
         layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        View view = layoutInflater.inflate(R.layout.learn_slider,container,false);
+        View view = layoutInflater.inflate(R.layout.slider_learn,container,false);
 
         ImageView slideImage = (ImageView) view.findViewById(R.id.learn_image);
         TextView slideHead = (TextView) view.findViewById(R.id.learn_head);

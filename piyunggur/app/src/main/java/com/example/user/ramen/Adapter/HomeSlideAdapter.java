@@ -40,7 +40,7 @@ public class HomeSlideAdapter extends PagerAdapter{
     @Override
     public Object instantiateItem(ViewGroup container, int position){
         layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        View view = layoutInflater.inflate(R.layout.home_news,null);
+        View view = layoutInflater.inflate(R.layout.listitem_news,null);
 
         ImageView slideImageView = (ImageView) view.findViewById(R.id.home_slide_img);
 

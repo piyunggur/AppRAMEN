@@ -31,7 +31,7 @@ public class LearnActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-      setContentView(R.layout.learn_layout);
+      setContentView(R.layout.layout_learn);
 
         viewpagerSlide = (ViewPager) findViewById(R.id.learnslider_view);
         layoutDot = (LinearLayout) findViewById(R.id.learn_dots);

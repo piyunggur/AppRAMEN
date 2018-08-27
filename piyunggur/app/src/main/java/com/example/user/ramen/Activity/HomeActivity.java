@@ -63,7 +63,7 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home_layout);
+        setContentView(R.layout.layout_home);
 
         //new slider
         vSlideViewPager = (ViewPager) findViewById(R.id.home_slide_vp_news);

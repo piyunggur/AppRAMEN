@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/background_main"
+    android:orientation="vertical"
+    tools:context=".Activity.HomeActivity"
     >
 
     <RelativeLayout
-        android:id="@+id/homefm_relativelayout"
+        android:id="@+id/home_news_r"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorBack"
         >
 
         <ImageView
@@ -24,13 +26,13 @@
             />
 
         <RelativeLayout
-            android:id="@+id/homefm_news"
+            android:id="@+id/home_news"
             android:layout_width="match_parent"
             android:layout_height="225dp"
             >
 
             <android.support.v4.view.ViewPager
-                android:id="@+id/homefm_newsslide"
+                android:id="@+id/home_slide_vp_news"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignParentStart="true"
@@ -38,7 +40,7 @@
                 />
 
             <LinearLayout
-                android:id="@+id/homefm__dotsslide"
+                android:id="@+id/home_slide_dots"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -48,15 +50,16 @@
 
         </RelativeLayout>
 
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/homefm_news"
+            android:layout_below="@id/home_news"
             android:orientation="vertical"
             >
 
             <Button
-                android:id="@+id/homefm_main_menu1"
+                android:id="@+id/home_main_manu1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -66,11 +69,11 @@
                 android:gravity="start"
                 android:paddingStart="7dp"
                 android:paddingTop="5dp"
-                android:background="@drawable/main_manu1"
+                android:background="@drawable/main_menu1"
                 />
 
             <Button
-                android:id="@+id/homefm_main_menu2"
+                android:id="@+id/home_main_manu2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -80,11 +83,11 @@
                 android:gravity="start"
                 android:paddingStart="7dp"
                 android:paddingTop="5dp"
-                android:background="@drawable/main_manu2"
+                android:background="@drawable/main_menu2"
                 />
 
             <Button
-                android:id="@+id/homefm_main_menu3"
+                android:id="@+id/home_main_manu3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -94,7 +97,7 @@
                 android:gravity="start"
                 android:paddingStart="7dp"
                 android:paddingTop="5dp"
-                android:background="@drawable/main_manu3"
+                android:background="@drawable/main_menu3"
                 />
 
             <RelativeLayout
@@ -105,7 +108,7 @@
                 >
 
                 <ImageView
-                    android:id="@+id/homefm_icon_sale"
+                    android:id="@+id/icon_sale"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_alignParentStart="true"
@@ -115,7 +118,7 @@
                     />
 
                 <TextView
-                    android:id="@+id/homefm_text_sale"
+                    android:id="@+id/text_sale"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignStart="@id/icon_sale"
@@ -127,10 +130,10 @@
                     />
 
                 <android.support.v7.widget.RecyclerView
-                    android:id="@+id/homefm_promotion_recyclerview"
+                    android:layout_below="@id/icon_sale"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_below="@id/homefm_icon_sale"
+                    android:id="@+id/promotion_recyclerview"
                     android:orientation="horizontal"
                     >
                 </android.support.v7.widget.RecyclerView>
@@ -140,12 +143,13 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
+                android:background="#c8000000"
                 >
 
                 <android.support.v7.widget.RecyclerView
-                    android:id="@+id/homefm_manu_recyclerview"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:id="@+id/manu_recyclerview"
                     android:orientation="horizontal"
                     >
 
@@ -157,10 +161,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="5dp"
+                android:background="#c8000000"
                 >
 
                 <android.support.v7.widget.RecyclerView
-                    android:id="@+id/homefm_testgrid3_view"
+                    android:id="@+id/testgrid3_view"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
@@ -169,8 +174,11 @@
 
             </LinearLayout>
 
+
         </LinearLayout>
 
+
     </RelativeLayout>
+
 
 </ScrollView>

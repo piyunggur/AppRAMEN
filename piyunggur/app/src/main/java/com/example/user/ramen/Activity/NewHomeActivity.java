@@ -1,15 +1,12 @@
 package com.example.user.ramen.Activity;
 
-import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.AttributeSet;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 
 import com.example.user.ramen.Adapter.NewHomeSlideAdapter;
 import com.example.user.ramen.R;
@@ -21,12 +18,12 @@ public class NewHomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.newhome_layout);
+        setContentView(R.layout.layout_newhome);
 
         page = (ViewPager) findViewById(R.id.newhome_viewpage);
         NewHomeSlideAdapter adapter = new NewHomeSlideAdapter(getSupportFragmentManager(),this);
         page.setAdapter(adapter);
-        LockableViewPager lockableViewPager = new LockableViewPager(this);
+//        LockableViewPager lockableViewPager = new LockableViewPager(this);
 
         BottomNavigationView bottomNav = findViewById(R.id.newhome_bottonnavigation);
         bottomNav.setOnNavigationItemSelectedListener(navigationList);
@@ -53,38 +50,38 @@ public class NewHomeActivity extends AppCompatActivity {
                 }
             };
 
-        public class LockableViewPager extends ViewPager {
-        private boolean swipeable;
-        public LockableViewPager(Context context) {
-            super(context);
-            setSwipeable(false);
-        }
-
-        public LockableViewPager(Context context, AttributeSet attrs) {
-            super(context, attrs);
-            this.swipeable = true;
-            setSwipeable(false);
-        }
-
-        @Override
-        public boolean onTouchEvent(MotionEvent event) {
-            if (this.swipeable) {
-                return super.onTouchEvent(event);
-            }
-            return false;
-        }
-
-        @Override
-        public boolean onInterceptTouchEvent(MotionEvent event) {
-            if (this.swipeable) {
-                return super.onInterceptTouchEvent(event);
-            }
-            return false;
-        }
-
-        public void setSwipeable(boolean swipeable) {
-            this.swipeable = swipeable;
-        }
-    }
+//        public class LockableViewPager extends ViewPager {
+//        private boolean swipeable;
+//        public LockableViewPager(Context context) {
+//            super(context);
+//            setSwipeable(false);
+//        }
+//
+//        public LockableViewPager(Context context, AttributeSet attrs) {
+//            super(context, attrs);
+//            this.swipeable = true;
+//            setSwipeable(false);
+//        }
+//
+//        @Override
+//        public boolean onTouchEvent(MotionEvent event) {
+//            if (this.swipeable) {
+//                return super.onTouchEvent(event);
+//            }
+//            return false;
+//        }
+//
+//        @Override
+//        public boolean onInterceptTouchEvent(MotionEvent event) {
+//            if (this.swipeable) {
+//                return super.onInterceptTouchEvent(event);
+//            }
+//            return false;
+//        }
+//
+//        public void setSwipeable(boolean swipeable) {
+//            this.swipeable = swipeable;
+//        }
+//    }
 
 }

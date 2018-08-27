@@ -12,7 +12,7 @@ public class LogoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.logo_layout);
+        setContentView(R.layout.layout_logo);
 
         new CountDownTimer(1500,1) {
 

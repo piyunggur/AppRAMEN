@@ -23,7 +23,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_layout);
+        setContentView(R.layout.layout_login);
 
         tHead = (TextView) findViewById(R.id.login_head);
         eUser = (EditText) findViewById(R.id.login_user);

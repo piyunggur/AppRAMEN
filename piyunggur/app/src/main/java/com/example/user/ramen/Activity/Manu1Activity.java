@@ -25,7 +25,7 @@ public class Manu1Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.manu1_layout);
+        setContentView(R.layout.layout_menu1);
 
         addTestGrid3();
     }

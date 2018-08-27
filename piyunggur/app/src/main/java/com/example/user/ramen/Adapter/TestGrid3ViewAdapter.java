@@ -41,7 +41,7 @@ public class TestGrid3ViewAdapter extends RecyclerView.Adapter<TestGrid3ViewAdap
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.allmanu_listitem, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.listitem_allmenu, parent, false);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }

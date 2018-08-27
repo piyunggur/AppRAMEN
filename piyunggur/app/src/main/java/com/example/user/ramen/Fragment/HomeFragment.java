@@ -79,7 +79,7 @@ public class HomeFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
-        View v = inflater.inflate(R.layout.homefragment_layout, container, false);
+        View v = inflater.inflate(R.layout.fragment_home, container, false);
 
         //new slider
         vSlideViewPager = v.findViewById(R.id.homefm_newsslide);

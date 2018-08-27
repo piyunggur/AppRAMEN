@@ -18,7 +18,7 @@ public class TestBottomNavigationActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.testbottomnavigation_layout);
+        setContentView(R.layout.layout_testbottomnavigation);
 
         Fragment selectedFragment = new HomeFragment();
         getSupportFragmentManager().beginTransaction()
