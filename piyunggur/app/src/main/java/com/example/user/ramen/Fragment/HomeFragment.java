@@ -67,7 +67,7 @@ public class HomeFragment extends Fragment {
     private static final String tag = "Manu";
     private ArrayList<String> mNameManu = new ArrayList<>();
 
-    private Context mContext;
+    private Context mContext = getContext();
 
     @Override
     public void onResume() {
@@ -81,10 +81,12 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
         View v = inflater.inflate(R.layout.fragment_home, container, false);
 
+        mContext = getContext();
+        Log.d("TEST","mContext" + mContext);
         //new slider
         vSlideViewPager = v.findViewById(R.id.homefm_newsslide);
         lDotLayout = v.findViewById(R.id.homefm__dotsslide);
-        aSliderAdapter = new HomeSlideAdapter(inflater.getContext());
+        aSliderAdapter = new HomeSlideAdapter(mContext);
         vSlideViewPager.setAdapter(aSliderAdapter);
         addDotsIndicator(0);
         vSlideViewPager.addOnPageChangeListener(viewListener);

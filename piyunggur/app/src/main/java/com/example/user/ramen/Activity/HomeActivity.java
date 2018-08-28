@@ -1,5 +1,6 @@
 package com.example.user.ramen.Activity;
 
+import android.content.Context;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -59,6 +60,7 @@ public class HomeActivity extends AppCompatActivity {
     //manu slider
     private static final String tag = "Manu";
     private ArrayList<String> mNameManu = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
