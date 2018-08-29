@@ -118,7 +118,6 @@
                     android:id="@+id/homefm_text_sale"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignStart="@id/icon_sale"
                     android:layout_marginTop="15dp"
                     android:layout_marginStart="50dp"
                     android:text="โปรโมชั่น"

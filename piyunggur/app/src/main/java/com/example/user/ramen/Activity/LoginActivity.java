@@ -14,43 +14,47 @@ import com.example.user.ramen.R;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private TextView tHead;
-    private EditText eUser;
-    private EditText ePassword;
-    private Button bSubmit;
-    private Button bRegister;
+
+    private TextView mHead;
+    private EditText mUser;
+    private EditText mPassword;
+    private Button mSubmit;
+    private Button mRegister;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_login);
 
-        tHead = (TextView) findViewById(R.id.login_head);
-        eUser = (EditText) findViewById(R.id.login_user);
-        ePassword = (EditText) findViewById(R.id.login_password);
-        bSubmit = (Button) findViewById(R.id.login_submit);
-        bRegister = (Button) findViewById(R.id.login_register);
 
-        tHead.setTypeface(CustomFont.getInstance().getFontHead(this));
-        eUser.setTypeface(CustomFont.getInstance().getFontData(this));
-        ePassword.setTypeface(CustomFont.getInstance().getFontData(this));
-        bSubmit.setTypeface(CustomFont.getInstance().getFontData(this));
-        bRegister.setTypeface(CustomFont.getInstance().getFontData(this));
+        mHead = (TextView) findViewById(R.id.login_head);
+        mUser = (EditText) findViewById(R.id.login_user);
+        mPassword = (EditText) findViewById(R.id.login_password);
+        mSubmit = (Button) findViewById(R.id.login_submit);
+        mRegister = (Button) findViewById(R.id.login_register);
 
-        bSubmit.setOnClickListener(new View.OnClickListener() {
+
+        mHead.setTypeface(CustomFont.getInstance().getFontHead(this));
+        mUser.setTypeface(CustomFont.getInstance().getFontData(this));
+        mPassword.setTypeface(CustomFont.getInstance().getFontData(this));
+        mSubmit.setTypeface(CustomFont.getInstance().getFontData(this));
+        mRegister.setTypeface(CustomFont.getInstance().getFontData(this));
+
+
+        mSubmit.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("ResourceAsColor")
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this,HomeActivity.class));
+                startActivity(new Intent(LoginActivity.this,MainActivity.class));
             }
         });
 
-        bRegister.setOnClickListener(new View.OnClickListener() {
+
+        mRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
-                //startActivity(new Intent(LoginActivity.this,TestBottomNavigationActivity.class));
-                startActivity(new Intent(LoginActivity.this,NewHomeActivity.class));
+                startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
             }
         });
 

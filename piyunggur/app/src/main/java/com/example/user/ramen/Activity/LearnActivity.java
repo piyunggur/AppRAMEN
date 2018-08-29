@@ -16,53 +16,63 @@ import com.example.user.ramen.R;
 
 public class LearnActivity extends AppCompatActivity {
 
+
     private ViewPager viewpagerSlide;
     private LinearLayout layoutDot;
     private TextView[] arr_dot;
     private LearnAdapter sliderAdapter;
     private Button buttonNext;
     private Button buttonBack;
-    private TextView textHead;
-    private TextView texttData;
-
     private int mCurrentPage;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.layout_learn);
 
-      setContentView(R.layout.layout_learn);
 
         viewpagerSlide = (ViewPager) findViewById(R.id.learnslider_view);
         layoutDot = (LinearLayout) findViewById(R.id.learn_dots);
 
         buttonNext = (Button) findViewById(R.id.learn_next);
         buttonBack = (Button) findViewById(R.id.learn_back);
-        textHead = (TextView) findViewById(R.id.learn_head);
-        texttData = (TextView) findViewById(R.id.learn_data);
 
         buttonNext.setTypeface(CustomFont.getInstance().getFontData(this));
         buttonBack.setTypeface(CustomFont.getInstance().getFontData(this));
 
+
         sliderAdapter = new LearnAdapter(this);
         viewpagerSlide.setAdapter(sliderAdapter);
+
+
+        //make dots slide
         addDotsIndicator(0);
+
+
+        //add function chang slide
         viewpagerSlide.addOnPageChangeListener(viewListener);
+
 
         //OnclickListeners
         buttonNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+
                 Button set_bt_next = (Button)view;
                 String text_bt_next = set_bt_next.getText().toString();
+
                 if(text_bt_next.equalsIgnoreCase("ดำเนินการต่อ")){
                     startActivity(new Intent(LearnActivity.this,LoginActivity.class));
                     finish();
                 }
+
                 viewpagerSlide.setCurrentItem(mCurrentPage + 1);
             }
         });
+
+
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -71,8 +81,11 @@ public class LearnActivity extends AppCompatActivity {
         });
     }
 
+
     public void  addDotsIndicator(int position){
+
         arr_dot = new TextView[3];
+
 
         for (int i = 0; i < arr_dot.length; i++) {
             arr_dot[i] = new TextView(this);
@@ -82,26 +95,32 @@ public class LearnActivity extends AppCompatActivity {
             layoutDot.addView(arr_dot[i]);
         }
 
+
         if(arr_dot.length > 0){
             arr_dot[position].setTextColor(getResources().getColor(R.color.colorWhite));
         }
+
     }
 
-    ViewPager.OnPageChangeListener viewListener = new ViewPager.OnPageChangeListener() {
-        @Override
-        public void onPageScrolled(int i, float v, int i1) {
 
-        }
+
+    ViewPager.OnPageChangeListener viewListener = new ViewPager.OnPageChangeListener() {
+
+
+        @Override
+        public void onPageScrolled(int i, float v, int i1) { }
+
 
         @Override
         public void onPageSelected(int page) {
-//            addDotsIndicator(i);
+
             for(int i = 0; i < arr_dot.length ; i++) {
                 if (i==page)
                     arr_dot[i].setTextColor(getResources().getColor(R.color.colorWhite));
                 else
                     arr_dot[i].setTextColor(getResources().getColor(R.color.colorBackText));
             }
+
 
             mCurrentPage = page;
 
@@ -128,8 +147,9 @@ public class LearnActivity extends AppCompatActivity {
         }
 
         @Override
-        public void onPageScrollStateChanged(int i) {
+        public void onPageScrollStateChanged(int i) {}
 
-        }
     };
+
+
 }

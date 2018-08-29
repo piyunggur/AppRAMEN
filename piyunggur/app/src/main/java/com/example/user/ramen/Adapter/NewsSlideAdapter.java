@@ -11,12 +11,12 @@ import android.widget.RelativeLayout;
 
 import com.example.user.ramen.R;
 
-public class HomeSlideAdapter extends PagerAdapter{
+public class NewsSlideAdapter extends PagerAdapter{
 
     Context context;
     LayoutInflater layoutInflater;
 
-    public HomeSlideAdapter(Context context){
+    public NewsSlideAdapter(Context context){
         this.context = context;
     }
 

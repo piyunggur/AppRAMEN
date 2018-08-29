@@ -19,7 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.user.ramen.Custom.CustomFont;
-import com.example.user.ramen.Adapter.HomeSlideAdapter;
+import com.example.user.ramen.Adapter.NewsSlideAdapter;
 import com.example.user.ramen.Adapter.ManuRecyclerViewAdapter;
 import com.example.user.ramen.Adapter.PromotionRecyclerViewAdapter;
 import com.example.user.ramen.R;
@@ -33,7 +33,7 @@ public class HomeFragment extends Fragment {
 
     //news slider
     private ViewPager vSlideViewPager;
-    private HomeSlideAdapter aSliderAdapter;
+    private NewsSlideAdapter aSliderAdapter;
     private LinearLayout lDotLayout;
     private TextView[] mDots;
     private int nCurrentPage;
@@ -86,7 +86,7 @@ public class HomeFragment extends Fragment {
         //new slider
         vSlideViewPager = v.findViewById(R.id.homefm_newsslide);
         lDotLayout = v.findViewById(R.id.homefm__dotsslide);
-        aSliderAdapter = new HomeSlideAdapter(mContext);
+        aSliderAdapter = new NewsSlideAdapter(mContext);
         vSlideViewPager.setAdapter(aSliderAdapter);
         addDotsIndicator(0);
         vSlideViewPager.addOnPageChangeListener(viewListener);

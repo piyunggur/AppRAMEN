@@ -3,49 +3,70 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#625C5D"
-    tools:context=".Activity.LearnActivity">
+    android:background="#2e2b2c"
+    tools:context=".Activity.LearnActivity"
+    >
+
 
     <android.support.v4.view.ViewPager
         android:id="@+id/learnslider_view"
+
         android:layout_width="match_parent"
-        android:layout_height="518dp"
+        android:layout_height="match_parent"
+        android:layout_above="@id/learn_dots"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         />
 
+
     <LinearLayout
         android:id="@+id/learn_dots"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
         />
+
 
     <Button
         android:id="@+id/learn_back"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="15dp"
+
         android:background="@color/colorNull"
         android:text="BACK"
+        android:textAlignment="viewStart"
         android:textColor="@color/colorWhite"
-        android:visibility="invisible"
-        />
+        android:textSize="16sp"
+        android:visibility="invisible" />
+
 
     <Button
         android:id="@+id/learn_next"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="15dp"
         android:background="@color/colorNull"
+
         android:text="ต่อไป"
+        android:textAlignment="viewEnd"
         android:textColor="@color/colorWhite"
-        />
+        android:textSize="16sp" />
+
 
 </RelativeLayout>

@@ -4,98 +4,123 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".Activity.RegisterActivity"
+
     android:background="@drawable/background_fornt"
-    tools:context=".Activity.RegisterActivity">
+    >
+
 
     <ImageView
-        android:id="@+id/register_iv_head"
+        android:id="@+id/register_ivhead"
+
         android:layout_width="match_parent"
         android:layout_height="75dp"
-        android:background="@color/colorMenu"
         android:layout_alignParentTop="true"
+
+        android:background="@color/colorMenu"
         />
 
+
     <Button
-        android:id="@+id/register_bt_back"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:id="@+id/register_btback"
+
+        android:layout_width="22dp"
+        android:layout_height="22dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="32dp"
         android:layout_marginStart="15dp"
+
         android:background="@drawable/back"
         />
 
+
     <TextView
-        android:id="@+id/register_tv_head"
+        android:id="@+id/register_tvhead"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="สมัครสมาชิก"
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="27dp"
+
+        android:gravity="center"
+        android:text="สมัครสมาชิก"
         android:textColor="@color/colorWhite"
-        android:textSize="30dp"
+        android:textSize="22sp"
         />
 
+
     <EditText
-        android:id="@+id/register_et_user"
+        android:id="@+id/register_etuser"
+
         android:layout_width="295dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/register_iv_head"
+        android:layout_below="@id/register_ivhead"
         android:layout_marginTop="40dp"
         android:layout_centerHorizontal="true"
-        android:theme="@style/EdittextWhite"
-        android:hint="ชื่อผู้ใช้"
-        android:textColorHint="@color/colorWhite"
-        android:textColor="@color/colorWhite"
-        android:gravity="center"
+
         android:ems="10"
         android:inputType="textEmailAddress"
+        android:theme="@style/EdittextWhite"
+        android:hint="ชื่อผู้ใช้"
+        android:textSize="16sp"
+        android:textColorHint="@color/colorWhite"
+        android:textColor="@color/colorWhite"
         />
 
+
     <EditText
-        android:id="@+id/register_et_pass1"
+        android:id="@+id/register_etpass1"
+
         android:layout_width="295dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/register_et_user"
+        android:layout_below="@id/register_etuser"
         android:layout_marginTop="25dp"
+
         android:hint="รหัสผ่าน"
-        android:gravity="center"
+        android:textSize="16sp"
         android:textColorHint="@color/colorWhite"
         android:textColor="@color/colorWhite"
         android:theme="@style/EdittextWhite"
         />
 
+
     <EditText
+        android:id="@+id/register_etpass2"
+
         android:layout_width="295dp"
         android:layout_height="wrap_content"
-        android:id="@+id/register_et_pass2"
-        android:layout_below="@id/register_et_pass1"
+        android:layout_below="@id/register_etpass1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
+
         android:hint="รหัสผ่านอีกครั้งเพื่อยืนยัน"
-        android:gravity="center"
+        android:textSize="16sp"
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorWhite"
         android:theme="@style/EdittextWhite"
         />
+
 
     <Button
-        android:id="@+id/register_bt_summit"
+        android:id="@+id/register_btsummit"
+
         android:layout_width="295dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/register_et_pass2"
+        android:layout_height="43dp"
+        android:layout_below="@id/register_etpass2"
         android:layout_marginTop="50dp"
         android:layout_centerHorizontal="true"
+
         android:gravity="center"
-        android:background="@drawable/s_bg_button_register"
+        android:background="@drawable/button_register_function"
         android:text="ดำเนินการต่อ"
+        android:textSize="16sp"
         android:textColorHint="@color/colorMain"
         android:textColor="@color/colorMain"
-        android:textSize="18dp"
         />
+
+
 
 </RelativeLayout>

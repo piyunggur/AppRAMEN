@@ -14,6 +14,7 @@ public class LogoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_logo);
 
+
         new CountDownTimer(1500,1) {
 
             public void onTick(long millisUntilFinished) {
@@ -22,7 +23,6 @@ public class LogoActivity extends AppCompatActivity {
 
             public void onFinish() {
                 startActivity(new Intent(LogoActivity.this,LearnActivity.class));
-                //startActivity(new Intent(LogoActivity.this,TestBottomNavigationActivity.class));
                 finish();
             }
         }.start();

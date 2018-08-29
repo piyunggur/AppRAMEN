@@ -5,26 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:design="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activity.MainActivity"
+
     android:background="@drawable/background_main"
-    tools:context=".Activity.NewHomeActivity">
+    >
+
 
     <android.support.v4.view.ViewPager
-        android:id="@+id/newhome_viewpage"
+        android:id="@+id/main_viewpage"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
-        android:layout_above="@id/newhome_bottonnavigation"
+        android:layout_above="@id/main_bottonnavigation"
         />
 
+
     <android.support.design.widget.BottomNavigationView
-        android:id="@+id/newhome_bottonnavigation"
+        android:id="@+id/main_bottonnavigation"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         design:menu="@menu/testbottom_menunavigation"
-        android:background="@color/colorWhite"
-        >
 
-    </android.support.design.widget.BottomNavigationView>
+        android:background="@color/colorWhite"
+        />
+
 
 </RelativeLayout>

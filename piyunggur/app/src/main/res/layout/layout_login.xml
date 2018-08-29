@@ -4,114 +4,141 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".Activity.LoginActivity"
+
     android:background="@drawable/background_fornt"
-    tools:context=".Activity.LoginActivity">
+    >
+
+
 
     <ImageView
         android:id="@+id/login_logo"
+
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
+
         app:srcCompat="@drawable/logo"
         />
 
+
     <TextView
         android:id="@+id/login_head"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_below="@id/login_logo"
         android:layout_marginTop="35dp"
         android:layout_centerHorizontal="true"
+
         android:text="เข้าสู่ระบบ"
         android:textColor="@color/colorWhite"
-        android:textSize="35dp"
+        android:textSize="35sp"
+        android:gravity="center"
         />
+
 
     <EditText
         android:id="@+id/login_user"
+
         android:layout_width="295dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/login_head"
         android:layout_centerHorizontal="true"
-        android:theme="@style/EdittextWhite"
+        android:layout_marginTop="20dp"
         android:ems="10"
-        android:gravity="center"
+
+        android:theme="@style/EdittextWhite"
         android:hint="ชื่อสมาชิก"
         android:inputType="textEmailAddress"
-        android:layout_marginTop="20dp"
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorWhite"
         />
+
+
     <EditText
         android:id="@+id/login_password"
+
         android:layout_width="295dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/login_user"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:ems="10"
+
         android:hint="รหัสผ่าน"
         android:inputType="textPassword"
         android:textColor="@color/colorWhite"
         android:textColorHint="@color/colorWhite"
+        android:textSize="16sp"
         android:theme="@style/EdittextWhite"
-        android:gravity="center"
         />
+
 
     <Button
         android:id="@+id/login_submit"
+
         android:layout_width="295dp"
         android:layout_height="43dp"
         android:layout_below="@id/login_password"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
-        android:background="@drawable/s_bg_button_submit"
+
+        android:background="@drawable/button_submit_function"
         android:text="ดำเนินการต่อ"
         android:textColor="@color/colorWhite"
-        android:textSize="18sp"
+        android:textSize="16sp"
         />
 
     <Button
         android:id="@+id/login_register"
+
         android:layout_width="295dp"
         android:layout_height="43dp"
         android:layout_below="@id/login_submit"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
-        android:background="@drawable/s_bg_button_register"
+
+        android:background="@drawable/button_register_function"
         android:text="สมัครสมาชิก"
         android:textColor="@color/colorMain"
-        android:textSize="18sp"
+        android:textSize="16sp"
         />
 
     <Button
         android:id="@+id/login_facebook"
+
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_below="@id/login_register"
         android:layout_alignParentStart="true"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/s_bg_button_facebook"
+        android:layout_marginTop="22dp"
+
+        android:background="@drawable/button_facebook_function"
         android:text="F"
         android:textColor="@color/colorWhite"
         android:textSize="18sp"
         />
 
+
     <Button
         android:id="@+id/login_gmail"
+
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_below="@id/login_register"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="22dp"
         android:layout_marginEnd="60dp"
-        android:background="@drawable/s_bg_button_gmail"
+
+        android:background="@drawable/button_gmail_function"
         android:text="G"
         android:textColor="@color/colorWhite"
         android:textSize="18dp" />
+
+
 
 </RelativeLayout>
