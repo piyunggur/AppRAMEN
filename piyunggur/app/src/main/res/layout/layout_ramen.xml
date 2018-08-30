@@ -11,13 +11,6 @@
 
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
-        />
-
-
-    <ImageView
         android:id="@+id/ramen_bghead"
 
         android:layout_width="match_parent"
@@ -56,6 +49,134 @@
         android:textColor="@color/colorWhite"
         android:textSize="22dp"
         />
+
+
+    <Button
+        android:id="@+id/ramen_shopping"
+
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="15dp"
+
+        android:background="@drawable/icon_shopping"
+
+        />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ramen_bghead"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/ramen_tvname"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="15dp"
+
+                android:text="ชื่อ ราเมง"
+                android:textSize="22sp"
+                android:textColor="@color/colorYellow"
+                />
+
+
+            <TextView
+                android:id="@+id/ramen_data_ramen"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ramen_tvname"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="15dp"
+
+                android:text="ข้อมูลของราเมง"
+                android:textSize="16sp"
+                android:textColor="@color/colorWhite"
+                />
+
+
+            <ImageView
+                android:id="@+id/ramen_ivramen"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ramen_data_ramen"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="25dp"
+
+                android:background="@drawable/ramens1"
+                />
+
+
+            <ImageView
+                android:id="@+id/ramen_bgobject"
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/ramen_ivramen"
+                android:layout_marginTop="25dp"
+
+                android:background="@color/colorMenu"
+                />
+
+
+            <TextView
+                android:id="@+id/ramen_tvobject"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ramen_ivramen"
+                android:layout_marginTop="35dp"
+                android:layout_marginStart="15dp"
+
+                android:text="เลือกเพิ่ม"
+                android:textSize="22dp"
+                android:textColor="@color/colorWhite"
+                />
+
+
+            <TextView
+                android:id="@+id/ramen_tvnote"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/ramen_tvobject"
+                android:layout_marginStart="120dp"
+
+                android:text="(เลือกเพิ่มอย่างละ 10 บาท)"
+                android:textSize="14dp"
+                android:textColor="@color/colorWhite"
+                />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/ramen_view"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/ramen_bgobject"
+                >
+
+            </android.support.v7.widget.RecyclerView>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
 
 
 </RelativeLayout>

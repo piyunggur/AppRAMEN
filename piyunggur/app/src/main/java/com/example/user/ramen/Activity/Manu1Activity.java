@@ -5,8 +5,9 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.example.user.ramen.Adapter.RamenGridViewAdapter;
+import com.example.user.ramen.Custom.Ramen;
 import com.example.user.ramen.R;
-import com.example.user.ramen.Adapter.TestGrid3ViewAdapter;
 
 import java.util.ArrayList;
 
@@ -51,9 +52,11 @@ public class Manu1Activity extends AppCompatActivity {
         RecyclerView gridView = findViewById(R.id.nanu1allmanu_view);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this,2);
 
-        TestGrid3ViewAdapter testGrid3Adapter = new TestGrid3ViewAdapter(this,arraylistImage_testgrid3,arraylistName_testgrid3,
+        RamenGridViewAdapter testGrid3Adapter = new RamenGridViewAdapter(this,arraylistImage_testgrid3,arraylistName_testgrid3,
                 arraylistPrice_testgrid3, arrayListbgKcal, arrayListKcal, arrayListbgSale, arrayListSale);
         gridView.setLayoutManager(gridLayoutManager);
         gridView.setAdapter(testGrid3Adapter);
+
+
     }
 }

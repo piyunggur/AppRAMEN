@@ -18,18 +18,20 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.user.ramen.Adapter.RamenGridViewAdapter;
 import com.example.user.ramen.Custom.CustomFont;
 import com.example.user.ramen.Adapter.NewsSlideAdapter;
 import com.example.user.ramen.Adapter.ManuRecyclerViewAdapter;
 import com.example.user.ramen.Adapter.PromotionRecyclerViewAdapter;
 import com.example.user.ramen.R;
-import com.example.user.ramen.Adapter.TestGrid3ViewAdapter;
 
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class HomeFragment extends Fragment {
+
+
 
     //news slider
     private ViewPager vSlideViewPager;
@@ -41,11 +43,13 @@ public class HomeFragment extends Fragment {
     private final int period = 3000;
     private Timer timer;
 
+
     //promotion slider
     private static final String TAG = "HomeFragment";
-    private ArrayList<String> mNames = new ArrayList<>();
-    private ArrayList<Integer> mImageResources = new ArrayList<>();
-    private ArrayList<String> mPrice = new ArrayList<>();
+    private ArrayList<String> promotion_Names = new ArrayList<>();
+    private ArrayList<Integer> promotion_ImageResources = new ArrayList<>();
+    private ArrayList<String> promotion_Price = new ArrayList<>();
+
 
     //set main manu
     private Button main_menu1;
@@ -53,48 +57,60 @@ public class HomeFragment extends Fragment {
     private Button main_menu3;
     private TextView main_menu;
 
-    //set allmanu slide
-    private ArrayList<Integer> arraylistImage_testgrid3 = new ArrayList<>();
-    private ArrayList<String> arraylistName_testgrid3 = new ArrayList<>();
-    private ArrayList<Integer> arraylistPrice_testgrid3 = new ArrayList<>();
 
-    private ArrayList<Integer> arrayListbgKcal = new ArrayList<>();
-    private ArrayList<Float> arrayListKcal = new ArrayList<>();
-    private ArrayList<Integer> arrayListbgSale = new ArrayList<>();
-    private ArrayList<Integer> arrayListSale = new ArrayList<>();
+    //set ramen slide
+    private ArrayList<Integer> ramen_Image = new ArrayList<>();
+    private ArrayList<String> ramen_Name = new ArrayList<>();
+    private ArrayList<Integer> ramen_Price = new ArrayList<>();
+
+
+    //data ramen
+    private ArrayList<Integer> bgKcal = new ArrayList<>();
+    private ArrayList<Float> Kcal = new ArrayList<>();
+    private ArrayList<Integer> bgSale = new ArrayList<>();
+    private ArrayList<Integer> Sale = new ArrayList<>();
+
 
     //manu slider
     private static final String tag = "Manu";
-    private ArrayList<String> mNameManu = new ArrayList<>();
+    private ArrayList<String> mNameMenu = new ArrayList<>();
+
 
     private Context mContext = getContext();
+
+
 
     @Override
     public void onResume() {
         super.onResume();
         mContext = getContext();
-//        vSlideViewPager.setCurrentItem(nCurrentPage);
     }
+
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState){
         View v = inflater.inflate(R.layout.fragment_home, container, false);
 
+
         mContext = getContext();
         Log.d("TEST","mContext" + mContext);
-        //new slider
+
+
+        //news slider
         vSlideViewPager = v.findViewById(R.id.homefm_newsslide);
-        lDotLayout = v.findViewById(R.id.homefm__dotsslide);
+        lDotLayout = v.findViewById(R.id.homefm_dotsslide);
         aSliderAdapter = new NewsSlideAdapter(mContext);
         vSlideViewPager.setAdapter(aSliderAdapter);
-        addDotsIndicator(0);
+
+        addDotsSlider(0);
         vSlideViewPager.addOnPageChangeListener(viewListener);
+
 
         //set time auto slider news
         timer = new Timer();
         timer.scheduleAtFixedRate(new SetAutoSlider(getActivity()),delay,period);
-        //v.animate().translationY(0);
+
 
         //setfont in main menu
         main_menu1 = v.findViewById(R.id.homefm_main_menu1);
@@ -106,21 +122,27 @@ public class HomeFragment extends Fragment {
         main_menu3.setTypeface(CustomFont.getInstance().getFontHead(mContext));
         main_menu.setTypeface(CustomFont.getInstance().getFontHead(mContext));
 
+        //makePromotion
         Log.d(TAG, "onCreate: started ImageBitmaps.");
-        initImageBitmaps(v);
+        addPromotion(v);
+
 
         //manu slider
         Log.d(tag,"onCreate: started AdddataMenu.");
-        AdddataMenu(v);
+        AddMenu(v);
 
+
+        //
         Log.d(tag,"onCreate: started addTestGrid3.");
-        addTestGrid3(v);
+        addRamen(v);
+
 
         return v;
     }
 
+
     //create dot in news slider
-    public void addDotsIndicator(int position){
+    public void addDotsSlider(int position){
         mDots = new TextView[3];
 
         for (int i = 0; i < mDots.length; i++) {
@@ -190,76 +212,98 @@ public class HomeFragment extends Fragment {
         }
     }
 
+
     @Override
     public void onPause() {
         timer.cancel();
         super.onPause();
     }
 
+
     //add data in promotion
-    private View initImageBitmaps(View v){
+    private View addPromotion(View v){
         Log.d(TAG, "initImageBitmaps: preparing bitmaps.");
 
-        mImageResources.add(R.drawable.ramen1);
-        mNames.add("พิเศษสั่ง 2 ถ้วยจากราคา 200฿ เหลือ 190฿");
-        mPrice.add("190฿");
 
-        mImageResources.add(R.drawable.ramen2);
-        mNames.add("พิเศษสั่ง 3 ถ้วยจากราคา 400฿ เหลือ 290฿");
-        mPrice.add("290฿");
+        int count_data = 4;
+        int set_price = 0;
+        int set_sale = 0;
 
-        mImageResources.add(R.drawable.ramen3);
-        mNames.add("พิเศษสั่ง 4 ถ้วยจากราคา 500฿ เหลือ 380฿");
-        mPrice.add("380฿");
 
-        mImageResources.add(R.drawable.ramen4);
-        mNames.add("พิเศษสั่ง 5 ถ้วยจากราคา 600฿ เหลือ 480฿");
-        mPrice.add("148฿");
+        for (int i = 0; i < count_data; i++) {
 
-        initRecyclerView(v);
+
+            if(i == 0){
+                promotion_ImageResources.add(R.drawable.ramen1);
+            }else if(i == 1){
+                promotion_ImageResources.add(R.drawable.ramen2);
+            }else if(i == 2){
+                promotion_ImageResources.add(R.drawable.ramen3);
+            }else if(i == 3){
+                promotion_ImageResources.add(R.drawable.ramen4);
+            }
+
+            set_price = (i+1)*200;
+            set_sale = set_price-(i+1)*50;
+
+            promotion_Names.add("พิเศษสั่ง 2 ถ้วยจากราคา "+set_price+" ฿ เหลือ "+set_sale+" ฿");
+            promotion_Price.add(set_sale+"฿");
+
+
+        }
+
+
+        setRecyclerViewOnPromotion(v);
 
         return v;
 
     }
 
+
+
     //set promotion on layout
-    private View initRecyclerView(View v){
+    private View setRecyclerViewOnPromotion(View v){
         Log.d(TAG, "initRecyclerView: init recyclerivew.");
 
+
         RecyclerView recyclerView = v.findViewById(R.id.homefm_promotion_recyclerview);
-        PromotionRecyclerViewAdapter adapter = new PromotionRecyclerViewAdapter(mContext,mNames,mImageResources,mPrice);
+        PromotionRecyclerViewAdapter adapter = new PromotionRecyclerViewAdapter(mContext, promotion_Names, promotion_ImageResources, promotion_Price);
         recyclerView.setAdapter(adapter);
         LinearLayoutManager layoutManager
                 = new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(layoutManager);
 
+
         return v;
     }
 
-    //add data in manu
-    private  View AdddataMenu(View v){
+
+
+    //add data in menu
+    private  View AddMenu(View v){
         Log.d(tag, "initImageBitmaps: preparing bitmaps.");
 
-        mNameManu.add("โชยุราเมง");
 
-        mNameManu.add("มิโสะราเมง");
+        mNameMenu.add("โชยุราเมง");
+        mNameMenu.add("มิโสะราเมง");
+        mNameMenu.add("ชิโอะราเมง");
+        mNameMenu.add("ทงคตสึราเมง");
+        mNameMenu.add("สึเคเมง");
 
-        mNameManu.add("ชิโอะราเมง");
 
-        mNameManu.add("ทงคตสึราเมง");
-
-        mNameManu.add("สึเคเมง");
-
-        setRecyclerViewOnManu(v);
+        setRecyclerViewOnMenu(v);
 
         return v;
     }
 
+
     //set manu on layout
-    private View setRecyclerViewOnManu(View v){
+    private View setRecyclerViewOnMenu(View v){
+
+
         Log.d(tag, "initRecyclerView: init recyclerivew.");
         RecyclerView recyclerView = v.findViewById(R.id.homefm_manu_recyclerview);
-        ManuRecyclerViewAdapter adapter = new ManuRecyclerViewAdapter(mContext,mNameManu);
+        ManuRecyclerViewAdapter adapter = new ManuRecyclerViewAdapter(mContext, mNameMenu);
         recyclerView.setAdapter(adapter);
         LinearLayoutManager layoutManager = new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(layoutManager);
@@ -268,35 +312,70 @@ public class HomeFragment extends Fragment {
 
     }
 
-    private View addTestGrid3(View v){
+    private View addRamen(View v){
 
         for (int i = 0; i < 10; i++) {
 
-            arraylistImage_testgrid3.add(R.drawable.ramens1);
-            arraylistName_testgrid3.add("ราเมง"+i);
-            arraylistPrice_testgrid3.add(155);
-            arrayListbgKcal.add(R.color.colorKcal);
-            arrayListKcal.add(436.2f);
-            arrayListbgSale.add(R.color.colorSale);
-            arrayListSale.add(10);
+
+            if(i == 0){
+                ramen_Image.add(R.drawable.ramens1);
+            }else if(i == 1){
+                ramen_Image.add(R.drawable.ramens2);
+            }else if(i == 2){
+                ramen_Image.add(R.drawable.ramens3);
+            }else if(i == 3){
+                ramen_Image.add(R.drawable.ramens4);
+            }else if(i == 4){
+                ramen_Image.add(R.drawable.ramens5);
+            }else if(i == 5){
+                ramen_Image.add(R.drawable.ramens6);
+            }else if(i == 6){
+                ramen_Image.add(R.drawable.ramens1);
+            }else if(i == 7){
+                ramen_Image.add(R.drawable.ramens2);
+            }else if(i == 8){
+                ramen_Image.add(R.drawable.ramens3);
+            }else if(i == 9){
+                ramen_Image.add(R.drawable.ramens4);
+            }else if(i == 10){
+                ramen_Image.add(R.drawable.ramens5);
+            }
+
+
+            ramen_Name.add("ราเมง"+i);
+            ramen_Price.add(155);
+            bgKcal.add(R.color.colorKcal);
+            Kcal.add(436.2f);
+            bgSale.add(R.color.colorSale);
+            Sale.add(10);
+
+
         }
 
-        setTestGrid3(v);
+
+        setRecyclerViewOnRamen(v);
 
         return v;
     }
 
-    private View setTestGrid3(View v){
 
-        RecyclerView gridView = v.findViewById(R.id.homefm_testgrid3_view);
+
+
+    private View setRecyclerViewOnRamen(View v){
+
+
+        RecyclerView gridView = v.findViewById(R.id.homefm_ramen_view);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(mContext,2);
-
-        TestGrid3ViewAdapter testGrid3Adapter = new TestGrid3ViewAdapter(mContext,arraylistImage_testgrid3,arraylistName_testgrid3,
-                arraylistPrice_testgrid3, arrayListbgKcal, arrayListKcal, arrayListbgSale, arrayListSale);
+        RamenGridViewAdapter testGrid3Adapter = new RamenGridViewAdapter(mContext, ramen_Image, ramen_Name,
+                ramen_Price, bgKcal, Kcal, bgSale, Sale);
         gridView.setLayoutManager(gridLayoutManager);
         gridView.setAdapter(testGrid3Adapter);
 
+
         return v;
+
     }
+
+
 
 }

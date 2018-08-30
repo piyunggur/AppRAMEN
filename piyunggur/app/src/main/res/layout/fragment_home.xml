@@ -38,7 +38,7 @@
                 />
 
             <LinearLayout
-                android:id="@+id/homefm__dotsslide"
+                android:id="@+id/homefm_dotsslide"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -159,7 +159,7 @@
                 >
 
                 <android.support.v7.widget.RecyclerView
-                    android:id="@+id/homefm_testgrid3_view"
+                    android:id="@+id/homefm_ramen_view"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     >
