@@ -120,6 +120,62 @@
             />
 
 
+        <ImageView
+            android:id="@+id/ramen_ivheart1"
+
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignBottom="@id/ramen_price"
+            android:layout_toEndOf="@id/ramen_price"
+            android:layout_marginStart="11dp"
+            android:layout_marginBottom="4dp"
+            />
+
+        <ImageView
+            android:id="@+id/ramen_ivheart2"
+
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignBottom="@id/ramen_ivheart1"
+            android:layout_toEndOf="@id/ramen_ivheart1"
+            android:layout_marginStart="4dp"
+            />
+
+        <ImageView
+            android:id="@+id/ramen_ivheart3"
+
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignBottom="@id/ramen_ivheart1"
+            android:layout_toEndOf="@id/ramen_ivheart2"
+            android:layout_marginStart="4dp"
+
+            />
+
+        <ImageView
+            android:id="@+id/ramen_ivheart4"
+
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignBottom="@id/ramen_ivheart1"
+            android:layout_toEndOf="@id/ramen_ivheart3"
+            android:layout_marginStart="4dp"
+
+            />
+
+        <ImageView
+            android:id="@+id/ramen_ivheart5"
+
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignBottom="@id/ramen_ivheart1"
+            android:layout_toEndOf="@id/ramen_ivheart4"
+            android:layout_marginStart="4dp"
+
+            />
+
+
+
     </RelativeLayout>
 
 

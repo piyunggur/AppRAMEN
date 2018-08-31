@@ -28,7 +28,7 @@ public class Manu1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_menu1);
 
-        addTestGrid3();
+//        addTestGrid3();
     }
 
     private void addTestGrid3(){
@@ -52,10 +52,10 @@ public class Manu1Activity extends AppCompatActivity {
         RecyclerView gridView = findViewById(R.id.nanu1allmanu_view);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this,2);
 
-        RamenGridViewAdapter testGrid3Adapter = new RamenGridViewAdapter(this,arraylistImage_testgrid3,arraylistName_testgrid3,
-                arraylistPrice_testgrid3, arrayListbgKcal, arrayListKcal, arrayListbgSale, arrayListSale);
-        gridView.setLayoutManager(gridLayoutManager);
-        gridView.setAdapter(testGrid3Adapter);
+//        RamenGridViewAdapter testGrid3Adapter = new RamenGridViewAdapter(this,arraylistImage_testgrid3,arraylistName_testgrid3,
+//                arraylistPrice_testgrid3, arrayListbgKcal, arrayListKcal, arrayListbgSale, arrayListSale);
+//        gridView.setLayoutManager(gridLayoutManager);
+//        gridView.setAdapter(testGrid3Adapter);
 
 
     }

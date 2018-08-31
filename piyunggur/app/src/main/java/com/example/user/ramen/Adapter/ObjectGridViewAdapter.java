@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,17 +41,19 @@ public class ObjectGridViewAdapter extends RecyclerView.Adapter<ObjectGridViewAd
 
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder,final int position) {
 
+        Log.d("TEST ObjectGVA","am running");
 
         holder.data_imge.setImageResource(arr_image.get(position));
+
 
     }
 
 
     @Override
     public int getItemCount() {
-        return 0;
+        return arr_image.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

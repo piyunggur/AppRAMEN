@@ -70,6 +70,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/ramen_bghead"
+        android:layout_above="@id/ramen_bgmenu_below"
+
         >
 
 
@@ -124,7 +126,7 @@
                 android:id="@+id/ramen_bgobject"
 
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="40dp"
                 android:layout_below="@id/ramen_ivramen"
                 android:layout_marginTop="25dp"
 
@@ -138,11 +140,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/ramen_ivramen"
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginStart="15dp"
 
                 android:text="เลือกเพิ่ม"
-                android:textSize="22dp"
+                android:textSize="18sp"
                 android:textColor="@color/colorWhite"
                 />
 
@@ -153,23 +155,33 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/ramen_tvobject"
-                android:layout_marginStart="120dp"
+                android:layout_toEndOf="@id/ramen_tvobject"
+                android:layout_marginStart="20dp"
 
                 android:text="(เลือกเพิ่มอย่างละ 10 บาท)"
-                android:textSize="14dp"
+                android:textSize="14sp"
                 android:textColor="@color/colorWhite"
                 />
 
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/ramen_view"
-
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:padding="5dp"
                 android:layout_below="@id/ramen_bgobject"
                 >
 
-            </android.support.v7.widget.RecyclerView>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/ramen_view"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="10dp"
+                    />
+
+
+            </LinearLayout>
 
 
         </RelativeLayout>
@@ -177,6 +189,105 @@
 
     </ScrollView>
 
+
+    <ImageView
+        android:id="@+id/ramen_bgmenu_below"
+
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+
+        android:background="@color/colorMenu"
+        />
+
+
+    <Button
+        android:id="@+id/ramen_addlike"
+
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+
+        android:background="@drawable/like_add"
+        />
+
+
+    <ImageView
+        android:id="@+id/ramen_ivline1"
+
+        android:layout_width="2dp"
+        android:layout_height="30dp"
+        android:layout_toEndOf="@id/ramen_addlike"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="10dp"
+
+        android:background="@color/colorWhite"
+        />
+
+
+    <TextView
+        android:id="@+id/ramen_tvsave"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/ramen_addlike"
+        android:layout_marginStart="20dp"
+
+        android:text="หยิบใสรถเข็น"
+        android:textSize="16sp"
+        android:textColor="@color/colorWhite"
+        />
+
+
+    <ImageView
+        android:id="@+id/ramen_ivline2"
+
+        android:layout_width="2dp"
+        android:layout_height="30dp"
+        android:layout_toEndOf="@id/ramen_tvsave"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="10dp"
+
+        android:background="@color/colorWhite"
+        />
+
+
+    <TextView
+        android:id="@+id/ramen_tvsale"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_toEndOf="@id/ramen_ivline2"
+        android:layout_marginStart="10dp"
+
+        android:text="สั่งซื้อ"
+        android:textSize="16sp"
+        android:textColor="@color/colorWhite"
+        />
+
+
+    <TextView
+        android:id="@+id/ramen_tvtotal"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="15dp"
+
+        android:text="รวม "
+        android:textSize="16sp"
+        android:textColor="@color/colorWhite"
+        />
 
 
 </RelativeLayout>

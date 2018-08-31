@@ -1,16 +1,23 @@
 package com.example.user.ramen.Activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ScrollView;
+import android.widget.TabHost;
 import android.widget.TextView;
 
 import com.example.user.ramen.Adapter.ObjectGridViewAdapter;
-import com.example.user.ramen.Adapter.RamenGridViewAdapter;
 import com.example.user.ramen.Custom.CustomFont;
+import com.example.user.ramen.Custom.Ramen;
 import com.example.user.ramen.R;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -19,11 +26,20 @@ public class RamenActivity extends AppCompatActivity {
 
     TextView mHead;
     TextView mName;
+    Button btSale;
     TextView mDataRamen;
     TextView mHeadObject;
     TextView mNoteObject;
 
-    private ArrayList<Integer> mObject = new ArrayList<>();
+    //menu below
+    Button mLike;
+    TextView mSave;
+    TextView mSale;
+    TextView mTotal;
+
+    boolean like ;
+
+    private ArrayList<Integer> mObject_image = new ArrayList<>();
 
 
     @Override
@@ -34,21 +50,62 @@ public class RamenActivity extends AppCompatActivity {
 
         mHead = (TextView) findViewById(R.id.ramen_tvhead);
         mName = (TextView) findViewById(R.id.ramen_tvname);
+        btSale = (Button) findViewById(R.id.ramen_shopping);
         mDataRamen = (TextView) findViewById(R.id.ramen_data_ramen);
         mHeadObject = (TextView) findViewById(R.id.ramen_tvobject);
         mNoteObject = (TextView) findViewById(R.id.ramen_tvnote);
 
+        //menu below
+        mLike = (Button) findViewById(R.id.ramen_addlike);
+        mSave = (TextView) findViewById(R.id.ramen_tvsave);
+        mSale = (TextView) findViewById(R.id.ramen_tvsale);
+        mTotal = (TextView) findViewById(R.id.ramen_tvtotal);
 
+        //set font
         mHead.setTypeface(CustomFont.getInstance().getFontHead(this));
         mName.setTypeface(CustomFont.getInstance().getFontHead(this));
         mDataRamen.setTypeface(CustomFont.getInstance().getFontData(this));
         mHeadObject.setTypeface(CustomFont.getInstance().getFontHead(this));
         mNoteObject.setTypeface(CustomFont.getInstance().getFontData(this));
 
+        //set font menu below
+        mLike.setTypeface(CustomFont.getInstance().getFontData(this));
+        mName.setTypeface(CustomFont.getInstance().getFontData(this));
+        mDataRamen.setTypeface(CustomFont.getInstance().getFontData(this));
+        mHeadObject.setTypeface(CustomFont.getInstance().getFontData(this));
+        mNoteObject.setTypeface(CustomFont.getInstance().getFontData(this));
+        mTotal.setTypeface(CustomFont.getInstance().getFontData(this));
 
         Bundle bundle = getIntent().getExtras();
         mHead.setText(bundle.getString("NameRamen"));
         mName.setText(bundle.getString("NameRamen"));
+
+        like = false;
+        mLike.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if(like){
+                    mLike.setBackgroundResource(R.drawable.like_add);
+                }else{
+                    mLike.setBackgroundResource(R.drawable.like_add_pass);
+                }
+                like = !like;
+
+            }
+        });
+
+
+        btSale.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startActivity(new Intent(RamenActivity.this,ShoppingCarActivity.class));
+
+            }
+        });
+
+
 
         addObject();
     }
@@ -56,21 +113,21 @@ public class RamenActivity extends AppCompatActivity {
 
     private void addObject(){
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 6; i++) {
 
 
             if(i == 0){
-                mObject.add(R.drawable.object1);
+                mObject_image.add(R.drawable.object1);
             }else if(i == 1){
-                mObject.add(R.drawable.object2);
+                mObject_image.add(R.drawable.object2);
             }else if(i == 2){
-                mObject.add(R.drawable.object3);
+                mObject_image.add(R.drawable.object3);
             }else if(i == 3){
-                mObject.add(R.drawable.object4);
+                mObject_image.add(R.drawable.object4);
             }else if(i == 4){
-                mObject.add(R.drawable.object5);
+                mObject_image.add(R.drawable.object5);
             }else if(i == 5){
-                mObject.add(R.drawable.object6);
+                mObject_image.add(R.drawable.object6);
             }
         }
 
@@ -81,12 +138,14 @@ public class RamenActivity extends AppCompatActivity {
 
     private void setRecyclerViewOnObject(){
 
+        Log.d("TEST ObjectGVA","am setting");
 
         RecyclerView gridView = findViewById(R.id.ramen_view);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this,3);
-        ObjectGridViewAdapter testGrid3Adapter = new ObjectGridViewAdapter(this, mObject);
+        ObjectGridViewAdapter gridAdapter = new ObjectGridViewAdapter(this, mObject_image);
         gridView.setLayoutManager(gridLayoutManager);
-        gridView.setAdapter(testGrid3Adapter);
+        gridView.setAdapter(gridAdapter);
+
 
     }
 

@@ -63,13 +63,18 @@ public class HomeFragment extends Fragment {
     private ArrayList<String> ramen_Name = new ArrayList<>();
     private ArrayList<Integer> ramen_Price = new ArrayList<>();
 
-
     //data ramen
-    private ArrayList<Integer> bgKcal = new ArrayList<>();
-    private ArrayList<Float> Kcal = new ArrayList<>();
-    private ArrayList<Integer> bgSale = new ArrayList<>();
-    private ArrayList<Integer> Sale = new ArrayList<>();
+    private ArrayList<Integer> ramen_bgKcal = new ArrayList<>();
+    private ArrayList<Float> ramen_Kcal = new ArrayList<>();
+    private ArrayList<Integer> ramen_bgSale = new ArrayList<>();
+    private ArrayList<Integer> ramen_Sale = new ArrayList<>();
 
+    //data heart
+    private ArrayList<Integer> ramen_heart1 = new ArrayList<>();
+    private ArrayList<Integer> ramen_heart2 = new ArrayList<>();
+    private ArrayList<Integer> ramen_heart3 = new ArrayList<>();
+    private ArrayList<Integer> ramen_heart4 = new ArrayList<>();
+    private ArrayList<Integer> ramen_heart5 = new ArrayList<>();
 
     //manu slider
     private static final String tag = "Manu";
@@ -314,41 +319,77 @@ public class HomeFragment extends Fragment {
 
     private View addRamen(View v){
 
-        for (int i = 0; i < 10; i++) {
+        int count_heart = 4;
+
+        for (int i = 1; i <= 10; i++) {
 
 
-            if(i == 0){
+            if(i == 1){
                 ramen_Image.add(R.drawable.ramens1);
-            }else if(i == 1){
-                ramen_Image.add(R.drawable.ramens2);
             }else if(i == 2){
-                ramen_Image.add(R.drawable.ramens3);
-            }else if(i == 3){
-                ramen_Image.add(R.drawable.ramens4);
-            }else if(i == 4){
-                ramen_Image.add(R.drawable.ramens5);
-            }else if(i == 5){
-                ramen_Image.add(R.drawable.ramens6);
-            }else if(i == 6){
-                ramen_Image.add(R.drawable.ramens1);
-            }else if(i == 7){
                 ramen_Image.add(R.drawable.ramens2);
-            }else if(i == 8){
+            }else if(i == 3){
                 ramen_Image.add(R.drawable.ramens3);
-            }else if(i == 9){
+            }else if(i == 4){
                 ramen_Image.add(R.drawable.ramens4);
-            }else if(i == 10){
+            }else if(i == 5){
                 ramen_Image.add(R.drawable.ramens5);
+            }else if(i == 6){
+                ramen_Image.add(R.drawable.ramens6);
+            }else if(i == 7){
+                ramen_Image.add(R.drawable.ramens1);
+            }else if(i == 8){
+                ramen_Image.add(R.drawable.ramens2);
+            }else if(i == 9){
+                ramen_Image.add(R.drawable.ramens3);
+            }else if(i == 10){
+                ramen_Image.add(R.drawable.ramens4);
             }
-
 
             ramen_Name.add("ราเมง"+i);
             ramen_Price.add(155);
-            bgKcal.add(R.color.colorKcal);
-            Kcal.add(436.2f);
-            bgSale.add(R.color.colorSale);
-            Sale.add(10);
+            ramen_bgKcal.add(R.color.colorKcal);
+            ramen_Kcal.add(436.2f);
+            ramen_bgSale.add(R.color.colorSale);
+            ramen_Sale.add(10);
 
+            if(count_heart == 0){
+                ramen_heart1.add(R.drawable.like_off);
+                ramen_heart2.add(R.drawable.like_off);
+                ramen_heart3.add(R.drawable.like_off);
+                ramen_heart4.add(R.drawable.like_off);
+                ramen_heart5.add(R.drawable.like_off);
+            }else if(count_heart == 1){
+                ramen_heart1.add(R.drawable.like_on);
+                ramen_heart2.add(R.drawable.like_off);
+                ramen_heart3.add(R.drawable.like_off);
+                ramen_heart4.add(R.drawable.like_off);
+                ramen_heart5.add(R.drawable.like_off);
+            }else if(count_heart == 2){
+                ramen_heart1.add(R.drawable.like_on);
+                ramen_heart2.add(R.drawable.like_on);
+                ramen_heart3.add(R.drawable.like_off);
+                ramen_heart4.add(R.drawable.like_off);
+                ramen_heart5.add(R.drawable.like_off);
+            }else if(count_heart == 3){
+                ramen_heart1.add(R.drawable.like_on);
+                ramen_heart2.add(R.drawable.like_on);
+                ramen_heart3.add(R.drawable.like_on);
+                ramen_heart4.add(R.drawable.like_off);
+                ramen_heart5.add(R.drawable.like_off);
+            }else if(count_heart == 4){
+                ramen_heart1.add(R.drawable.like_on);
+                ramen_heart2.add(R.drawable.like_on);
+                ramen_heart3.add(R.drawable.like_on);
+                ramen_heart4.add(R.drawable.like_on);
+                ramen_heart5.add(R.drawable.like_off);
+            }else if(count_heart == 5){
+                ramen_heart1.add(R.drawable.like_on);
+                ramen_heart2.add(R.drawable.like_on);
+                ramen_heart3.add(R.drawable.like_on);
+                ramen_heart4.add(R.drawable.like_on);
+                ramen_heart5.add(R.drawable.like_on);
+            }
 
         }
 
@@ -366,10 +407,11 @@ public class HomeFragment extends Fragment {
 
         RecyclerView gridView = v.findViewById(R.id.homefm_ramen_view);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(mContext,2);
-        RamenGridViewAdapter testGrid3Adapter = new RamenGridViewAdapter(mContext, ramen_Image, ramen_Name,
-                ramen_Price, bgKcal, Kcal, bgSale, Sale);
+        RamenGridViewAdapter gridAdapter = new RamenGridViewAdapter(mContext, ramen_Image, ramen_Name,
+                ramen_Price, ramen_bgKcal, ramen_Kcal, ramen_bgSale, ramen_Sale
+                ,ramen_heart1,ramen_heart2,ramen_heart3,ramen_heart4,ramen_heart5);
         gridView.setLayoutManager(gridLayoutManager);
-        gridView.setAdapter(testGrid3Adapter);
+        gridView.setAdapter(gridAdapter);
 
 
         return v;

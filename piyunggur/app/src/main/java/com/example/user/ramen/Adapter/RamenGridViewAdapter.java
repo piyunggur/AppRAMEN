@@ -28,11 +28,17 @@ public class RamenGridViewAdapter extends RecyclerView.Adapter<RamenGridViewAdap
     private ArrayList<Float> arr_kcal = new ArrayList<>();
     private ArrayList<Integer> arr_bgsale = new ArrayList<>();
     private ArrayList<Integer> arr_sale = new ArrayList<>();
+    private ArrayList<Integer> arr_heart1 = new ArrayList<>();
+    private ArrayList<Integer> arr_heart2 = new ArrayList<>();
+    private ArrayList<Integer> arr_heart3 = new ArrayList<>();
+    private ArrayList<Integer> arr_heart4 = new ArrayList<>();
+    private ArrayList<Integer> arr_heart5 = new ArrayList<>();
     private Context mContext;
 
 
     public RamenGridViewAdapter(Context mContext,ArrayList<Integer> images,ArrayList<String> names,ArrayList<Integer> prices,
-                                ArrayList<Integer> bgkcals, ArrayList<Float> kcals,ArrayList<Integer> bgsales, ArrayList<Integer> sales) {
+                                ArrayList<Integer> bgkcals, ArrayList<Float> kcals,ArrayList<Integer> bgsales, ArrayList<Integer> sales,
+                                ArrayList<Integer> heart1,ArrayList<Integer> heart2,ArrayList<Integer> heart3,ArrayList<Integer> heart4,ArrayList<Integer> heart5) {
 
 
         this.arr_image.addAll(images);
@@ -43,6 +49,11 @@ public class RamenGridViewAdapter extends RecyclerView.Adapter<RamenGridViewAdap
         this.arr_kcal = kcals;
         this.arr_bgsale = bgsales;
         this.arr_sale = sales;
+        this.arr_heart1 = heart1;
+        this.arr_heart2 = heart2;
+        this.arr_heart3 = heart3;
+        this.arr_heart4 = heart4;
+        this.arr_heart5 = heart5;
 
 
     }
@@ -81,6 +92,12 @@ public class RamenGridViewAdapter extends RecyclerView.Adapter<RamenGridViewAdap
         holder.data_sale.setText(arr_sale.get(position)+" %");
         holder.data_sale.setTypeface(CustomFont.getInstance().getFontData(mContext));
 
+        holder.data_heart1.setImageResource(arr_heart1.get(position));
+        holder.data_heart2.setImageResource(arr_heart2.get(position));
+        holder.data_heart3.setImageResource(arr_heart3.get(position));
+        holder.data_heart4.setImageResource(arr_heart4.get(position));
+        holder.data_heart5.setImageResource(arr_heart5.get(position));
+
 
         holder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,11 +130,16 @@ public class RamenGridViewAdapter extends RecyclerView.Adapter<RamenGridViewAdap
         TextView data_price;
         CardView parentLayout;
 
-
         ImageView data_bgkcal;
         TextView data_kcal;
         ImageView data_bgsale;
         TextView data_sale;
+
+        ImageView data_heart1;
+        ImageView data_heart2;
+        ImageView data_heart3;
+        ImageView data_heart4;
+        ImageView data_heart5;
 
 
         public ViewHolder(View itemView){
@@ -129,12 +151,16 @@ public class RamenGridViewAdapter extends RecyclerView.Adapter<RamenGridViewAdap
             data_price = itemView.findViewById(R.id.ramen_price);
             parentLayout = itemView.findViewById(R.id.ramen_listitem);
 
-
             data_bgkcal = itemView.findViewById(R.id.ramen_bgkcal);
             data_kcal = itemView.findViewById(R.id.ramen_kcal);
             data_bgsale = itemView.findViewById(R.id.ramen_bgsale);
             data_sale = itemView.findViewById(R.id.ramen_sale);
 
+            data_heart1 = itemView.findViewById(R.id.ramen_ivheart1);
+            data_heart2 = itemView.findViewById(R.id.ramen_ivheart2);
+            data_heart3 = itemView.findViewById(R.id.ramen_ivheart3);
+            data_heart4 = itemView.findViewById(R.id.ramen_ivheart4);
+            data_heart5 = itemView.findViewById(R.id.ramen_ivheart5);
 
         }
 

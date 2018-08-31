@@ -19,7 +19,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorWhite"
+        android:background="@color/colorMain"
         android:orientation="vertical"
         >
 
@@ -33,7 +33,7 @@
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
 
-            android:background="@color/colorWhite"
+            android:background="@color/colorMain"
             tools:src="@drawable/object1"
             />
 
