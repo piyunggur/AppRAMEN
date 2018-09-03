@@ -6,8 +6,10 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.example.user.ramen.Adapter.MainSlideAdapter;
+import com.example.user.ramen.Custom.CustomFont;
 import com.example.user.ramen.R;
 
 public class MainActivity extends AppCompatActivity {

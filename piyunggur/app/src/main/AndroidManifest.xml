@@ -37,7 +37,11 @@
             android:screenOrientation="portrait" />
         <activity android:name=".Activity.ShoppingCarActivity" />
         <activity android:name=".Activity.RamenActivity" />
-        <activity android:name=".Activity.MapActivity"></activity>
+        <activity android:name=".Activity.MapActivity" />
+        <activity
+            android:name=".MenuRamenActivity"
+            android:label="@string/title_activity_menu_ramen"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
