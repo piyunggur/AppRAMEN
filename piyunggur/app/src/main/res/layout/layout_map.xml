@@ -5,8 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.ShoppingCarActivity"
-    >
+    tools:context=".Activity.MapActivity">
+
 
     <ImageView
         android:layout_width="match_parent"
@@ -14,19 +14,19 @@
         android:background="@color/colorBack"
         />
 
+
     <ImageView
-        android:id="@+id/shoppingcar_bghead"
+        android:id="@+id/map_bghead"
 
         android:layout_width="match_parent"
         android:layout_height="75dp"
-        android:layout_alignParentTop="true"
 
         android:background="@color/colorMenu"
         />
 
 
     <Button
-        android:id="@+id/shoppingcar_back"
+        android:id="@+id/map_back"
 
         android:layout_width="22dp"
         android:layout_height="22dp"
@@ -40,29 +40,42 @@
 
 
     <TextView
-        android:id="@+id/shoppingcar_tvhead"
+        android:id="@+id/map_tvhead"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentTop="true"
         android:layout_marginTop="27dp"
 
         android:gravity="center"
-        android:text="รถเข็นสั่งของ"
+        android:text="เลือกสถานที่จัดส่ง"
         android:textColor="@color/colorWhite"
         android:textSize="22sp"
         />
 
+
     <FrameLayout
-        android:id="@+id/shoppingcar_fragment"
+        android:id="@+id/map_fragment"
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/shoppingcar_bghead"
+        android:layout_below="@id/map_bghead"
         />
 
 
+    <Button
+        android:id="@+id/map_summit"
 
+        android:layout_width="295dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+
+        android:text="ยืนยันสถานที่ส่ง"
+        android:textSize="16sp"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/button_use_code_function"
+        />
 
 </RelativeLayout>

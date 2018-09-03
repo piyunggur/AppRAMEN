@@ -2,6 +2,7 @@ package com.example.user.ramen.Fragment;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -14,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.user.ramen.Activity.MapActivity;
 import com.example.user.ramen.Adapter.OrderRecyclerViewAdapter;
 import com.example.user.ramen.Custom.CustomFont;
 import com.example.user.ramen.R;
@@ -71,6 +73,18 @@ public class OrderFragment extends Fragment {
 
         Log.d(TAG,"onCreate: started initAddOrder");
         initOrder(view);
+
+        mNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startActivity(new Intent(getActivity(), MapActivity.class));
+
+
+            }
+        });
+
+
 
         return view;
     }

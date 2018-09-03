@@ -34,7 +34,7 @@
         android:text="ใช้คูปอง"
         android:textSize="16sp"
         android:textColor="@color/colorWhite"
-        android:background="@drawable/button_use_code"
+        android:background="@drawable/button_use_code_function"
         />
 
 
@@ -122,7 +122,7 @@
 
             android:text="ยืนยันการสั่งซื้อ"
             android:textColor="@color/colorWhite"
-            android:background="@drawable/button_use_code"
+            android:background="@drawable/button_use_code_function"
             />
 
     </RelativeLayout>

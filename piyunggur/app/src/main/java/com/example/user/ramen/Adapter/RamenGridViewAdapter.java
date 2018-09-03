@@ -106,8 +106,10 @@ public class RamenGridViewAdapter extends RecyclerView.Adapter<RamenGridViewAdap
                 //set go to RamenActivity
                 Intent intent = new Intent(mContext,RamenActivity.class);
                 intent.putExtra("NameRamen",arr_name.get(position));
+                intent.putExtra("Price",arr_price.get(position));
                 mContext.startActivity(intent);
-                Toast.makeText(mContext, arr_name.get(position), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(mContext, arr_name.get(position), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(mContext,arr_price.get(position), Toast.LENGTH_SHORT).show();
 
             }
         });

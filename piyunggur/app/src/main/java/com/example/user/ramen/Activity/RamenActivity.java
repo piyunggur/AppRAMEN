@@ -24,6 +24,7 @@ import java.util.ArrayList;
 public class RamenActivity extends AppCompatActivity {
 
 
+    Button mBack;
     TextView mHead;
     TextView mName;
     Button btSale;
@@ -36,6 +37,8 @@ public class RamenActivity extends AppCompatActivity {
     TextView mSave;
     TextView mSale;
     TextView mTotal;
+    TextView mPrice;
+
 
     boolean like ;
 
@@ -48,6 +51,7 @@ public class RamenActivity extends AppCompatActivity {
         setContentView(R.layout.layout_ramen);
 
 
+        mBack = (Button) findViewById(R.id.ramen_back);
         mHead = (TextView) findViewById(R.id.ramen_tvhead);
         mName = (TextView) findViewById(R.id.ramen_tvname);
         btSale = (Button) findViewById(R.id.ramen_shopping);
@@ -60,6 +64,7 @@ public class RamenActivity extends AppCompatActivity {
         mSave = (TextView) findViewById(R.id.ramen_tvsave);
         mSale = (TextView) findViewById(R.id.ramen_tvsale);
         mTotal = (TextView) findViewById(R.id.ramen_tvtotal);
+        mPrice = (TextView) findViewById(R.id.ramen_total_price);
 
         //set font
         mHead.setTypeface(CustomFont.getInstance().getFontHead(this));
@@ -70,15 +75,26 @@ public class RamenActivity extends AppCompatActivity {
 
         //set font menu below
         mLike.setTypeface(CustomFont.getInstance().getFontData(this));
-        mName.setTypeface(CustomFont.getInstance().getFontData(this));
-        mDataRamen.setTypeface(CustomFont.getInstance().getFontData(this));
-        mHeadObject.setTypeface(CustomFont.getInstance().getFontData(this));
-        mNoteObject.setTypeface(CustomFont.getInstance().getFontData(this));
+        mSale.setTypeface(CustomFont.getInstance().getFontData(this));
+        mSave.setTypeface(CustomFont.getInstance().getFontData(this));
         mTotal.setTypeface(CustomFont.getInstance().getFontData(this));
+        mPrice.setTypeface(CustomFont.getInstance().getFontData(this));
 
         Bundle bundle = getIntent().getExtras();
         mHead.setText(bundle.getString("NameRamen"));
         mName.setText(bundle.getString("NameRamen"));
+//        mPrice.setText(bundle.getString("Price")+" ฿");
+
+
+        mBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                finish();
+
+            }
+        });
+
 
         like = false;
         mLike.setOnClickListener(new View.OnClickListener() {
@@ -105,6 +121,15 @@ public class RamenActivity extends AppCompatActivity {
             }
         });
 
+        mSale.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startActivity(new Intent(RamenActivity.this,ShoppingCarActivity.class));
+
+            }
+        });
+
 
 
         addObject();
@@ -122,7 +147,7 @@ public class RamenActivity extends AppCompatActivity {
                 mObject_image.add(R.drawable.object2);
             }else if(i == 2){
                 mObject_image.add(R.drawable.object3);
-            }else if(i == 3){
+            }else if (i == 3){
                 mObject_image.add(R.drawable.object4);
             }else if(i == 4){
                 mObject_image.add(R.drawable.object5);
