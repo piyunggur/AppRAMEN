@@ -39,9 +39,11 @@
         <activity android:name=".Activity.RamenActivity" />
         <activity android:name=".Activity.MapActivity" />
         <activity
-            android:name=".MenuRamenActivity"
+            android:name=".Activity.MenuRamenActivity"
             android:label="@string/title_activity_menu_ramen"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".TestSearchActivity" />
+        <activity android:name=".TestSearch2Activity"></activity>
     </application>
 
 </manifest>

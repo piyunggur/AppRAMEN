@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.example.user.ramen.Custom.CustomFont;
 import com.example.user.ramen.R;
+import com.example.user.ramen.TestSearchActivity;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -55,8 +56,9 @@ public class RegisterActivity extends AppCompatActivity {
         mSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
-                finish();
+                startActivity(new Intent(RegisterActivity.this,TestSearchActivity.class));
+//                startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
+//                finish();
             }
         });
 

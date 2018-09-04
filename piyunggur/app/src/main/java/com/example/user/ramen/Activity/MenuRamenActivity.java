@@ -1,4 +1,4 @@
-package com.example.user.ramen;
+package com.example.user.ramen.Activity;
 
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -18,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.TextView;
+import com.example.user.ramen.R;
 
 public class MenuRamenActivity extends AppCompatActivity {
 

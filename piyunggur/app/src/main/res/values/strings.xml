@@ -10,4 +10,16 @@
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_menu_ramen">เมนูราคาประหยัด</string>
+
+
+    <!--test-->
+    <string-array name="my_foods">
+        <item>item1</item>
+        <item>item2</item>
+        <item>item3</item>
+        <item>item4</item>
+        <item>item5</item>
+    </string-array>
+
+
 </resources>
