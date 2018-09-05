@@ -43,7 +43,9 @@
             android:label="@string/title_activity_menu_ramen"
             android:theme="@style/AppTheme" />
         <activity android:name=".TestSearchActivity" />
-        <activity android:name=".TestSearch2Activity"></activity>
+        <activity android:name=".TestSearch2Activity" />
+        <activity android:name=".TestSearch3Activity" />
+        <activity android:name=".TestSearch4Activity"></activity>
     </application>
 
 </manifest>
