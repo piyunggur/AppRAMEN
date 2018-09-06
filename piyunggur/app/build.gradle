@@ -43,6 +43,6 @@ dependencies {
     //circle imageview
 //    compile 'de.hdodenhof:circleimageview:2.2.0'
 
-    //implementation 'com.android.tools.build:gradle:2.1.2'
+    implementation 'com.android.tools.build:gradle:2.1.2'
 
 }

@@ -45,7 +45,8 @@
         <activity android:name=".TestSearchActivity" />
         <activity android:name=".TestSearch2Activity" />
         <activity android:name=".TestSearch3Activity" />
-        <activity android:name=".TestSearch4Activity"></activity>
+        <activity android:name=".TestSearch4Activity" />
+        <activity android:name=".Search5Activity"></activity>
     </application>
 
 </manifest>
