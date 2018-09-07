@@ -15,15 +15,15 @@ import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
 
+
 public class FriendListActivity extends Activity implements SearchView.OnQueryTextListener{
 
-
-    private SenzorApplication application;
+    private SenzorApplication application; // What? Function in class OR File java class ??
     private ListView friendListView;
     private SearchView searchView;
     private MenuItem searchMenuItem;
     private FriendListAdapter friendListAdapter;
-    private ArrayList<User> friendList;
+    private ArrayList<User> friendList; // file java class ??
 
 
     public void onCreate(Bundle savedInstanceState){
@@ -44,7 +44,7 @@ public class FriendListActivity extends Activity implements SearchView.OnQueryTe
 
 
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-        searchMenuItem = menu.findItem(R.id.search);
+        searchMenuItem = menu.findItem(R.id.test_search_menu);
         searchView = (SearchView) searchMenuItem.getActionView();
 
 
@@ -62,8 +62,8 @@ public class FriendListActivity extends Activity implements SearchView.OnQueryTe
         switch (item.getItemId()){
             case android.R.id.home:
                 FriendListActivity.this.finish();
-                FriendListActivity.this.overridePendingTransition(R.anim.stay_in, R.anim.bottom_out);
-                ActivityUtils.hideSoftKeyboard(this);
+                FriendListActivity.this.overridePendingTransition(R.anim.stay_in, R.anim.bottom_out);//R.anim??
+                ActivityUtils.hideSoftKeyboard(this);// file android class
 
 
                 return true;
@@ -83,7 +83,7 @@ public class FriendListActivity extends Activity implements SearchView.OnQueryTe
         Typeface typeface = Typeface.createFromAsset(this.getAssets(), "fonts/vegur_2.otf");
         int titleId = getResources().getIdentifier("action_bar_title","id","android");
         TextView actionBarTitle = (TextView) (this.findViewById(titleId));
-        actionBarTitle.setTextColor(getResources().getColor(R.color.white));
+        actionBarTitle.setTextColor(getResources().getColor(R.color.colorWhite));
         actionBarTitle.setTypeface(typeface);
     }
 
