@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="android.app.searchable"
-            android:resource="@xml/searchable"></meta-data>
+            android:resource="@xml/searchable" />
 
         <activity
             android:name=".Activity.LearnActivity"
@@ -46,7 +46,8 @@
             android:name=".Activity.MenuRamenActivity"
             android:label="@string/title_activity_menu_ramen"
             android:theme="@style/AppTheme" />
-        <activity android:name=".FriendListActivity"></activity>
+        <activity android:name=".FriendListActivity" />
+        <activity android:name=".SearchActivity"></activity>
     </application>
 
 </manifest>

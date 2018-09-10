@@ -9,7 +9,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.user.ramen.Custom.CustomFont;
+import com.example.user.ramen.FriendListActivity;
 import com.example.user.ramen.R;
+import com.example.user.ramen.SearchActivity;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -55,7 +57,8 @@ public class RegisterActivity extends AppCompatActivity {
         mSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
+                startActivity(new Intent(RegisterActivity.this,SearchActivity.class));
+//                startActivity(new Intent(RegisterActivity.this,FriendListActivity.class));
 //                finish();
             }
         });

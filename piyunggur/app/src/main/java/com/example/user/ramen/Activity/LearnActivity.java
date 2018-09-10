@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import com.example.user.ramen.Custom.CustomFont;
 import com.example.user.ramen.Adapter.LearnAdapter;
 import com.example.user.ramen.R;
+import android.support.v7.app.ActionBar;
 
 public class LearnActivity extends AppCompatActivity {
 
@@ -30,7 +32,10 @@ public class LearnActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_learn);
-
+//        getActionBar().hide();
+//        getSupportActionBar().show();
+//            getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
+//            getActionBar().show();
 
         viewpagerSlide = (ViewPager) findViewById(R.id.learnslider_view);
         layoutDot = (LinearLayout) findViewById(R.id.learn_dots);
