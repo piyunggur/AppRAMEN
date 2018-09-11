@@ -1,5 +1,6 @@
 package com.example.user.ramen.Activity;
 
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -20,6 +21,10 @@ public class MapActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_map);
+
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
 
         mTextHead = (TextView) findViewById(R.id.map_tvhead);

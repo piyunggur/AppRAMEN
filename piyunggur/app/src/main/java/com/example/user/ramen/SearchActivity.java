@@ -1,8 +1,12 @@
 package com.example.user.ramen;
 
+import android.app.SearchManager;
+import android.content.Context;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.SearchView;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -47,15 +51,31 @@ public class SearchActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.search_menu2,menu);
-        MenuItem item = menu.findItem(R.id.search_food);
-        SearchView searchView = (SearchView)item.getActionView();
 
+
+//        old code
+//        MenuInflater inflater = getMenuInflater();
+//        inflater.inflate(R.menu.search_menu2,menu);
+//        MenuItem item = menu.findItem(R.id.search_food);
+//        SearchView searchView = (SearchView)item.getActionView();
+
+
+//        new code by web : stack overflow : Why setOnQueryTextListener()get"on a null object reference error"
+        getMenuInflater().inflate(R.menu.search_menu2,menu);
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        MenuItem menuItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(menuItem);
+
+        Log.d("Test" , ""+searchManager);
+        Log.d("Value",""+searchManager.getSearchableInfo(getCallingActivity()));
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(getCallingActivity()));
+        searchView.setQueryHint(getResources().getString(R.string.app_name));
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+
             @Override
             public boolean onQueryTextSubmit(String s) {
+                Log.d("test1", "test click");
                 return false;
             }
 

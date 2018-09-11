@@ -36,6 +36,8 @@ public class LearnActivity extends AppCompatActivity {
 //        getSupportActionBar().show();
 //            getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
 //            getActionBar().show();
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         viewpagerSlide = (ViewPager) findViewById(R.id.learnslider_view);
         layoutDot = (LinearLayout) findViewById(R.id.learn_dots);

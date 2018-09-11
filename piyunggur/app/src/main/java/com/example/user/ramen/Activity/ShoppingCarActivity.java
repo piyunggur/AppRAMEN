@@ -1,5 +1,6 @@
 package com.example.user.ramen.Activity;
 
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -19,6 +20,10 @@ public class ShoppingCarActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_shoppingcar);
+
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
 
         mTextHead = (TextView) findViewById(R.id.shoppingcar_tvhead);

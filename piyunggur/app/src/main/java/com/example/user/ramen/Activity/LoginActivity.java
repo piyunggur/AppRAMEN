@@ -2,6 +2,7 @@ package com.example.user.ramen.Activity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -26,6 +27,10 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_login);
+
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
 
         mHead = (TextView) findViewById(R.id.login_head);
