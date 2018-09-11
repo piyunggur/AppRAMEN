@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -32,9 +33,17 @@ public class RegisterActivity extends AppCompatActivity {
 
 
         //set in actionbar
-        setTitle("สมัครสมาชิก");
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE);
+//        code : alinstart, can not setTypeface
+//        setTitle("สมัครสมาชิก");
+//        ActionBar actionBar = getSupportActionBar();
+//        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE);
+
+
+//        this.getActionBar().setDisplayShowCustomEnabled(true);
+//        this.getActionBar().setDisplayShowTitleEnabled(false);
+//
+//
+//        LayoutInflater inflater = LayoutInflater.from(this);
 
 
 
