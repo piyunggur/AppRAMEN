@@ -3,6 +3,8 @@ package com.example.user.ramen.Activity;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.user.ramen.Custom.CustomFont;
@@ -13,7 +15,6 @@ public class ShoppingCarActivity extends AppCompatActivity {
 
 
     private OrderFragment fragmentOrder;
-    private TextView mTextHead;
 
 
     @Override
@@ -22,12 +23,28 @@ public class ShoppingCarActivity extends AppCompatActivity {
         setContentView(R.layout.layout_shoppingcar);
 
 
+        //set actionbar
         ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
+        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        actionBar.setDisplayShowCustomEnabled(true);
+        actionBar.setCustomView(R.layout.custom_action_bar_layout);
+
+        View view = actionBar.getCustomView();
+        TextView textView = (TextView)view.findViewById(R.id.custom_bar_text);
+        ImageButton imageButton = (ImageButton)view.findViewById(R.id.custom_bar_back);
+        ImageButton imageButton2 = (ImageButton)view.findViewById(R.id.custom_bar_safe);
 
 
-        mTextHead = (TextView) findViewById(R.id.shoppingcar_tvhead);
-        mTextHead.setTypeface(CustomFont.getInstance().getFontData(this));
+        textView.setTypeface(CustomFont.getInstance().getFontHead(this));
+        textView.setText("รถเข็นสั่งของ");
+        imageButton2.setBackgroundResource(R.color.colorNull);
+
+        imageButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                finish();
+            }
+        });
 
 
         fragmentOrder = new OrderFragment();

@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ScrollView;
 import android.widget.TabHost;
 import android.widget.TextView;
@@ -25,10 +26,7 @@ import java.util.ArrayList;
 public class RamenActivity extends AppCompatActivity {
 
 
-    Button mBack;
-    TextView mHead;
     TextView mName;
-    Button btSale;
     TextView mDataRamen;
     TextView mHeadObject;
     TextView mNoteObject;
@@ -51,14 +49,35 @@ public class RamenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_ramen);
 
+
+        //get data by Activity
+        Bundle bundle = getIntent().getExtras();
+
+        //set actionbar
         ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
+        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        actionBar.setDisplayShowCustomEnabled(true);
+        actionBar.setCustomView(R.layout.custom_action_bar_layout);
+
+        View view = actionBar.getCustomView();
+        TextView textView = (TextView)view.findViewById(R.id.custom_bar_text);
+        ImageButton imageButton = (ImageButton)view.findViewById(R.id.custom_bar_back);
+        ImageButton imageButton2 = (ImageButton)view.findViewById(R.id.custom_bar_safe);
 
 
-        mBack = (Button) findViewById(R.id.ramen_back);
-        mHead = (TextView) findViewById(R.id.ramen_tvhead);
+        textView.setTypeface(CustomFont.getInstance().getFontHead(this));
+        textView.setText(bundle.getString("NameRamen"));
+        imageButton2.setBackgroundResource(R.drawable.icon_shopping);
+
+        imageButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                finish();
+            }
+        });
+
+
         mName = (TextView) findViewById(R.id.ramen_tvname);
-        btSale = (Button) findViewById(R.id.ramen_shopping);
         mDataRamen = (TextView) findViewById(R.id.ramen_data_ramen);
         mHeadObject = (TextView) findViewById(R.id.ramen_tvobject);
         mNoteObject = (TextView) findViewById(R.id.ramen_tvnote);
@@ -71,7 +90,6 @@ public class RamenActivity extends AppCompatActivity {
         mPrice = (TextView) findViewById(R.id.ramen_total_price);
 
         //set font
-        mHead.setTypeface(CustomFont.getInstance().getFontHead(this));
         mName.setTypeface(CustomFont.getInstance().getFontHead(this));
         mDataRamen.setTypeface(CustomFont.getInstance().getFontData(this));
         mHeadObject.setTypeface(CustomFont.getInstance().getFontHead(this));
@@ -84,20 +102,8 @@ public class RamenActivity extends AppCompatActivity {
         mTotal.setTypeface(CustomFont.getInstance().getFontData(this));
         mPrice.setTypeface(CustomFont.getInstance().getFontData(this));
 
-        Bundle bundle = getIntent().getExtras();
-        mHead.setText(bundle.getString("NameRamen"));
         mName.setText(bundle.getString("NameRamen"));
 //        mPrice.setText(bundle.getString("Price")+" ฿");
-
-
-        mBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                finish();
-
-            }
-        });
 
 
         like = false;
@@ -115,15 +121,6 @@ public class RamenActivity extends AppCompatActivity {
             }
         });
 
-
-        btSale.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                startActivity(new Intent(RamenActivity.this,ShoppingCarActivity.class));
-
-            }
-        });
 
         mSale.setOnClickListener(new View.OnClickListener() {
             @Override

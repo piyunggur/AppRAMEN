@@ -1,6 +1,7 @@
 package com.example.user.ramen.Activity;
 
 import android.content.Intent;
+import android.media.Image;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.user.ramen.Custom.CustomFont;
@@ -18,8 +20,6 @@ import com.example.user.ramen.SearchActivity;
 public class RegisterActivity extends AppCompatActivity {
 
 
-    private Button mBack;
-    private TextView mHead;
     private EditText mUser;
     private EditText mPass1;
     private EditText mPass2;
@@ -32,44 +32,40 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.layout_register);
 
 
-        //set in actionbar
-//        code : alinstart, can not setTypeface
-//        setTitle("สมัครสมาชิก");
-//        ActionBar actionBar = getSupportActionBar();
-//        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE);
+        //set actionbar
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        actionBar.setDisplayShowCustomEnabled(true);
+        actionBar.setCustomView(R.layout.custom_action_bar_layout);
+
+        View view = actionBar.getCustomView();
+        TextView textView = (TextView)view.findViewById(R.id.custom_bar_text);
+        ImageButton imageButton = (ImageButton)view.findViewById(R.id.custom_bar_back);
+        ImageButton imageButton2 = (ImageButton)view.findViewById(R.id.custom_bar_safe);
 
 
-//        this.getActionBar().setDisplayShowCustomEnabled(true);
-//        this.getActionBar().setDisplayShowTitleEnabled(false);
-//
-//
-//        LayoutInflater inflater = LayoutInflater.from(this);
+        textView.setTypeface(CustomFont.getInstance().getFontHead(this));
+        imageButton2.setBackgroundResource(R.color.colorNull);
+
+        imageButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                finish();
+            }
+        });
 
 
 
-
-        mBack = (Button) findViewById(R.id.register_btback);
-        mHead = (TextView) findViewById(R.id.register_tvhead);
         mUser = (EditText) findViewById(R.id.register_etuser);
         mPass1 = (EditText) findViewById(R.id.register_etpass1);
         mPass2 = (EditText) findViewById(R.id.register_etpass2);
         mSubmit = (Button) findViewById(R.id.register_btsummit);
 
 
-        mHead.setTypeface(CustomFont.getInstance().getFontHead(this));
         mUser.setTypeface(CustomFont.getInstance().getFontData(this));
         mPass1.setTypeface(CustomFont.getInstance().getFontData(this));
         mPass2.setTypeface(CustomFont.getInstance().getFontData(this));
         mSubmit.setTypeface(CustomFont.getInstance().getFontData(this));
-
-
-        mBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
-                finish();
-            }
-        });
 
 
         mSubmit.setOnClickListener(new View.OnClickListener() {
