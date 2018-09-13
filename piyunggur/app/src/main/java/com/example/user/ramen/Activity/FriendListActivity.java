@@ -1,4 +1,4 @@
-package com.example.user.ramen;
+package com.example.user.ramen.Activity;
 
 import android.app.SearchManager;
 import android.content.Context;
@@ -8,6 +8,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.SearchView;
+
+import com.example.user.ramen.R;
 
 public class FriendListActivity extends AppCompatActivity implements SearchView.OnQueryTextListener{
 

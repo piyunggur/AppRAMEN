@@ -20,6 +20,7 @@
         <item>item4</item>
         <item>item5</item>
     </string-array>
+    <string name="title_activity_menu_sale">เมนูราคาปรัหยัด</string>
 
 
 </resources>

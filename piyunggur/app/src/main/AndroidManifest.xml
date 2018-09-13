@@ -42,12 +42,13 @@
         <activity android:name=".Activity.ShoppingCarActivity" />
         <activity android:name=".Activity.RamenActivity" />
         <activity android:name=".Activity.MapActivity" />
+        <activity android:name=".Activity.FriendListActivity" />
+        <activity android:name=".Activity.SearchActivity" />
         <activity
-            android:name=".Activity.MenuRamenActivity"
-            android:label="@string/title_activity_menu_ramen"
-            android:theme="@style/AppTheme" />
-        <activity android:name=".FriendListActivity" />
-        <activity android:name=".SearchActivity"></activity>
+            android:name=".Activity.MenuSaleActivity"
+            android:label="@string/title_activity_menu_sale"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".PreOrderActivity"></activity>
     </application>
 
 </manifest>

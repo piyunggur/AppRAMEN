@@ -8,58 +8,12 @@
     tools:context=".Activity.MapActivity">
 
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorBack"
-        />
-
-
-    <ImageView
-        android:id="@+id/map_bghead"
-
-        android:layout_width="match_parent"
-        android:layout_height="75dp"
-
-        android:background="@color/colorMenu"
-        />
-
-
-    <Button
-        android:id="@+id/map_back"
-
-        android:layout_width="22dp"
-        android:layout_height="22dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="32dp"
-        android:layout_marginStart="15dp"
-
-        android:background="@drawable/back"
-        />
-
-
-    <TextView
-        android:id="@+id/map_tvhead"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="27dp"
-
-        android:gravity="center"
-        android:text="เลือกสถานที่จัดส่ง"
-        android:textColor="@color/colorWhite"
-        android:textSize="22sp"
-        />
-
 
     <FrameLayout
         android:id="@+id/map_fragment"
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/map_bghead"
         />
 
 

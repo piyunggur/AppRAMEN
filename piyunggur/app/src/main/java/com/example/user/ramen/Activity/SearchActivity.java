@@ -1,4 +1,4 @@
-package com.example.user.ramen;
+package com.example.user.ramen.Activity;
 
 import android.app.SearchManager;
 import android.content.Context;
@@ -8,12 +8,12 @@ import android.os.Bundle;
 import android.support.v7.widget.SearchView;
 import android.util.Log;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import java.lang.reflect.Array;
+import com.example.user.ramen.R;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 

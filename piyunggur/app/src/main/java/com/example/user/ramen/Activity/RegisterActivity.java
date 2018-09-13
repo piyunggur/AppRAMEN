@@ -1,11 +1,9 @@
 package com.example.user.ramen.Activity;
 
 import android.content.Intent;
-import android.media.Image;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,9 +11,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.user.ramen.Custom.CustomFont;
-import com.example.user.ramen.FriendListActivity;
 import com.example.user.ramen.R;
-import com.example.user.ramen.SearchActivity;
 
 public class RegisterActivity extends AppCompatActivity {
 

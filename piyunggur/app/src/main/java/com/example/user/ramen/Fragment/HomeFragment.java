@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -15,6 +16,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -75,6 +77,7 @@ public class HomeFragment extends Fragment {
     private ArrayList<Integer> ramen_heart3 = new ArrayList<>();
     private ArrayList<Integer> ramen_heart4 = new ArrayList<>();
     private ArrayList<Integer> ramen_heart5 = new ArrayList<>();
+
 
     //manu slider
     private static final String tag = "Manu";

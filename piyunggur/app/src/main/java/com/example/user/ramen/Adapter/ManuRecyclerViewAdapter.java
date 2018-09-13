@@ -11,8 +11,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.user.ramen.Activity.Manu1Activity;
 import com.example.user.ramen.Custom.CustomFont;
+import com.example.user.ramen.Activity.MenuSaleActivity;
 import com.example.user.ramen.R;
 
 import java.util.ArrayList;
@@ -46,7 +46,7 @@ public class ManuRecyclerViewAdapter extends RecyclerView.Adapter<ManuRecyclerVi
             @Override
             public void onClick(View view) {
                 Log.d(TAG, "onClick: clicked on : " + arr_manu.get(position));
-                mContext.startActivities(new Intent[]{new Intent(mContext, Manu1Activity.class)});
+                mContext.startActivities(new Intent[]{new Intent(mContext, MenuSaleActivity.class)});
                 Toast.makeText(mContext, arr_manu.get(position), Toast.LENGTH_SHORT).show();
             }
         });
