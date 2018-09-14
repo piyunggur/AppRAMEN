@@ -15,9 +15,7 @@ import com.example.user.ramen.R;
 
 import java.util.ArrayList;
 
-public class Menu4 extends Fragment {
-
-    //set ramen slide
+public class Menu5Fragment extends Fragment {//set ramen slide
     private ArrayList<Integer> ramen_Image = new ArrayList<>();
     private ArrayList<String> ramen_Name = new ArrayList<>();
     private ArrayList<Integer> ramen_Price = new ArrayList<>();
@@ -50,7 +48,7 @@ public class Menu4 extends Fragment {
                              @Nullable Bundle savedInstanceState) {
 
         context = getContext();
-        View v = inflater.inflate(R.layout.fragment_menu4, container, false);
+        View v = inflater.inflate(R.layout.fragment_menu5, container, false);
 
         addRamen(v);
 
@@ -148,7 +146,7 @@ public class Menu4 extends Fragment {
     private View setRecyclerViewOnRamen(View v){
 
 
-        RecyclerView gridView = v.findViewById(R.id.menu_sale4_recyclerview);
+        RecyclerView gridView = v.findViewById(R.id.menu_sale5_recyclerview);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(context, 2);
         RamenGridViewAdapter gridViewAdapter = new RamenGridViewAdapter(context, ramen_Image, ramen_Name,
                 ramen_Price, ramen_bgKcal, ramen_Kcal, ramen_bgSale, ramen_Sale

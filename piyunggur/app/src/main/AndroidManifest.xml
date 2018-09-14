@@ -48,7 +48,8 @@
             android:name=".Activity.MenuSaleActivity"
             android:label="@string/title_activity_menu_sale"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".PreOrderActivity"></activity>
+        <activity android:name=".PreOrderActivity" />
+        <activity android:name=".ATMActivity"></activity>
     </application>
 
 </manifest>

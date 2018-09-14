@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_ivew="http://schemas.android.com/apk/res-auto"
+    tools:context=".ATMActivity"
+    android:background="@drawable/background_main">
+
+
+    <TextView
+        android:id="@+id/atm_head"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+
+        android:text="ช่องทางการชำระเงิน"
+        android:textSize="22sp"
+        android:textColor="@color/colorYellow"
+        />
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_below="@id/atm_head"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+
+        card_ivew:cardCornerRadius="8dp"
+        card_ivew:cardBackgroundColor="#49000000"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/atm_data_bank1"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+
+                android:text="ข้อมูลบัญชีธนาคาร\nที่จะให้ลูกค้าไปจ่าย"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                />
+
+
+            <TextView
+                android:id="@+id/atm_data_bank2"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/atm_data_bank1"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+
+                android:text="ข้อมูลบัญชีธนาคาร\nที่จะให้ลูกค้าไปจ่าย"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                />
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+
+    <Button
+        android:id="@+id/atm_upload"
+
+        android:layout_width="296dp"
+        android:layout_height="43dp"
+        android:layout_above="@id/atm_image_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+
+        android:text="อัพโหลดหลักฐานการชำระเงิน"
+        android:textSize="16sp"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/button_use_code_function"
+        />
+
+
+    <TextView
+        android:id="@+id/atm_image_name"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/atm_nextday"
+        android:layout_marginBottom="40dp"
+
+        android:text="ชื่อไฟล์นะเนี้ย.png"
+        android:textSize="16sp"
+        android:textColor="@color/colorWhite"
+        />
+
+
+    <Button
+        android:id="@+id/atm_nextday"
+
+        android:layout_width="296dp"
+        android:layout_height="43dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+
+        android:text="ส่งให้ภายภายหลัง"
+        android:textSize="16sp"
+        android:textColor="@color/colorWhite"
+        android:gravity="center"
+        android:background="@drawable/button_use_code_function"
+        />
+
+
+
+
+
+</RelativeLayout>

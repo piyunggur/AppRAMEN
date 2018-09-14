@@ -9,13 +9,14 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.user.ramen.Adapter.RamenGridViewAdapter;
 import com.example.user.ramen.R;
 
 import java.util.ArrayList;
 
-public class Menu3 extends Fragment {
+public class Menu1Fragment extends Fragment {
 
 
     //set ramen slide
@@ -51,7 +52,7 @@ public class Menu3 extends Fragment {
                              @Nullable Bundle savedInstanceState) {
 
         context = getContext();
-        View v = inflater.inflate(R.layout.fragment_menu3, container, false);
+        View v = inflater.inflate(R.layout.fragment_menu1, container, false);
 
         addRamen(v);
 
@@ -149,7 +150,7 @@ public class Menu3 extends Fragment {
     private View setRecyclerViewOnRamen(View v){
 
 
-        RecyclerView gridView = v.findViewById(R.id.menu_sale3_recyclerview);
+        RecyclerView gridView = v.findViewById(R.id.menu_sale1_recyclerview);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(context, 2);
         RamenGridViewAdapter gridViewAdapter = new RamenGridViewAdapter(context, ramen_Image, ramen_Name,
                 ramen_Price, ramen_bgKcal, ramen_Kcal, ramen_bgSale, ramen_Sale

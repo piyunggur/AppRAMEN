@@ -15,7 +15,7 @@ import com.example.user.ramen.R;
 
 import java.util.ArrayList;
 
-public class Menu2 extends Fragment {
+public class Menu3Fragment extends Fragment {
 
 
     //set ramen slide
@@ -39,8 +39,6 @@ public class Menu2 extends Fragment {
 
     Context context;
 
-
-
     @Override
     public void onResume(){
         super.onResume();;
@@ -53,7 +51,7 @@ public class Menu2 extends Fragment {
                              @Nullable Bundle savedInstanceState) {
 
         context = getContext();
-        View v = inflater.inflate(R.layout.fragment_menu2, container, false);
+        View v = inflater.inflate(R.layout.fragment_menu3, container, false);
 
         addRamen(v);
 
@@ -151,7 +149,7 @@ public class Menu2 extends Fragment {
     private View setRecyclerViewOnRamen(View v){
 
 
-        RecyclerView gridView = v.findViewById(R.id.menu_sale2_recyclerview);
+        RecyclerView gridView = v.findViewById(R.id.menu_sale3_recyclerview);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(context, 2);
         RamenGridViewAdapter gridViewAdapter = new RamenGridViewAdapter(context, ramen_Image, ramen_Name,
                 ramen_Price, ramen_bgKcal, ramen_Kcal, ramen_bgSale, ramen_Sale
@@ -163,7 +161,6 @@ public class Menu2 extends Fragment {
         return v;
 
     }
-
 
 
 }

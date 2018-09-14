@@ -7,7 +7,7 @@
     xmlns:design="http://schemas.android.com/apk/res-auto"
     tools:context=".Activity.MainActivity"
 
-    android:background="@drawable/background_main"
+    android:background="@drawable/main_background"
     >
 
 

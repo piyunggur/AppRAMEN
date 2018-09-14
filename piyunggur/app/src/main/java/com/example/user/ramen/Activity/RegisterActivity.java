@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.user.ramen.ATMActivity;
 import com.example.user.ramen.Custom.CustomFont;
 import com.example.user.ramen.R;
 
@@ -67,7 +68,8 @@ public class RegisterActivity extends AppCompatActivity {
         mSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(RegisterActivity.this,SearchActivity.class));
+                startActivity(new Intent(RegisterActivity.this, ATMActivity.class));
+//                startActivity(new Intent(RegisterActivity.this,SearchActivity.class));
 //                startActivity(new Intent(RegisterActivity.this,FriendListActivity.class));
 //                finish();
             }

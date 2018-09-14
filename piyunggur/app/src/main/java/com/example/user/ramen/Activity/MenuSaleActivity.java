@@ -12,11 +12,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.user.ramen.Fragment.Menu1;
-import com.example.user.ramen.Fragment.Menu2;
-import com.example.user.ramen.Fragment.Menu3;
-import com.example.user.ramen.Fragment.Menu4;
-import com.example.user.ramen.Fragment.Menu5;
+import com.example.user.ramen.Fragment.Menu1Fragment;
+import com.example.user.ramen.Fragment.Menu2Fragment;
+import com.example.user.ramen.Fragment.Menu3Fragment;
+import com.example.user.ramen.Fragment.Menu4Fragment;
+import com.example.user.ramen.Fragment.Menu5Fragment;
 import com.example.user.ramen.R;
 
 public class MenuSaleActivity extends AppCompatActivity {
@@ -123,19 +123,19 @@ public class MenuSaleActivity extends AppCompatActivity {
 
             switch(position){
                 case 0:
-                    Menu1 menu1 = new Menu1();
+                    Menu1Fragment menu1 = new Menu1Fragment();
                     return menu1;
                 case 1:
-                    Menu2 menu2 = new Menu2();
+                    Menu2Fragment menu2 = new Menu2Fragment();
                     return menu2;
                 case 2:
-                    Menu3 menu3 = new Menu3();
+                    Menu3Fragment menu3 = new Menu3Fragment();
                     return menu3;
                 case 3:
-                    Menu4 menu4 = new Menu4();
+                    Menu4Fragment menu4 = new Menu4Fragment();
                     return menu4;
                 case 4:
-                    Menu5 menu5 = new Menu5();
+                    Menu5Fragment menu5 = new Menu5Fragment();
                     return menu5;
                 default:
                     return null;

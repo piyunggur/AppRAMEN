@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,124 +9,167 @@
     android:background="@drawable/background_main"
     >
 
-    <TextView
-        android:id="@+id/pre_order_head"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
-
-        android:text="ข้อมูลสถานที่จัดส่ง"
-        android:textColor="@color/colorYellow"
-        android:textSize="18sp"
-        />
-
-    <TextView
-        android:id="@+id/pre_order_name"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/pre_order_head"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="15dp"
-
-        android:text="ชื่อผู้สั่งซื้อ"
-        android:textSize="16sp"
-        android:textColor="@color/colorWhite"
-        />
-
-    <TextView
-        android:id="@+id/pre_order_at"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/pre_order_name"
-        android:layout_marginTop="12dp"
-        android:layout_marginStart="15dp"
-
-        android:text="ที่อยู่"
-        android:textSize="16sp"
-        android:textColor="@color/colorWhite"
-        />
-
-    <TextView
-        android:id="@+id/pre_order_headmenu"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/pre_order_at"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="15dp"
-
-        android:text="iBanking"
-        android:textSize="18sp"
-        android:textColor="@color/colorYellow"
-        />
-
-    <Button
-        android:id="@+id/pre_order_menu1"
-
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_below="@id/pre_order_headmenu"
-        android:layout_marginTop="20dp"
-
-        android:text="ธนาคารกรุงไทย"
-        android:textSize="16sp"
-        android:textColor="@color/colorWhite"
-        android:background="@color/colorSale"
-        android:paddingStart="15dp"
-        android:gravity="fill_vertical"
-        />
+        android:layout_height="match_parent">
 
 
-    <Button
-        android:id="@+id/pre_order_menu2"
+        <TextView
+            android:id="@+id/pre_order_head"
 
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_below="@id/pre_order_menu1"
-        android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
 
-        android:text="ธนาคารกรุงศรีอยุธยา"
-        android:textSize="16sp"
-        android:textColor="@color/colorWhite"
-        android:background="@color/colorSale"
-        android:paddingStart="15dp"
-        android:gravity="fill_vertical"
-        />
+            android:text="ข้อมูลสถานที่จัดส่ง"
+            android:textColor="@color/colorYellow"
+            android:textSize="18sp"
+            />
 
-    <Button
-        android:id="@+id/pre_order_menu3"
+        <TextView
+            android:id="@+id/pre_order_name"
 
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_below="@id/pre_order_menu2"
-        android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pre_order_head"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
 
-        android:text="ธนาคารกสิกรไทย"
-        android:textSize="16sp"
-        android:textColor="@color/colorWhite"
-        android:background="@color/colorSale"
-        android:paddingStart="15dp"
-        android:gravity="fill_vertical"
-        />
+            android:text="ชื่อผู้สั่งซื้อ"
+            android:textSize="16sp"
+            android:textColor="@color/colorWhite"
+            />
 
-    <Button
-        android:id="@+id/pre_order_menu4"
+        <TextView
+            android:id="@+id/pre_order_at"
 
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_below="@id/pre_order_menu3"
-        android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pre_order_name"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="15dp"
 
-        android:text="ธนาคารกรุงเทพ"
-        android:textSize="16sp"
-        android:textColor="@color/colorWhite"
-        android:background="@color/colorSale"
-        android:paddingStart="15dp"
-        android:gravity="fill_vertical"
-        />
+            android:text="ที่อยู่"
+            android:textSize="16sp"
+            android:textColor="@color/colorWhite"
+            />
 
-</RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/pre_order_recyclerview"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pre_order_at"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical"
+
+            android:background="#49000000"
+            >
+        </android.support.v7.widget.RecyclerView>
+
+
+        <TextView
+            android:id="@+id/pre_order_headmenu"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pre_order_recyclerview"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"
+
+            android:text="iBanking"
+            android:textSize="18sp"
+            android:textColor="@color/colorYellow"
+            />
+
+        <Button
+            android:id="@+id/pre_order_menu1"
+
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/pre_order_headmenu"
+            android:layout_marginTop="20dp"
+
+            android:text="ธนาคารกรุงไทย"
+            android:textSize="16sp"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/button_next_bank_function"
+            android:paddingStart="15dp"
+            android:gravity="fill_vertical"
+            />
+
+
+        <Button
+            android:id="@+id/pre_order_menu2"
+
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/pre_order_menu1"
+            android:layout_marginTop="5dp"
+
+            android:text="ธนาคารกรุงศรีอยุธยา"
+            android:textSize="16sp"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/button_next_bank_function"
+            android:paddingStart="15dp"
+            android:gravity="fill_vertical"
+            />
+
+        <Button
+            android:id="@+id/pre_order_menu3"
+
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/pre_order_menu2"
+            android:layout_marginTop="5dp"
+
+            android:text="ธนาคารกสิกรไทย"
+            android:textSize="16sp"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/button_next_bank_function"
+            android:paddingStart="15dp"
+            android:gravity="fill_vertical"
+            />
+
+        <Button
+            android:id="@+id/pre_order_menu4"
+
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/pre_order_menu3"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="30dp"
+
+            android:text="ธนาคารกรุงเทพ"
+            android:textSize="16sp"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/button_next_bank_function"
+            android:paddingStart="15dp"
+            android:gravity="fill_vertical"
+            />
+
+        <Button
+            android:id="@+id/pre_order_atm"
+
+            android:layout_width="295dp"
+            android:layout_height="43dp"
+            android:layout_below="@id/pre_order_menu4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="45dp"
+
+            android:gravity="center"
+            android:background="@drawable/button_use_code_function"
+            android:text="จ่ายผ่าน ATM"
+            android:textSize="16sp"
+            android:textColor="@color/colorWhite"
+            />
+
+
+    </RelativeLayout>
+
+
+
+</ScrollView>
