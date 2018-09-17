@@ -4,14 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background_main"
+    android:background="@drawable/main_background"
     >
 
     <RelativeLayout
         android:id="@+id/homefm_relativelayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorBack"
         >
 
         <ImageView

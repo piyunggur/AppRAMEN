@@ -10,7 +10,6 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.example.user.ramen.ATMActivity;
 import com.example.user.ramen.Custom.CustomFont;
 import com.example.user.ramen.R;
 

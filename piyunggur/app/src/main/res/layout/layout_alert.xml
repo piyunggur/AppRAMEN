@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    tools:context=".AlertActivity"
+
+    android:orientation="vertical"
+    android:background="@drawable/main_background">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/user_feed_news"
+
+        android:layout_width="340dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center_horizontal"
+
+        card_view:cardCornerRadius="8dp"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardBackgroundColor= "#56000000"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+
+            <TextView
+                android:id="@+id/user_head_news"
+
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+
+                android:text="การแจ้งเตือน"
+                android:textSize="18sp"
+                android:textColor="@color/colorWhite"
+                android:background="@color/colorMain"
+                />
+
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

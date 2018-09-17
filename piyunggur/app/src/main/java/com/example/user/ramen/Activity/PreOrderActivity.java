@@ -1,4 +1,4 @@
-package com.example.user.ramen;
+package com.example.user.ramen.Activity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.example.user.ramen.Adapter.OrderRecyclerViewAdapter;
 import com.example.user.ramen.Custom.CustomFont;
+import com.example.user.ramen.R;
 
 import java.util.ArrayList;
 

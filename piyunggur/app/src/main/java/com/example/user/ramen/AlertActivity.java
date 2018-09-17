@@ -1,28 +1,29 @@
-package com.example.user.ramen.Activity;
+package com.example.user.ramen;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.user.ramen.Custom.CustomFont;
-import com.example.user.ramen.R;
+
+import java.util.ArrayList;
+
+public class AlertActivity extends AppCompatActivity {
 
 
-public class MapActivity extends AppCompatActivity {
-
-
-    Button mSummit;
+    //set object in order
+    private ArrayList<Integer> ImageNews = new ArrayList<>();
+    private ArrayList<String> DataNews = new ArrayList<>();
+    private ArrayList<Integer> Line = new ArrayList<>();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_map);
+        setContentView(R.layout.layout_alert);
 
 
         //set actionbar
@@ -38,7 +39,7 @@ public class MapActivity extends AppCompatActivity {
 
 
         textView.setTypeface(CustomFont.getInstance().getFontHead(this));
-        textView.setText("เลือกสถานที่จัดส่ง");
+        textView.setText("การแจ้งเตือน");
         imageButton2.setBackgroundResource(R.color.colorNull);
 
         imageButton.setOnClickListener(new View.OnClickListener(){
@@ -47,21 +48,6 @@ public class MapActivity extends AppCompatActivity {
                 finish();
             }
         });
-
-
-        mSummit = (Button) findViewById(R.id.map_summit);
-
-        mSummit.setTypeface(CustomFont.getInstance().getFontData(this));
-
-        mSummit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                startActivity(new Intent(MapActivity.this, PreOrderActivity.class));
-
-            }
-        });
-
 
 
     }
