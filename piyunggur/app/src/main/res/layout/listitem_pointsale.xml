@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    >
+
+
+    <Button
+        android:id="@+id/pointsale_sale"
+
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+
+        android:text="25 P ใช้"
+        android:textSize="18sp"
+        android:textColor="@color/colorGreen"
+        android:background="@drawable/button_user_menu_function"
+        />
+
+    <TextView
+        android:id="@+id/pointsale_data"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_toStartOf="@id/pointsale_sale"
+        android:layout_marginTop="20dp"
+
+        android:text="แลกรับส่วนลดราเมง 5 บาท"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorBlack"
+        />
+
+
+
+</RelativeLayout>

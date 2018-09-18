@@ -50,11 +50,11 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Activity.PreOrderActivity" />
         <activity android:name=".Activity.ATMActivity" />
-        <activity android:name=".AlertActivity" />
-        <activity android:name=".LikeActivity" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".PointsaleActivity" />
-        <activity android:name=".ReportActivity"></activity>
+        <activity android:name=".Activity.AlertActivity" />
+        <activity android:name=".Activity.LikeActivity" />
+        <activity android:name=".Activity.ProfileActivity" />
+        <activity android:name=".Activity.PointsaleActivity" />
+        <activity android:name=".Activity.ReportActivity"></activity>
     </application>
 
 </manifest>

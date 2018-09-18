@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_ivew="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    card_ivew:cardCornerRadius="0dp"
+    card_ivew:cardBackgroundColor= "#56000000"
+    android:id="@+id/alert_listitem"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/alert_image"
+
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"
+
+            android:background="@drawable/box"
+            />
+
+        <TextView
+            android:id="@+id/alert_data"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/alert_image"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="30dp"
+
+            android:text="data news"
+            android:textSize="16sp"
+            android:textColor="@color/colorGreen"
+            />
+
+
+        <ImageView
+            android:id="@+id/alert_line"
+
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/alert_image"
+            android:layout_marginTop="35dp"
+
+            android:background="@color/colorMain"
+            />
+
+
+    </RelativeLayout>
+
+
+
+</android.support.v7.widget.CardView>

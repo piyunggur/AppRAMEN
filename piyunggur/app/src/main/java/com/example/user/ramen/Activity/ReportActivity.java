@@ -1,4 +1,4 @@
-package com.example.user.ramen;
+package com.example.user.ramen.Activity;
 
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -8,22 +8,15 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.user.ramen.Custom.CustomFont;
+import com.example.user.ramen.R;
 
-import java.util.ArrayList;
-
-public class AlertActivity extends AppCompatActivity {
-
-
-    //set object in order
-    private ArrayList<Integer> ImageNews = new ArrayList<>();
-    private ArrayList<String> DataNews = new ArrayList<>();
-    private ArrayList<Integer> Line = new ArrayList<>();
+public class ReportActivity extends AppCompatActivity {
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_alert);
+        setContentView(R.layout.layout_report);
 
 
         //set actionbar
@@ -39,7 +32,7 @@ public class AlertActivity extends AppCompatActivity {
 
 
         textView.setTypeface(CustomFont.getInstance().getFontHead(this));
-        textView.setText("การแจ้งเตือน");
+        textView.setText("ติดต่อ RAMEN");
         imageButton2.setBackgroundResource(R.color.colorNull);
 
         imageButton.setOnClickListener(new View.OnClickListener(){
@@ -49,6 +42,7 @@ public class AlertActivity extends AppCompatActivity {
             }
         });
 
-
     }
+
+
 }

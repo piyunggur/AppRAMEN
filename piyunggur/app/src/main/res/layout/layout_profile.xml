@@ -1,9 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileActivity">
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activity.ProfileActivity"
+    
+    android:background="@drawable/main_background"
+    >
 
-</android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/profile_card_image"
+
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        card_view:cardCornerRadius="8dp"
+        card_view:cardUseCompatPadding="true"
+        >
+
+
+    </android.support.v7.widget.CardView>
+    
+    
+    <TextView
+        android:id="@+id/profile_h_user"
+
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@id/profile_card_image"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+
+        android:gravity="center"
+        android:text="ชื่อบัญชี"
+        android:textSize="18sp"
+        android:textColor="@color/colorYellow"
+        />
+
+
+    <EditText
+        android:id="@+id/profile_e_user"
+
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_toEndOf="@id/profile_h_user"
+        android:layout_alignBottom="@id/profile_h_user"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="50dp"
+        android:ems="10"
+
+        android:textSize="16sp"
+        android:textColor="@color/colorWhite"
+        android:hint="ชื่อผู้ใช้"
+        android:textColorHint="@color/colorWhite"
+        />
+
+
+    <TextView
+        android:id="@+id/profile_h_email"
+
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@id/profile_h_user"
+        android:layout_alignStart="@id/profile_h_user"
+        android:layout_marginTop="15dp"
+
+        android:gravity="center"
+        android:text="เมลล์"
+        android:textSize="18sp"
+        android:textColor="@color/colorYellow"
+        />
+
+
+    <EditText
+        android:id="@+id/profile_e_email"
+
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@id/profile_e_user"
+        android:layout_alignBottom="@id/profile_h_email"
+        android:ems="10"
+
+        android:textSize="16sp"
+        android:textColor="@color/colorWhite"
+        android:hint="อีเมลล์ผู้ใช้"
+        android:textColorHint="@color/colorWhite"
+        />
+
+
+    <TextView
+        android:id="@+id/profile_h_phone"
+
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@id/profile_h_email"
+        android:layout_alignStart="@id/profile_h_email"
+        android:layout_marginTop="15dp"
+
+        android:gravity="center"
+        android:text="เบอรโทรศัทพ์"
+        android:textSize="18sp"
+        android:textColor="@color/colorYellow"
+        />
+
+
+    <EditText
+        android:id="@+id/profile_e_phone"
+
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@id/profile_e_user"
+        android:layout_alignBottom="@id/profile_h_phone"
+
+        android:textSize="16sp"
+        android:textColor="@color/colorWhite"
+        android:hint="0000000000"
+        android:textColorHint="@color/colorWhite"
+        />
+
+
+    <TextView
+        android:id="@+id/profile_h_gender"
+
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@id/profile_h_phone"
+        android:layout_alignStart="@id/profile_h_phone"
+        android:layout_marginTop="15dp"
+
+        android:gravity="center"
+        android:text="เพศ"
+        android:textSize="18sp"
+        android:textColor="@color/colorYellow"
+        />
+
+    <EditText
+        android:id="@+id/profile_e_gender"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/profile_e_user"
+        android:layout_alignBottom="@id/profile_h_gender"
+
+        android:textSize="16sp"
+        android:textColor="@color/colorWhite"
+        android:hint="ชาย"
+        android:textColorHint="@color/colorWhite"
+        />
+
+
+</RelativeLayout>

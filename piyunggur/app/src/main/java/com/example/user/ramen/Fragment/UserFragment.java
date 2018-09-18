@@ -1,28 +1,24 @@
 package com.example.user.ramen.Fragment;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.example.user.ramen.Adapter.OrderRecyclerViewAdapter;
-import com.example.user.ramen.AlertActivity;
+import com.example.user.ramen.Activity.AlertActivity;
+import com.example.user.ramen.Activity.LikeActivity;
+import com.example.user.ramen.Activity.PointsaleActivity;
+import com.example.user.ramen.Activity.ProfileActivity;
+import com.example.user.ramen.Activity.ReportActivity;
 import com.example.user.ramen.Custom.CustomFont;
 import com.example.user.ramen.R;
-
-import java.util.ArrayList;
 
 public class UserFragment extends Fragment {
     private OrderFragment fragmentOrder;
@@ -81,6 +77,50 @@ public class UserFragment extends Fragment {
 
 
                 startActivity(new Intent(getActivity(), AlertActivity.class));
+
+            }
+        });
+
+
+        Menu1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                startActivity(new Intent(getActivity(), PointsaleActivity.class));
+
+            }
+        });
+
+
+        Menu2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                startActivity(new Intent(getActivity(), LikeActivity.class));
+
+            }
+        });
+
+
+        Menu3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                startActivity(new Intent(getActivity(), ProfileActivity.class));
+
+            }
+        });
+
+
+        Menu4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                startActivity(new Intent(getActivity(), ReportActivity.class));
 
             }
         });

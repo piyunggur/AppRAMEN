@@ -178,7 +178,7 @@
             android:text="คูปองส่วนลด"
             android:textSize="18sp"
             android:textColor="@color/colorWhite"
-            android:background="@color/colorMain"
+            android:background="@drawable/button_user_menu_function"
             android:gravity="fill_vertical"
             android:paddingStart="15dp"
             />
@@ -195,7 +195,7 @@
             android:text="สิ่งที่คุณถูกใจ"
             android:textSize="18sp"
             android:textColor="@color/colorWhite"
-            android:background="@color/colorMain"
+            android:background="@drawable/button_user_menu_function"
             android:gravity="fill_vertical"
             android:paddingStart="15dp"
             />
@@ -212,7 +212,7 @@
             android:text="แก้ไขข้อมูลส่วนตัว"
             android:textSize="18sp"
             android:textColor="@color/colorWhite"
-            android:background="@color/colorMain"
+            android:background="@drawable/button_user_menu_function"
             android:gravity="fill_vertical"
             android:paddingStart="15dp"
             />
@@ -229,7 +229,7 @@
             android:text="ติดต่อ RAMEN"
             android:textSize="18sp"
             android:textColor="@color/colorWhite"
-            android:background="@color/colorMain"
+            android:background="@drawable/button_user_menu_function"
             android:gravity="fill_vertical"
             android:paddingStart="15dp"
             />
@@ -246,7 +246,7 @@
             android:text="ออกจากระบบ"
             android:textSize="18sp"
             android:textColor="@color/colorWhite"
-            android:background="@color/colorMain"
+            android:background="@drawable/button_user_menu_function"
             android:gravity="fill_vertical"
             android:paddingStart="15dp"
             android:layout_marginBottom="20dp"
