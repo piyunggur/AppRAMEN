@@ -23,4 +23,11 @@
     <string name="title_activity_menu_sale">เมนูราคาปรัหยัด</string>
 
 
+    <string-array name="reports_toppic">
+        <item>ระบบมีข้อผิดพลาด</item>
+        <item>การจัดส่งล่าช้่า</item>
+        <item>ข้อแนะนำ</item>
+    </string-array>
+
+
 </resources>
