@@ -54,7 +54,10 @@
         <activity android:name=".Activity.LikeActivity" />
         <activity android:name=".Activity.ProfileActivity" />
         <activity android:name=".Activity.PointsaleActivity" />
-        <activity android:name=".Activity.ReportActivity"></activity>
+        <activity android:name=".Activity.ReportActivity" />
+        <activity android:name=".TestNoticifationActivity" />
+        <activity android:name=".TestBackgroundSerriceActivity"></activity>
+        <service android:name=".TestMyService"></service>
     </application>
 
 </manifest>
