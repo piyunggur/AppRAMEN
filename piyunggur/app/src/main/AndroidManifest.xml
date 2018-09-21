@@ -56,8 +56,12 @@
         <activity android:name=".Activity.PointsaleActivity" />
         <activity android:name=".Activity.ReportActivity" />
         <activity android:name=".TestNoticifationActivity" />
-        <activity android:name=".TestBackgroundSerriceActivity"></activity>
-        <service android:name=".TestMyService"></service>
+        <activity android:name=".TestBackgroundSerriceActivity" />
+
+        <service android:name=".TestMyService"/>
+        <service android:name=".ExampleService"/>
+
+        <activity android:name=".TestForegroundServiceActivity"></activity>
     </application>
 
 </manifest>

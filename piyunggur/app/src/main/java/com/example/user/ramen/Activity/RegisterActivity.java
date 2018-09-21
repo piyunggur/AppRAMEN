@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.example.user.ramen.Custom.CustomFont;
 import com.example.user.ramen.R;
 import com.example.user.ramen.TestBackgroundSerriceActivity;
+import com.example.user.ramen.TestForegroundServiceActivity;
 import com.example.user.ramen.TestNoticifationActivity;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -70,7 +71,9 @@ public class RegisterActivity extends AppCompatActivity {
         mSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(RegisterActivity.this, TestBackgroundSerriceActivity.class));
+                startActivity(new Intent(RegisterActivity.this, TestForegroundServiceActivity.class));
+//                startActivity(new Intent(RegisterActivity.this, TestBackgroundSerriceActivity.class));
+//                startActivity(new Intent(RegisterActivity.this, TestNoticifationActivity.class));
 //                startActivity(new Intent(RegisterActivity.this, ATMActivity.class));
 //                startActivity(new Intent(RegisterActivity.this,SearchActivity.class));
 //                startActivity(new Intent(RegisterActivity.this,FriendListActivity.class));
